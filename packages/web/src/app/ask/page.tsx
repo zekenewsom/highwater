@@ -39,14 +39,52 @@ const FAQS = [
 
 const CREATIVE_FAQS = [];
 
-const MORE_FAQS = [];
+const MORE_FAQS: { question: string; answer: string }[] = [];
+
+// Simple function to find the best matching FAQ answer
+function findFAQAnswer(userQuestion: string): string {
+  const question = userQuestion.toLowerCase();
+  
+  // Check for exact matches first
+  for (const faq of FAQS) {
+    if (faq.question.toLowerCase().includes(question) || question.includes(faq.question.toLowerCase())) {
+      return faq.answer;
+    }
+  }
+  
+  // Check for keyword matches
+  const keywords = {
+    'buy': 'Should I buy crypto? If so, how much?',
+    'crypto': 'Should I buy crypto? If so, how much?',
+    'tax': 'How do I report my crypto taxes?',
+    'taxes': 'How do I report my crypto taxes?',
+    'die': 'What happens to my Bitcoin if I die?',
+    'death': 'What happens to my Bitcoin if I die?',
+    'safe': 'Is my exchange safe? / How do I store this?',
+    'store': 'Is my exchange safe? / How do I store this?',
+    'exchange': 'Is my exchange safe? / How do I store this?',
+    'ira': 'Can I hold crypto in my IRA or trust?',
+    'trust': 'Can I hold crypto in my IRA or trust?',
+    'etf': 'Should I invest in Bitcoin ETFs?',
+    'bitcoin': 'Should I invest in Bitcoin ETFs?',
+    'scam': 'How do I avoid crypto scams?',
+    'staking': 'What are the tax implications of staking or DeFi?',
+    'defi': 'What are the tax implications of staking or DeFi?'
+  };
+  
+  for (const [keyword, faqQuestion] of Object.entries(keywords)) {
+    if (question.includes(keyword)) {
+      const faq = FAQS.find(f => f.question === faqQuestion);
+      if (faq) return faq.answer;
+    }
+  }
+  
+  return "I don't have a specific answer for that question yet. Please check our FAQ section for common questions, or contact our support team for personalized assistance.";
+}
 
 function ChatBox({ faqs }: { faqs: { question: string; answer: string }[] }) {
   const [input, setInput] = React.useState("");
   const [messages, setMessages] = React.useState<string[]>([]);
-
-  // Placeholder for LLM integration (e.g., Ollama, OpenChat, LM Studio, etc.)
-  // You could call an API here to get a response from an open-source LLM.
 
   const handleSend = () => {
     if (input.trim()) {
@@ -95,7 +133,7 @@ function FAQQuickBox({ faq, onClick }: { faq: { question: string; answer: string
       onClick={onClick}
       type="button"
     >
-      <div className="text-xs md:text-sm font-normal text-gray-900 italic text-center w-full">“{faq.question}”</div>
+      <div className="text-xs md:text-sm font-normal text-gray-900 italic text-center w-full">"{faq.question}"</div>
     </button>
   );
 }
@@ -153,28 +191,20 @@ export default function AskPage() {
     setInput(question);
   };
 
-  // Handle sending a message to Ollama
+  // Handle sending a message - now uses FAQ matching instead of AI
   const handleSend = async () => {
     if (!input.trim()) return;
     setMessages(msgs => [...msgs, { sender: 'user', text: input }]);
     setLoading(true);
     const userMessage = input;
     setInput("");
-    try {
-      const res = await fetch('/api/ollama-proxy', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt: userMessage }),
-      });
-      const data = await res.json();
-      let llmResponse = data.response || data.message || data?.choices?.[0]?.text || 'No response';
-      // If Ollama returns a streaming response, you may need to adjust this logic.
-      setMessages(msgs => [...msgs, { sender: 'llm', text: llmResponse }]);
-    } catch (err: any) {
-      setMessages(msgs => [...msgs, { sender: 'llm', text: 'Error: Unable to reach LLM.' }]);
-    } finally {
+    
+    // Simulate processing time
+    setTimeout(() => {
+      const response = findFAQAnswer(userMessage);
+      setMessages(msgs => [...msgs, { sender: 'llm', text: response }]);
       setLoading(false);
-    }
+    }, 1000);
   };
 
   return (
