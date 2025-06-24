@@ -1,8 +1,6 @@
 import express, { Application, Request, Response, NextFunction } from "express";
 import cors from "cors";
 import routes from "./routes";
-import swaggerUi from "swagger-ui-express";
-import swaggerSpec from "./config/swagger";
 import logger from "./utils/logger";
 
 const app: Application = express();
@@ -15,9 +13,6 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   logger.info({ message: "Incoming request", method: req.method, url: req.url });
   next();
 });
-
-// Swagger API docs
-app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Mount all routes
 app.use("/api/v1", routes);
