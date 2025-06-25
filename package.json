@@ -6,11 +6,9 @@
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
-    "start": "turbo run start",
-    "prepare": "husky install"
+    "start": "turbo run start"
   },
   "devDependencies": {
-    "husky": "^8.0.0",
     "turbo": "latest",
     "typescript": "^5.0.0"
   },
