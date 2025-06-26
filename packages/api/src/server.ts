@@ -5,6 +5,7 @@ import clientsRouter from './routes/clients';
 import portfoliosRouter from './routes/portfolios';
 import http from "http";
 
+import logger from "./utils/logger";
 dotenv.config();
 
 const config = {
@@ -90,19 +91,19 @@ const PORT = process.env.PORT || 4000;
 const server = http.createServer(app);
 
 server.listen(PORT, () => {
-  console.log(`HighWater API listening on port ${PORT}`);
+  logger.info(`API listening on port ${PORT}`);
 });
 
 // Graceful shutdown
 const shutdown = () => {
-  console.log("Received shutdown signal, closing server...");
+  logger.info("Received shutdown signal, closing server...");
   server.close(() => {
-    console.log("Server closed gracefully.");
+    logger.info("Server closed gracefully.");
     process.exit(0);
   });
   // Force exit if not closed in 10 seconds
   setTimeout(() => {
-    console.error("Could not close server in time, forcefully shutting down");
+    logger.error("Could not close server in time, forcefully shutting down");
     process.exit(1);
   }, 10000);
 };
