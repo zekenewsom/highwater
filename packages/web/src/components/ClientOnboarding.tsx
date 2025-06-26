@@ -118,10 +118,11 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({
         return (
           <div className="space-y-6">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">
                 Full Name *
               </label>
               <input
+                id="fullName"
                 type="text"
                 value={formData.name}
                 onChange={(e) => updateFormData('name', e.target.value)}
@@ -130,10 +131,11 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                 Email Address *
               </label>
               <input
+                id="email"
                 type="email"
                 value={formData.email}
                 onChange={(e) => updateFormData('email', e.target.value)}
@@ -142,10 +144,11 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="advisorId" className="block text-sm font-medium text-gray-700 mb-2">
                 Advisor ID *
               </label>
               <input
+                id="advisorId"
                 type="text"
                 value={formData.advisorId}
                 onChange={(e) => updateFormData('advisorId', e.target.value)}
@@ -154,10 +157,11 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                 Phone Number
               </label>
               <input
+                id="phone"
                 type="tel"
                 value={formData.phone || ''}
                 onChange={(e) => updateFormData('phone', e.target.value)}
@@ -172,10 +176,11 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({
         return (
           <div className="space-y-6">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="riskProfile" className="block text-sm font-medium text-gray-700 mb-2">
                 Risk Profile *
               </label>
               <select
+                id="riskProfile"
                 value={formData.riskProfile}
                 onChange={(e) => updateFormData('riskProfile', e.target.value)}
                 className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -186,10 +191,11 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({
               </select>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="communicationPreference" className="block text-sm font-medium text-gray-700 mb-2">
                 Communication Preference
               </label>
               <select
+                id="communicationPreference"
                 value={formData.communicationPreference}
                 onChange={(e) => updateFormData('communicationPreference', e.target.value)}
                 className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -200,10 +206,11 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({
               </select>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="reportingFrequency" className="block text-sm font-medium text-gray-700 mb-2">
                 Reporting Frequency
               </label>
               <select
+                id="reportingFrequency"
                 value={formData.reportingFrequency}
                 onChange={(e) => updateFormData('reportingFrequency', e.target.value)}
                 className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -220,10 +227,11 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({
         return (
           <div className="space-y-6">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="initialInvestment" className="block text-sm font-medium text-gray-700 mb-2">
                 Initial Investment Amount *
               </label>
               <input
+                id="initialInvestment"
                 type="number"
                 value={formData.initialInvestment}
                 onChange={(e) => updateFormData('initialInvestment', Number(e.target.value))}

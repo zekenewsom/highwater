@@ -25,12 +25,22 @@ describe('ClientsList', () => {
       name: 'Alice Smith',
       email: 'alice@example.com',
       advisorId: 'A123',
+      status: 'Active' as const,
+      totalAssets: 500000,
+      riskProfile: 'Moderate' as const,
+      createdAt: '2024-01-01T00:00:00Z',
+      updatedAt: '2024-01-01T00:00:00Z',
     },
     {
       id: '2',
       name: 'Bob Johnson',
       email: 'bob@example.com',
       advisorId: 'A456',
+      status: 'Active' as const,
+      totalAssets: 750000,
+      riskProfile: 'Aggressive' as const,
+      createdAt: '2024-01-02T00:00:00Z',
+      updatedAt: '2024-01-02T00:00:00Z',
     },
   ];
 

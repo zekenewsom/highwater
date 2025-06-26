@@ -71,8 +71,8 @@ jobs:
           flags: web
           name: web-coverage
 
-  test-integration:
-    name: Integration Tests
+  test-e2e:
+    name: End-to-End Tests
     runs-on: ubuntu-latest
     needs: [test-api, test-web]
     
@@ -94,19 +94,86 @@ jobs:
       - name: Install dependencies
         run: pnpm install
         
-      - name: Start API server
+      - name: Install Playwright browsers
+        run: cd packages/web && npx playwright install --with-deps
+        
+      - name: Build API
         run: |
           cd packages/api
           pnpm build
+          
+      - name: Start API server
+        run: |
+          cd packages/api
           pnpm start &
           sleep 10
           
-      - name: Run integration tests
+      - name: Run E2E tests
         run: |
           cd packages/web
           pnpm test:e2e
         env:
           NEXT_PUBLIC_API_URL: http://localhost:3001
+          
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: playwright-report
+          path: packages/web/playwright-report/
+          retention-days: 30
+
+  test-visual:
+    name: Visual Regression Tests
+    runs-on: ubuntu-latest
+    needs: [test-api, test-web]
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'pnpm'
+          
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          
+      - name: Install dependencies
+        run: pnpm install
+        
+      - name: Install Playwright browsers
+        run: cd packages/web && npx playwright install --with-deps
+        
+      - name: Build API
+        run: |
+          cd packages/api
+          pnpm build
+          
+      - name: Start API server
+        run: |
+          cd packages/api
+          pnpm start &
+          sleep 10
+          
+      - name: Run visual regression tests
+        run: |
+          cd packages/web
+          npx playwright test --config=playwright.config.ts --grep="Visual Regression"
+        env:
+          NEXT_PUBLIC_API_URL: http://localhost:3001
+          
+      - name: Upload visual test results
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: visual-test-results
+          path: packages/web/test-results/
+          retention-days: 30
 
   lint:
     name: Lint

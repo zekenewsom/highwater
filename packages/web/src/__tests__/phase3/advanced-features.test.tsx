@@ -365,7 +365,7 @@ describe('Phase 3 Advanced Features', () => {
 
       expect(screen.getByText('Alice Smith')).toBeInTheDocument();
       expect(screen.getByText('alice@example.com')).toBeInTheDocument();
-      expect(screen.getByText('Active')).toBeInTheDocument();
+      expect(screen.getAllByText('Active')).toHaveLength(2); // There are 2 clients with "Active" status
       expect(screen.getByText('$2,500,000')).toBeInTheDocument(); // Formatted currency
     });
 

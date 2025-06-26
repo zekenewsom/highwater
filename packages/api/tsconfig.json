@@ -1,13 +1,30 @@
 {
-    "extends": "../../tsconfig.json",
     "compilerOptions": {
-      "outDir": "dist",
-      "baseUrl": "src",
-      "composite": true,
+      "target": "ES2020",
+      "module": "commonjs",
+      "lib": ["ES2020"],
+      "outDir": "./dist",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "resolveJsonModule": true,
+      "declaration": true,
+      "declarationMap": true,
+      "sourceMap": true,
+      "types": ["node", "jest"],
+      "typeRoots": ["./node_modules/@types", "./src/types"],
+      "baseUrl": ".",
       "paths": {
-        "@highwater/types": ["../types/dist"]
+        "@/*": ["src/*"]
       }
     },
-    "include": ["src", "tests"],
-    "exclude": ["node_modules"]
+    "include": [
+      "src/**/*",
+      "tests/**/*"
+    ],
+    "exclude": [
+      "node_modules",
+      "dist"
+    ]
 }

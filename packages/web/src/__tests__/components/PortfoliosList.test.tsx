@@ -25,12 +25,18 @@ describe('PortfoliosList', () => {
       name: 'Growth Portfolio',
       clientId: '1',
       assets: 5,
+      value: 250000,
+      performance: 12.5,
+      risk: 'Moderate' as const,
     },
     {
       id: '2',
       name: 'Income Portfolio',
       clientId: '2',
       assets: 7,
+      value: 350000,
+      performance: 8.2,
+      risk: 'Conservative' as const,
     },
   ];
 
@@ -119,6 +125,9 @@ describe('PortfoliosList', () => {
         name: 'Single Asset Portfolio',
         clientId: '1',
         assets: 1,
+        value: 100000,
+        performance: 5.0,
+        risk: 'Conservative' as const,
       },
     ];
     mockApiService.getPortfolios.mockResolvedValue({

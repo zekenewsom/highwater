@@ -21,82 +21,287 @@
 [33m[39m
 [1m[2mDetermining test suites to run...[22m[22m[999D[K
 
-[1mTest Suites: [22m0 of 3 total
+[1mTest Suites: [22m0 of 4 total
 [1mTests:       [22m0 total
 [1mSnapshots:   [22m0 total
 [1mTime:[22m        0 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
 [0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
 [0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/[22m[1mapi-v2.test.ts[22m
 
-[1mTest Suites: [22m0 of 3 total
+[1mTest Suites: [22m0 of 4 total
 [1mTests:       [22m0 total
 [1mSnapshots:   [22m0 total
-[1mTime:[22m        0 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+[1mTime:[22m        0 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
 [0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
 [0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/[22m[1mapi-v2.test.ts[22m
 
-[1mTest Suites: [22m0 of 3 total
+[1mTest Suites: [22m0 of 4 total
 [1mTests:       [22m0 total
 [1mSnapshots:   [22m0 total
-[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[0m[7m[1m[31m FAIL [39m[22m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
 
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
 [0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
 [0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/[22m[1mapi-v2.test.ts[22m
 
-[1mTest Suites: [22m0 of 3 total
+[1mTest Suites: [22m0 of 4 total
 [1mTests:       [22m0 total
 [1mSnapshots:   [22m0 total
-[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.676Z","url":"/api/v1/assets/live"}
-{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.678Z","url":"/api/v1/clients"}
-{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.680Z","url":"/api/v1/portfolios"}
-{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.685Z","url":"/api/v1/clients"}
-{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.687Z","url":"/api/v1/clients"}
-{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.687Z","url":"/api/v1/portfolios"}
-{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.689Z","url":"/api/v1/clients"}
-{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.689Z","url":"/api/v1/portfolios"}
-{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.691Z","url":"/api/v1/clients"}
-{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.692Z","url":"/api/v1/portfolios"}
-{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.693Z","url":"/api/v1/clients"}
-{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.693Z","url":"/api/v1/portfolios"}
-{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.695Z","url":"/api/v1/clients"}
-{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.695Z","url":"/api/v1/portfolios"}
-{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.697Z","url":"/api/v1/portfolios"}
-{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.698Z","url":"/api/v1/clients?invalid=param"}
-{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.699Z","url":"/api/v1/portfolios?invalid=param"}
-{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.699Z","url":"/api/v1/clients/nonexistent"}
-{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.701Z","url":"/api/v1/portfolios/nonexistent"}
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  [1m● [22mTest suite failed to run
 
+    Cannot find module '../../src/routes' from 'tests/setup.ts'
+
+    [0m [90m 121 |[39m   
+     [90m 122 |[39m   [90m// Add routes[39m
+    [31m[1m>[22m[39m[90m 123 |[39m   app[33m.[39muse([32m'/'[39m[33m,[39m require([32m'../../src/routes'[39m)[33m.[39m[36mdefault[39m)[33m;[39m
+     [90m     |[39m                [31m[1m^[22m[39m
+     [90m 124 |[39m   
+     [90m 125 |[39m   [36mreturn[39m app[33m;[39m
+     [90m 126 |[39m }[33m;[39m[0m
+
+      [2mat Resolver._throwModNotFoundError ([22m../../node_modules/.pnpm/jest-resolve@29.7.0/node_modules/jest-resolve/build/resolver.js[2m:427:11)[22m
+      [2mat createTestApp ([22mtests/setup.ts[2m:123:16)[22m
+      [2mat Object.<anonymous> ([22m[0m[36mtests/integration/assets.test.ts[39m[0m[2m:4:26)[22m
+
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
 [0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
 [0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/[22m[1mapi-v2.test.ts[22m
 
-[1mTest Suites: [22m0 of 3 total
+[1mTest Suites: [22m0 of 4 total
 [1mTests:       [22m0 total
 [1mSnapshots:   [22m0 total
-[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
-
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
 [0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
 [0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/[22m[1mapi-v2.test.ts[22m
 
-[1mTest Suites: [22m0 of 3 total
+[1mTest Suites: [22m0 of 4 total
 [1mTests:       [22m0 total
 [1mSnapshots:   [22m0 total
-[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[0m[7m[1m[31m FAIL [39m[22m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
 [0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
 [0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/[22m[1mapi-v2.test.ts[22m
 
-[1mTest Suites: [22m0 of 3 total
+[1mTest Suites: [22m0 of 4 total
 [1mTests:       [22m0 total
 [1mSnapshots:   [22m0 total
-[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  [1m● [22mTest suite failed to run
 
-[1mTest Suites: [22m[1m[32m2 passed[39m[22m, 2 of 3 total
-[1mTests:       [22m[1m[32m18 passed[39m[22m, 18 total
+    Cannot find module '../../src/routes' from 'tests/setup.ts'
+
+    [0m [90m 121 |[39m   
+     [90m 122 |[39m   [90m// Add routes[39m
+    [31m[1m>[22m[39m[90m 123 |[39m   app[33m.[39muse([32m'/'[39m[33m,[39m require([32m'../../src/routes'[39m)[33m.[39m[36mdefault[39m)[33m;[39m
+     [90m     |[39m                [31m[1m^[22m[39m
+     [90m 124 |[39m   
+     [90m 125 |[39m   [36mreturn[39m app[33m;[39m
+     [90m 126 |[39m }[33m;[39m[0m
+
+      [2mat Resolver._throwModNotFoundError ([22m../../node_modules/.pnpm/jest-resolve@29.7.0/node_modules/jest-resolve/build/resolver.js[2m:427:11)[22m
+      [2mat createTestApp ([22mtests/setup.ts[2m:123:16)[22m
+      [2mat Object.<anonymous> ([22m[0m[36mtests/integration/clients.test.ts[39m[0m[2m:4:26)[22m
+
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/[22m[1mapi-v2.test.ts[22m
+
+[1mTest Suites: [22m0 of 4 total
+[1mTests:       [22m0 total
 [1mSnapshots:   [22m0 total
-[1mTime:[22m        1 s, estimated 2 s[41m[30m ELIFECYCLE [39m[49m [31mTest failed. See above for more details.[39m
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[0m[7m[1m[31m FAIL [39m[22m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/[22m[1mapi-v2.test.ts[22m
+
+[1mTest Suites: [22m0 of 4 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  [1m● [22mTest suite failed to run
+
+    Cannot find module '../../src/routes' from 'tests/setup.ts'
+
+    [0m [90m 121 |[39m   
+     [90m 122 |[39m   [90m// Add routes[39m
+    [31m[1m>[22m[39m[90m 123 |[39m   app[33m.[39muse([32m'/'[39m[33m,[39m require([32m'../../src/routes'[39m)[33m.[39m[36mdefault[39m)[33m;[39m
+     [90m     |[39m                [31m[1m^[22m[39m
+     [90m 124 |[39m   
+     [90m 125 |[39m   [36mreturn[39m app[33m;[39m
+     [90m 126 |[39m }[33m;[39m[0m
+
+      [2mat Resolver._throwModNotFoundError ([22m../../node_modules/.pnpm/jest-resolve@29.7.0/node_modules/jest-resolve/build/resolver.js[2m:427:11)[22m
+      [2mat createTestApp ([22mtests/setup.ts[2m:123:16)[22m
+      [2mat Object.<anonymous> ([22m[0m[36mtests/integration/portfolios.test.ts[39m[0m[2m:4:26)[22m
+
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/[22m[1mapi-v2.test.ts[22m
+
+[1mTest Suites: [22m0 of 4 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/[22m[1mapi-v2.test.ts[22m
+
+[1mTest Suites: [22m[1m[31m3 failed[39m[22m, 3 of 4 total
+[1mTests:       [22m[1m[31m7 failed[39m[22m, 7 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[0m[7m[1m[31m FAIL [39m[22m[27m[0m [2msrc/__tests__/[22m[1mapi-v2.test.ts[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/[22m[1mapi-v2.test.ts[22m
+
+[1mTest Suites: [22m[1m[31m3 failed[39m[22m, 3 of 4 total
+[1mTests:       [22m[1m[31m7 failed[39m[22m, 7 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[1m[31m  [1m● [22m[1mAPI v2 JSON Endpoints › GET /api/v2/clients › should return JSON with correct content type[39m[22m
+
+    expected "Content-Type" matching /application\/json/, got "text/html; charset=utf-8"
+[2m[22m
+[2m    [0m [90m 16 |[39m         [33m.[39m[36mget[39m([32m'/api/v2/clients'[39m)[22m
+[2m     [90m 17 |[39m         [33m.[39mexpect([35m200[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m 18 |[39m         [33m.[39mexpect([32m'Content-Type'[39m[33m,[39m [35m/application\/json/[39m)[33m;[39m[22m
+[2m     [90m    |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m 19 |[39m[22m
+[2m     [90m 20 |[39m       expect(response[33m.[39mbody)[33m.[39mtoHaveProperty([32m'success'[39m[33m,[39m [36mtrue[39m)[33m;[39m[22m
+[2m     [90m 21 |[39m       expect(response[33m.[39mbody)[33m.[39mtoHaveProperty([32m'data'[39m)[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36msrc/__tests__/api-v2.test.ts[39m[0m[2m:18:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertHeader ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:232:16)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mAPI v2 JSON Endpoints › GET /api/v2/clients › should return clients with correct structure[39m[22m
+
+    TypeError: Cannot read properties of undefined (reading '0')
+[2m[22m
+[2m    [0m [90m 28 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[33m.[39m[36mget[39m([32m'/api/v2/clients'[39m)[33m;[39m[22m
+[2m     [90m 29 |[39m[22m
+[2m    [31m[1m>[22m[2m[39m[90m 30 |[39m       [36mconst[39m client [33m=[39m response[33m.[39mbody[33m.[39mdata[[35m0[39m][33m;[39m[22m
+[2m     [90m    |[39m                                        [31m[1m^[22m[2m[39m[22m
+[2m     [90m 31 |[39m       expect(client)[33m.[39mtoHaveProperty([32m'id'[39m)[33m;[39m[22m
+[2m     [90m 32 |[39m       expect(client)[33m.[39mtoHaveProperty([32m'name'[39m)[33m;[39m[22m
+[2m     [90m 33 |[39m       expect(client)[33m.[39mtoHaveProperty([32m'email'[39m)[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36msrc/__tests__/api-v2.test.ts[39m[0m[2m:30:40)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mAPI v2 JSON Endpoints › GET /api/v2/clients/:id › should return a single client as JSON[39m[22m
+
+    expected 200 "OK", got 404 "Not Found"
+[2m[22m
+[2m    [0m [90m 44 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[22m
+[2m     [90m 45 |[39m         [33m.[39m[36mget[39m([32m'/api/v2/clients/1'[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m 46 |[39m         [33m.[39mexpect([35m200[39m)[22m
+[2m     [90m    |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m 47 |[39m         [33m.[39mexpect([32m'Content-Type'[39m[33m,[39m [35m/application\/json/[39m)[33m;[39m[22m
+[2m     [90m 48 |[39m[22m
+[2m     [90m 49 |[39m       expect(response[33m.[39mbody)[33m.[39mtoHaveProperty([32m'success'[39m[33m,[39m [36mtrue[39m)[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36msrc/__tests__/api-v2.test.ts[39m[0m[2m:46:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertStatus ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:252:14)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mAPI v2 JSON Endpoints › GET /api/v2/portfolios › should return JSON with correct content type[39m[22m
+
+    expected "Content-Type" matching /application\/json/, got "text/html; charset=utf-8"
+[2m[22m
+[2m    [0m [90m 61 |[39m         [33m.[39m[36mget[39m([32m'/api/v2/portfolios'[39m)[22m
+[2m     [90m 62 |[39m         [33m.[39mexpect([35m200[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m 63 |[39m         [33m.[39mexpect([32m'Content-Type'[39m[33m,[39m [35m/application\/json/[39m)[33m;[39m[22m
+[2m     [90m    |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m 64 |[39m[22m
+[2m     [90m 65 |[39m       expect(response[33m.[39mbody)[33m.[39mtoHaveProperty([32m'success'[39m[33m,[39m [36mtrue[39m)[33m;[39m[22m
+[2m     [90m 66 |[39m       expect(response[33m.[39mbody)[33m.[39mtoHaveProperty([32m'data'[39m)[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36msrc/__tests__/api-v2.test.ts[39m[0m[2m:63:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertHeader ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:232:16)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mAPI v2 JSON Endpoints › GET /api/v2/portfolios › should return portfolios with correct structure[39m[22m
+
+    TypeError: Cannot read properties of undefined (reading '0')
+[2m[22m
+[2m    [0m [90m 73 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[33m.[39m[36mget[39m([32m'/api/v2/portfolios'[39m)[33m;[39m[22m
+[2m     [90m 74 |[39m[22m
+[2m    [31m[1m>[22m[2m[39m[90m 75 |[39m       [36mconst[39m portfolio [33m=[39m response[33m.[39mbody[33m.[39mdata[[35m0[39m][33m;[39m[22m
+[2m     [90m    |[39m                                           [31m[1m^[22m[2m[39m[22m
+[2m     [90m 76 |[39m       expect(portfolio)[33m.[39mtoHaveProperty([32m'id'[39m)[33m;[39m[22m
+[2m     [90m 77 |[39m       expect(portfolio)[33m.[39mtoHaveProperty([32m'name'[39m)[33m;[39m[22m
+[2m     [90m 78 |[39m       expect(portfolio)[33m.[39mtoHaveProperty([32m'clientId'[39m)[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36msrc/__tests__/api-v2.test.ts[39m[0m[2m:75:43)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mAPI v2 JSON Endpoints › GET /api/v2/portfolios/:id › should return a single portfolio as JSON[39m[22m
+
+    expected 200 "OK", got 404 "Not Found"
+[2m[22m
+[2m    [0m [90m 89 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[22m
+[2m     [90m 90 |[39m         [33m.[39m[36mget[39m([32m'/api/v2/portfolios/1'[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m 91 |[39m         [33m.[39mexpect([35m200[39m)[22m
+[2m     [90m    |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m 92 |[39m         [33m.[39mexpect([32m'Content-Type'[39m[33m,[39m [35m/application\/json/[39m)[33m;[39m[22m
+[2m     [90m 93 |[39m[22m
+[2m     [90m 94 |[39m       expect(response[33m.[39mbody)[33m.[39mtoHaveProperty([32m'success'[39m[33m,[39m [36mtrue[39m)[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36msrc/__tests__/api-v2.test.ts[39m[0m[2m:91:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertStatus ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:252:14)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mAPI v2 JSON Endpoints › Error handling › should handle errors gracefully and return JSON error responses[39m[22m
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32mtrue[39m
+    Received: [31mundefined[39m
+[2m[22m
+[2m    [0m [90m 107 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[33m.[39m[36mget[39m([32m'/api/v2/clients'[39m)[33m;[39m[22m
+[2m     [90m 108 |[39m       expect(response[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m[22m
+[2m    [31m[1m>[22m[2m[39m[90m 109 |[39m       expect(response[33m.[39mbody[33m.[39msuccess)[33m.[39mtoBe([36mtrue[39m)[33m;[39m[22m
+[2m     [90m     |[39m                                     [31m[1m^[22m[2m[39m[22m
+[2m     [90m 110 |[39m     })[33m;[39m[22m
+[2m     [90m 111 |[39m   })[33m;[39m[22m
+[2m     [90m 112 |[39m })[33m;[39m [0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36msrc/__tests__/api-v2.test.ts[39m[0m[2m:109:37)[22m[2m[22m
+
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/[22m[1mapi-v2.test.ts[22m
+
+[1mTest Suites: [22m[1m[31m3 failed[39m[22m, 3 of 4 total
+[1mTests:       [22m[1m[31m7 failed[39m[22m, 7 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[999D[K[1mTest Suites: [22m[1m[31m4 failed[39m[22m, 4 total
+[1mTests:       [22m[1m[31m7 failed[39m[22m, 7 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1.532 s, estimated 2 s
+[41m[30m ELIFECYCLE [39m[49m [31mTest failed. See above for more details.[39m
