@@ -43,3 +43,7 @@ next-env.d.ts
 #node.js
 dist/
 .env.local
+**/node_modules
+**/coverage
+**/.next
+
