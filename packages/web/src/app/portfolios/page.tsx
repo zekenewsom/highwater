@@ -58,10 +58,10 @@ export default function PortfoliosPage() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Portfolios List */}
               <div className="lg:col-span-2">
-                <PortfoliosList 
+                <PortfoliosList
                   onPortfolioSelect={(portfolio) => {
                     setSelectedPortfolio(portfolio);
-                  }} 
+                  }}
                 />
               </div>
 
@@ -71,37 +71,61 @@ export default function PortfoliosPage() {
                   <div className="bg-white shadow rounded-lg p-6 sticky top-6">
                     <div className="flex items-center mb-4">
                       <div className="h-12 w-12 rounded-full bg-green-600 flex items-center justify-center mr-4">
-                        <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        <svg
+                          className="h-6 w-6 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                          />
                         </svg>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-900">{selectedPortfolio.name}</h3>
-                        <p className="text-sm text-gray-500">Portfolio ID: {selectedPortfolio.id}</p>
+                        <h3 className="text-lg font-semibold text-gray-900">
+                          {selectedPortfolio.name}
+                        </h3>
+                        <p className="text-sm text-gray-500">
+                          Portfolio ID: {selectedPortfolio.id}
+                        </p>
                       </div>
                     </div>
 
                     <div className="space-y-4">
                       <div>
-                        <h4 className="text-sm font-medium text-gray-900 mb-2">Portfolio Information</h4>
+                        <h4 className="text-sm font-medium text-gray-900 mb-2">
+                          Portfolio Information
+                        </h4>
                         <dl className="space-y-2">
                           <div>
                             <dt className="text-sm text-gray-500">Portfolio ID</dt>
-                            <dd className="text-sm font-medium text-gray-900">{selectedPortfolio.id}</dd>
+                            <dd className="text-sm font-medium text-gray-900">
+                              {selectedPortfolio.id}
+                            </dd>
                           </div>
                           <div>
                             <dt className="text-sm text-gray-500">Client ID</dt>
-                            <dd className="text-sm font-medium text-gray-900">{selectedPortfolio.clientId}</dd>
+                            <dd className="text-sm font-medium text-gray-900">
+                              {selectedPortfolio.clientId}
+                            </dd>
                           </div>
                           <div>
                             <dt className="text-sm text-gray-500">Number of Assets</dt>
-                            <dd className="text-sm font-medium text-gray-900">{selectedPortfolio.assets}</dd>
+                            <dd className="text-sm font-medium text-gray-900">
+                              {selectedPortfolio.assets}
+                            </dd>
                           </div>
                         </dl>
                       </div>
 
                       <div className="pt-4 border-t border-gray-200">
-                        <h4 className="text-sm font-medium text-gray-900 mb-2">Performance Summary</h4>
+                        <h4 className="text-sm font-medium text-gray-900 mb-2">
+                          Performance Summary
+                        </h4>
                         <div className="space-y-3">
                           <div className="flex justify-between">
                             <span className="text-sm text-gray-500">Total Value</span>
@@ -142,10 +166,17 @@ export default function PortfoliosPage() {
                     <div className="text-center">
                       <div className="mx-auto h-12 w-12 text-gray-400">
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                          />
                         </svg>
                       </div>
-                      <h3 className="mt-2 text-sm font-medium text-gray-900">No portfolio selected</h3>
+                      <h3 className="mt-2 text-sm font-medium text-gray-900">
+                        No portfolio selected
+                      </h3>
                       <p className="mt-1 text-sm text-gray-500">
                         Select a portfolio from the list to view details and performance metrics.
                       </p>
@@ -178,4 +209,4 @@ export default function PortfoliosPage() {
       </div>
     </>
   );
-} 
+}

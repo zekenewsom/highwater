@@ -8,7 +8,8 @@ export async function GET(request: NextRequest) {
   // Login route
   if (pathname.endsWith('/login')) {
     const redirectUri = `${process.env.AUTH0_BASE_URL}/api/auth/callback`;
-    const authUrl = `${process.env.AUTH0_ISSUER_BASE_URL}/authorize?` +
+    const authUrl =
+      `${process.env.AUTH0_ISSUER_BASE_URL}/authorize?` +
       `response_type=code&` +
       `client_id=${process.env.AUTH0_CLIENT_ID}&` +
       `redirect_uri=${encodeURIComponent(redirectUri)}&` +

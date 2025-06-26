@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { useState, useRef, useEffect } from 'react';
 import { Cog6ToothIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
@@ -39,15 +39,19 @@ export default function NavBar() {
     <header className="bg-white border-b border-gray-200 shadow-sm w-full">
       <nav className="w-full px-4 sm:px-6 lg:px-8 flex items-center h-16">
         <div className="flex-1 flex items-center justify-start min-w-0">
-          <Link href="/" className="text-2xl font-bold text-black tracking-tight">HighWater Protocol</Link>
+          <Link href="/" className="text-2xl font-bold text-black tracking-tight">
+            HighWater Protocol
+          </Link>
         </div>
         <ul className="flex-1 flex justify-center gap-2 md:gap-4 lg:gap-6 min-w-0">
-          {NAV_LINKS.map(link => (
+          {NAV_LINKS.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
                 className={`px-4 py-2 rounded-full font-medium transition-all duration-150 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200 hover:bg-gray-100 hover:text-blue-700 ${
-                  active === link.href ? 'bg-gray-900 text-white shadow font-semibold' : 'text-gray-700'
+                  active === link.href
+                    ? 'bg-gray-900 text-white shadow font-semibold'
+                    : 'text-gray-700'
                 }`}
               >
                 {link.label}

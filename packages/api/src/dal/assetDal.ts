@@ -1,4 +1,4 @@
-import { Asset } from "@highwater/types/src/asset";
+import { Asset } from '@highwater/types/src/asset';
 
 let assetCache: Asset[] = [];
 

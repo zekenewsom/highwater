@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from 'react';
 import NavBar from '../../components/NavBar';
 
@@ -15,11 +15,19 @@ export default function SettingsPage() {
               <div className="flex flex-col gap-4">
                 <label className="block">
                   <span className="text-gray-700">Name</span>
-                  <input type="text" className="mt-1 block w-full rounded border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" placeholder="Your Name" />
+                  <input
+                    type="text"
+                    className="mt-1 block w-full rounded border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                    placeholder="Your Name"
+                  />
                 </label>
                 <label className="block">
                   <span className="text-gray-700">Email</span>
-                  <input type="email" className="mt-1 block w-full rounded border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" placeholder="you@example.com" />
+                  <input
+                    type="email"
+                    className="mt-1 block w-full rounded border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                    placeholder="you@example.com"
+                  />
                 </label>
               </div>
             </section>

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from 'react';
 
 const MOCK_TRANSACTIONS = [
@@ -25,10 +25,16 @@ export default function TransactionSummaryTable() {
         <tbody>
           {MOCK_TRANSACTIONS.map((t) => (
             <tr key={t.type} className="border-b last:border-0 hover:bg-gray-50 transition">
-              <td className="py-2 font-medium text-gray-700 align-middle whitespace-nowrap">{t.type}</td>
+              <td className="py-2 font-medium text-gray-700 align-middle whitespace-nowrap">
+                {t.type}
+              </td>
               <td className="py-2 text-gray-900 align-middle whitespace-nowrap">{t.count}</td>
               <td className="py-2 text-gray-900 align-middle whitespace-nowrap">{t.value}</td>
-              <td className={`py-2 align-middle whitespace-nowrap font-semibold ${t.change.startsWith('+') ? 'text-green-600' : 'text-red-600'}`}>{t.change}</td>
+              <td
+                className={`py-2 align-middle whitespace-nowrap font-semibold ${t.change.startsWith('+') ? 'text-green-600' : 'text-red-600'}`}
+              >
+                {t.change}
+              </td>
             </tr>
           ))}
         </tbody>

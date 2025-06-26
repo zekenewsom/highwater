@@ -3,16 +3,16 @@
 import React, { useState } from 'react';
 import { apiService, ApiError } from '../data/api';
 import { useApiCache } from '../hooks/useApiCache';
-import type { PortfolioAnalytics as PortfolioAnalyticsType, RebalancingRequest } from '../types/api';
+import type { RebalancingRequest, RebalancingResult } from '../types/api';
 
 interface PortfolioAnalyticsProps {
   portfolioId: string;
-  onRebalance?: (result: any) => void;
+  onRebalance?: (result: RebalancingResult) => void;
 }
 
-export const PortfolioAnalytics: React.FC<PortfolioAnalyticsProps> = ({ 
-  portfolioId, 
-  onRebalance 
+export const PortfolioAnalytics: React.FC<PortfolioAnalyticsProps> = ({
+  portfolioId,
+  onRebalance,
 }) => {
   const [period, setPeriod] = useState('1y');
   const [showRebalancing, setShowRebalancing] = useState(false);
@@ -20,13 +20,17 @@ export const PortfolioAnalytics: React.FC<PortfolioAnalyticsProps> = ({
     stocks: 60,
     bonds: 25,
     alternatives: 10,
-    cash: 5
+    cash: 5,
   });
 
-  const { data: analytics, loading, error, refresh } = useApiCache(
+  const {
+    data: analytics,
+    loading,
+    error,
+  } = useApiCache(
     `portfolio-analytics-${portfolioId}-${period}`,
     () => apiService.getPortfolioAnalytics(portfolioId, period),
-    5 * 60 * 1000 // 5 minutes cache
+    5 * 60 * 1000, // 5 minutes cache
   );
 
   const handleRebalancing = async () => {
@@ -36,7 +40,8 @@ export const PortfolioAnalytics: React.FC<PortfolioAnalyticsProps> = ({
       onRebalance?.(result.data);
       setShowRebalancing(false);
     } catch (error) {
-      console.error('Rebalancing analysis failed:', error);
+      // Error handling is done through the UI state
+      setShowRebalancing(false);
     }
   };
 
@@ -61,7 +66,11 @@ export const PortfolioAnalytics: React.FC<PortfolioAnalyticsProps> = ({
         <div className="flex">
           <div className="flex-shrink-0">
             <svg className="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+              <path
+                fillRule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                clipRule="evenodd"
+              />
             </svg>
           </div>
           <div className="ml-3">
@@ -117,16 +126,24 @@ export const PortfolioAnalytics: React.FC<PortfolioAnalyticsProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div className="bg-blue-50 rounded-lg p-4">
             <h4 className="text-sm font-medium text-blue-900 mb-2">Total Return</h4>
-            <p className={`text-2xl font-bold ${data.returns.total >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-              {data.returns.total > 0 ? '+' : ''}{data.returns.total.toFixed(1)}%
+            <p
+              className={`text-2xl font-bold ${data.returns.total >= 0 ? 'text-green-600' : 'text-red-600'}`}
+            >
+              {data.returns.total > 0 ? '+' : ''}
+              {data.returns.total.toFixed(1)}%
             </p>
-            <p className="text-sm text-blue-700">Annualized: {data.returns.annualized.toFixed(1)}%</p>
+            <p className="text-sm text-blue-700">
+              Annualized: {data.returns.annualized.toFixed(1)}%
+            </p>
           </div>
 
           <div className="bg-green-50 rounded-lg p-4">
             <h4 className="text-sm font-medium text-green-900 mb-2">vs Benchmark</h4>
-            <p className={`text-2xl font-bold ${data.performance.vsBenchmark >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-              {data.performance.vsBenchmark > 0 ? '+' : ''}{data.performance.vsBenchmark.toFixed(1)}%
+            <p
+              className={`text-2xl font-bold ${data.performance.vsBenchmark >= 0 ? 'text-green-600' : 'text-red-600'}`}
+            >
+              {data.performance.vsBenchmark > 0 ? '+' : ''}
+              {data.performance.vsBenchmark.toFixed(1)}%
             </p>
             <p className="text-sm text-green-700">Percentile: {data.performance.percentile}%</p>
           </div>
@@ -134,7 +151,9 @@ export const PortfolioAnalytics: React.FC<PortfolioAnalyticsProps> = ({
           <div className="bg-purple-50 rounded-lg p-4">
             <h4 className="text-sm font-medium text-purple-900 mb-2">Sharpe Ratio</h4>
             <p className="text-2xl font-bold text-purple-600">{data.risk.sharpeRatio.toFixed(2)}</p>
-            <p className="text-sm text-purple-700">Volatility: {data.risk.volatility.toFixed(1)}%</p>
+            <p className="text-sm text-purple-700">
+              Volatility: {data.risk.volatility.toFixed(1)}%
+            </p>
           </div>
         </div>
 
@@ -144,7 +163,9 @@ export const PortfolioAnalytics: React.FC<PortfolioAnalyticsProps> = ({
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="text-center">
               <p className="text-sm text-gray-500">Max Drawdown</p>
-              <p className="text-lg font-semibold text-red-600">{data.risk.maxDrawdown.toFixed(1)}%</p>
+              <p className="text-lg font-semibold text-red-600">
+                {data.risk.maxDrawdown.toFixed(1)}%
+              </p>
             </div>
             <div className="text-center">
               <p className="text-sm text-gray-500">Beta</p>
@@ -152,11 +173,15 @@ export const PortfolioAnalytics: React.FC<PortfolioAnalyticsProps> = ({
             </div>
             <div className="text-center">
               <p className="text-sm text-gray-500">Volatility</p>
-              <p className="text-lg font-semibold text-gray-900">{data.risk.volatility.toFixed(1)}%</p>
+              <p className="text-lg font-semibold text-gray-900">
+                {data.risk.volatility.toFixed(1)}%
+              </p>
             </div>
             <div className="text-center">
               <p className="text-sm text-gray-500">Sharpe Ratio</p>
-              <p className="text-lg font-semibold text-gray-900">{data.risk.sharpeRatio.toFixed(2)}</p>
+              <p className="text-lg font-semibold text-gray-900">
+                {data.risk.sharpeRatio.toFixed(2)}
+              </p>
             </div>
           </div>
         </div>
@@ -168,9 +193,7 @@ export const PortfolioAnalytics: React.FC<PortfolioAnalyticsProps> = ({
             {data.returns.monthly.map((return_, index) => (
               <div
                 key={index}
-                className={`flex-1 rounded-t ${
-                  return_ >= 0 ? 'bg-green-500' : 'bg-red-500'
-                }`}
+                className={`flex-1 rounded-t ${return_ >= 0 ? 'bg-green-500' : 'bg-red-500'}`}
                 style={{ height: `${Math.abs(return_) * 3}%` }}
                 title={`Month ${index + 1}: ${return_.toFixed(1)}%`}
               />
@@ -191,10 +214,12 @@ export const PortfolioAnalytics: React.FC<PortfolioAnalyticsProps> = ({
                   <input
                     type="number"
                     value={value}
-                    onChange={(e) => setTargetAllocation(prev => ({
-                      ...prev,
-                      [asset]: Number(e.target.value)
-                    }))}
+                    onChange={(e) =>
+                      setTargetAllocation((prev) => ({
+                        ...prev,
+                        [asset]: Number(e.target.value),
+                      }))
+                    }
                     className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
                     min="0"
                     max="100"
@@ -221,4 +246,4 @@ export const PortfolioAnalytics: React.FC<PortfolioAnalyticsProps> = ({
       </div>
     </div>
   );
-}; 
+};

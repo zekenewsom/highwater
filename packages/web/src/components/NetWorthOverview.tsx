@@ -1,11 +1,11 @@
-"use client";
+'use client';
 import React from 'react';
 import MOCK_ALLOC from './AllocationBreakdown';
 import { BarChart, Bar, XAxis, ResponsiveContainer } from 'recharts';
 
 // Cryptoassets now equals sum of Allocation Breakdown
 const MOCK_NET_WORTH = {
-  cryptoassets: MOCK_ALLOC.reduce((acc: number, cur: {value: number}) => acc + cur.value, 0),
+  cryptoassets: MOCK_ALLOC.reduce((acc: number, cur: { value: number }) => acc + cur.value, 0),
   investments: 5_261_894,
   reserves: 5_421_771,
   liabilities: 395_500,
@@ -42,17 +42,21 @@ const items = [
 ];
 
 export default function NetWorthOverview() {
-  const maxValue = Math.max(...items.map(i => i.value));
+  const maxValue = Math.max(...items.map((i) => i.value));
   return (
     <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 flex flex-col h-full justify-between gap-6">
       <h2 className="text-xl font-medium text-gray-800 tracking-tight mb-2">Net Worth Overview</h2>
       <div className="flex flex-col sm:flex-row sm:items-end gap-4 mb-2">
-        <span className="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight drop-shadow-sm leading-tight">${total.toLocaleString()}</span>
+        <span className="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight drop-shadow-sm leading-tight">
+          ${total.toLocaleString()}
+        </span>
       </div>
       <div className="flex flex-col gap-4 flex-1">
         {items.map((item, idx) => (
           <div key={item.label} className="flex items-center gap-4">
-            <span className="text-sm font-medium text-gray-700 w-40 min-w-[120px]">{item.label}</span>
+            <span className="text-sm font-medium text-gray-700 w-40 min-w-[120px]">
+              {item.label}
+            </span>
             <div className="flex-1 flex items-center">
               <ResponsiveContainer width="100%" height={18}>
                 <BarChart
@@ -72,7 +76,11 @@ export default function NetWorthOverview() {
                 </BarChart>
               </ResponsiveContainer>
             </div>
-            <span className={`text-base font-semibold tabular-nums ${item.negative ? 'text-red-600' : 'text-gray-900'}`}>{item.negative ? '-' : ''}${item.value.toLocaleString()}</span>
+            <span
+              className={`text-base font-semibold tabular-nums ${item.negative ? 'text-red-600' : 'text-gray-900'}`}
+            >
+              {item.negative ? '-' : ''}${item.value.toLocaleString()}
+            </span>
           </div>
         ))}
       </div>

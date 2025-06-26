@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from 'react';
 import { LineChart, Line, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 
@@ -12,7 +12,7 @@ const MOCK_TRENDS = [
       { date: 'Mar', value: 1.16 },
       { date: 'Mar 15', value: 1.18 },
       { date: 'Apr', value: 1.19 },
-      { date: 'Apr 30', value: 1.20 },
+      { date: 'Apr 30', value: 1.2 },
     ],
     chartColor: '#6366f1',
   },
@@ -75,10 +75,17 @@ export default function OnChainTrends() {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {MOCK_TRENDS.map((trend) => (
-          <div key={trend.label} className="bg-white rounded-lg shadow-lg border border-gray-200 p-5 flex flex-col h-full justify-between">
+          <div
+            key={trend.label}
+            className="bg-white rounded-lg shadow-lg border border-gray-200 p-5 flex flex-col h-full justify-between"
+          >
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-700">{trend.label}</span>
-              <span className={`text-xs ml-2 font-semibold ${trend.change.startsWith('+') ? 'text-green-600' : 'text-red-600'}`}>{trend.change}</span>
+              <span
+                className={`text-xs ml-2 font-semibold ${trend.change.startsWith('+') ? 'text-green-600' : 'text-red-600'}`}
+              >
+                {trend.change}
+              </span>
             </div>
             <span className="mt-2 text-2xl font-bold text-gray-900">{trend.value}</span>
             <div className="mt-3 w-full h-16 bg-gray-100 rounded flex items-center justify-center">
@@ -86,7 +93,13 @@ export default function OnChainTrends() {
                 <LineChart data={trend.chartData} margin={{ left: 0, right: 0, top: 0, bottom: 0 }}>
                   <XAxis dataKey="date" hide />
                   <YAxis domain={['auto', 'auto']} hide />
-                  <Line type="monotone" dataKey="value" stroke={trend.chartColor} strokeWidth={2} dot={false} />
+                  <Line
+                    type="monotone"
+                    dataKey="value"
+                    stroke={trend.chartColor}
+                    strokeWidth={2}
+                    dot={false}
+                  />
                 </LineChart>
               </ResponsiveContainer>
             </div>

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useState } from 'react';
 import { BookmarkIcon } from '@heroicons/react/24/outline';
@@ -10,7 +10,7 @@ export default function NewsFeed() {
   const VISIBLE_NEWS = 5;
 
   // Filter logic
-  const filteredNews = filter === 'All' ? NEWS : NEWS.filter(n => n.tag === filter);
+  const filteredNews = filter === 'All' ? NEWS : NEWS.filter((n) => n.tag === filter);
 
   return (
     <div className="flex-1 bg-white rounded-lg shadow-lg border border-gray-200 p-6 space-y-4 flex flex-col h-full justify-between min-w-0 max-w-full relative">
@@ -30,7 +30,10 @@ export default function NewsFeed() {
       </div>
       <ul className="space-y-4 flex-1 overflow-auto">
         {(showAll ? filteredNews : filteredNews.slice(0, 10)).map((n) => (
-          <li key={n.headline} className="relative bg-white rounded-lg shadow-sm border border-gray-100 p-4">
+          <li
+            key={n.headline}
+            className="relative bg-white rounded-lg shadow-sm border border-gray-100 p-4"
+          >
             <BookmarkIcon className="absolute top-0 right-0 h-5 w-5 text-gray-300 hover:text-gray-500 cursor-pointer" />
             <h3 className="text-base font-medium text-gray-700">{n.headline}</h3>
             <div className="mt-1 flex items-center justify-between text-xs text-gray-500">
@@ -61,10 +64,15 @@ export default function NewsFeed() {
             >
               &times;
             </button>
-            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">All News & Regulatory Feed</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+              All News & Regulatory Feed
+            </h2>
             <ul className="space-y-4 overflow-y-auto pr-2 flex-1">
               {NEWS.map((n) => (
-                <li key={n.headline} className="relative bg-white rounded-lg shadow-sm border border-gray-100 p-4">
+                <li
+                  key={n.headline}
+                  className="relative bg-white rounded-lg shadow-sm border border-gray-100 p-4"
+                >
                   <BookmarkIcon className="absolute top-0 right-0 h-5 w-5 text-gray-300 hover:text-gray-500 cursor-pointer" />
                   <h3 className="text-base font-medium text-gray-700">{n.headline}</h3>
                   <div className="mt-1 flex items-center justify-between text-xs text-gray-500">

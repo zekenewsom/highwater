@@ -9,10 +9,10 @@ interface MobileAppPreviewProps {
   onNavigate?: (screen: string) => void;
 }
 
-export const MobileAppPreview: React.FC<MobileAppPreviewProps> = ({ 
-  onNavigate 
-}) => {
-  const [activeTab, setActiveTab] = useState<'dashboard' | 'clients' | 'portfolios' | 'notifications'>('dashboard');
+export const MobileAppPreview: React.FC<MobileAppPreviewProps> = ({ onNavigate }) => {
+  const [activeTab, setActiveTab] = useState<
+    'dashboard' | 'clients' | 'portfolios' | 'notifications'
+  >('dashboard');
   const [showOnboarding, setShowOnboarding] = useState(false);
 
   // Mock mobile dashboard data (in real app, this would come from mobile-specific API)
@@ -26,7 +26,7 @@ export const MobileAppPreview: React.FC<MobileAppPreviewProps> = ({
         totalAssets: 2500000,
         riskProfile: 'Moderate',
         lastLogin: '2024-01-15T10:30:00Z',
-        notificationPreferences: { push: true, email: true, sms: false }
+        notificationPreferences: { push: true, email: true, sms: false },
       },
       {
         id: '2',
@@ -36,8 +36,8 @@ export const MobileAppPreview: React.FC<MobileAppPreviewProps> = ({
         totalAssets: 1800000,
         riskProfile: 'Conservative',
         lastLogin: '2024-01-14T15:45:00Z',
-        notificationPreferences: { push: false, email: true, sms: true }
-      }
+        notificationPreferences: { push: false, email: true, sms: true },
+      },
     ],
     portfolios: [
       {
@@ -47,7 +47,7 @@ export const MobileAppPreview: React.FC<MobileAppPreviewProps> = ({
         performance: 12.5,
         risk: 'Moderate',
         lastUpdated: '2024-01-15T09:00:00Z',
-        quickActions: ['Rebalance', 'View Details', 'Generate Report']
+        quickActions: ['Rebalance', 'View Details', 'Generate Report'],
       },
       {
         id: '2',
@@ -56,8 +56,8 @@ export const MobileAppPreview: React.FC<MobileAppPreviewProps> = ({
         performance: 8.2,
         risk: 'Conservative',
         lastUpdated: '2024-01-15T08:30:00Z',
-        quickActions: ['Rebalance', 'View Details']
-      }
+        quickActions: ['Rebalance', 'View Details'],
+      },
     ],
     notifications: [
       {
@@ -65,29 +65,29 @@ export const MobileAppPreview: React.FC<MobileAppPreviewProps> = ({
         type: 'alert',
         title: 'Market Alert',
         message: 'S&P 500 down 2.5% - consider rebalancing',
-        timestamp: '2024-01-15T10:00:00Z'
+        timestamp: '2024-01-15T10:00:00Z',
       },
       {
         id: '2',
         type: 'info',
         title: 'Client Update',
         message: 'Alice Smith completed risk assessment',
-        timestamp: '2024-01-15T09:30:00Z'
+        timestamp: '2024-01-15T09:30:00Z',
       },
       {
         id: '3',
         type: 'success',
         title: 'Portfolio Rebalanced',
         message: 'Growth Portfolio successfully rebalanced',
-        timestamp: '2024-01-15T08:15:00Z'
-      }
+        timestamp: '2024-01-15T08:15:00Z',
+      },
     ],
     summary: {
       totalClients: 2,
       totalAssets: 4300000,
       averagePerformance: 10.35,
-      pendingActions: 3
-    }
+      pendingActions: 3,
+    },
   };
 
   const formatCurrency = (amount: number) => {
@@ -95,7 +95,7 @@ export const MobileAppPreview: React.FC<MobileAppPreviewProps> = ({
       style: 'currency',
       currency: 'USD',
       minimumFractionDigits: 0,
-      maximumFractionDigits: 0
+      maximumFractionDigits: 0,
     }).format(amount);
   };
 
@@ -104,7 +104,7 @@ export const MobileAppPreview: React.FC<MobileAppPreviewProps> = ({
       month: 'short',
       day: 'numeric',
       hour: '2-digit',
-      minute: '2-digit'
+      minute: '2-digit',
     });
   };
 
@@ -114,11 +114,15 @@ export const MobileAppPreview: React.FC<MobileAppPreviewProps> = ({
       <div className="grid grid-cols-2 gap-3">
         <div className="bg-blue-50 rounded-lg p-3">
           <p className="text-xs text-blue-600 font-medium">Total Assets</p>
-          <p className="text-lg font-bold text-blue-900">{formatCurrency(mobileData.summary.totalAssets)}</p>
+          <p className="text-lg font-bold text-blue-900">
+            {formatCurrency(mobileData.summary.totalAssets)}
+          </p>
         </div>
         <div className="bg-green-50 rounded-lg p-3">
           <p className="text-xs text-green-600 font-medium">Avg Performance</p>
-          <p className="text-lg font-bold text-green-900">{mobileData.summary.averagePerformance.toFixed(1)}%</p>
+          <p className="text-lg font-bold text-green-900">
+            {mobileData.summary.averagePerformance.toFixed(1)}%
+          </p>
         </div>
       </div>
 
@@ -159,10 +163,15 @@ export const MobileAppPreview: React.FC<MobileAppPreviewProps> = ({
         <div className="space-y-2">
           {mobileData.notifications.slice(0, 3).map((notification) => (
             <div key={notification.id} className="flex items-start space-x-3">
-              <div className={`w-2 h-2 rounded-full mt-2 ${
-                notification.type === 'alert' ? 'bg-red-500' :
-                notification.type === 'success' ? 'bg-green-500' : 'bg-blue-500'
-              }`} />
+              <div
+                className={`w-2 h-2 rounded-full mt-2 ${
+                  notification.type === 'alert'
+                    ? 'bg-red-500'
+                    : notification.type === 'success'
+                      ? 'bg-green-500'
+                      : 'bg-blue-500'
+                }`}
+              />
               <div className="flex-1">
                 <p className="text-xs font-medium text-gray-900">{notification.title}</p>
                 <p className="text-xs text-gray-600">{notification.message}</p>
@@ -181,9 +190,13 @@ export const MobileAppPreview: React.FC<MobileAppPreviewProps> = ({
         <div key={client.id} className="bg-white rounded-lg p-4 shadow-sm">
           <div className="flex items-center justify-between mb-2">
             <h3 className="text-sm font-semibold text-gray-900">{client.name}</h3>
-            <span className={`text-xs px-2 py-1 rounded-full ${
-              client.status === 'Active' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'
-            }`}>
+            <span
+              className={`text-xs px-2 py-1 rounded-full ${
+                client.status === 'Active'
+                  ? 'bg-green-100 text-green-800'
+                  : 'bg-yellow-100 text-yellow-800'
+              }`}
+            >
               {client.status}
             </span>
           </div>
@@ -217,10 +230,15 @@ export const MobileAppPreview: React.FC<MobileAppPreviewProps> = ({
         <div key={portfolio.id} className="bg-white rounded-lg p-4 shadow-sm">
           <div className="flex items-center justify-between mb-2">
             <h3 className="text-sm font-semibold text-gray-900">{portfolio.name}</h3>
-            <span className={`text-xs px-2 py-1 rounded-full ${
-              portfolio.risk === 'High' ? 'bg-red-100 text-red-800' :
-              portfolio.risk === 'Moderate' ? 'bg-yellow-100 text-yellow-800' : 'bg-green-100 text-green-800'
-            }`}>
+            <span
+              className={`text-xs px-2 py-1 rounded-full ${
+                portfolio.risk === 'High'
+                  ? 'bg-red-100 text-red-800'
+                  : portfolio.risk === 'Moderate'
+                    ? 'bg-yellow-100 text-yellow-800'
+                    : 'bg-green-100 text-green-800'
+              }`}
+            >
               {portfolio.risk}
             </span>
           </div>
@@ -231,8 +249,11 @@ export const MobileAppPreview: React.FC<MobileAppPreviewProps> = ({
             </div>
             <div>
               <p className="text-gray-500">Performance</p>
-              <p className={`font-medium ${portfolio.performance >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                {portfolio.performance > 0 ? '+' : ''}{portfolio.performance.toFixed(1)}%
+              <p
+                className={`font-medium ${portfolio.performance >= 0 ? 'text-green-600' : 'text-red-600'}`}
+              >
+                {portfolio.performance > 0 ? '+' : ''}
+                {portfolio.performance.toFixed(1)}%
               </p>
             </div>
           </div>
@@ -256,17 +277,27 @@ export const MobileAppPreview: React.FC<MobileAppPreviewProps> = ({
       {mobileData.notifications.map((notification) => (
         <div key={notification.id} className="bg-white rounded-lg p-4 shadow-sm">
           <div className="flex items-start space-x-3">
-            <div className={`w-3 h-3 rounded-full mt-1 ${
-              notification.type === 'alert' ? 'bg-red-500' :
-              notification.type === 'success' ? 'bg-green-500' : 'bg-blue-500'
-            }`} />
+            <div
+              className={`w-3 h-3 rounded-full mt-1 ${
+                notification.type === 'alert'
+                  ? 'bg-red-500'
+                  : notification.type === 'success'
+                    ? 'bg-green-500'
+                    : 'bg-blue-500'
+              }`}
+            />
             <div className="flex-1">
               <div className="flex items-center justify-between mb-1">
                 <h3 className="text-sm font-semibold text-gray-900">{notification.title}</h3>
-                <span className={`text-xs px-2 py-1 rounded-full ${
-                  notification.type === 'alert' ? 'bg-red-100 text-red-800' :
-                  notification.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
-                }`}>
+                <span
+                  className={`text-xs px-2 py-1 rounded-full ${
+                    notification.type === 'alert'
+                      ? 'bg-red-100 text-red-800'
+                      : notification.type === 'success'
+                        ? 'bg-green-100 text-green-800'
+                        : 'bg-blue-100 text-blue-800'
+                  }`}
+                >
                   {notification.type}
                 </span>
               </div>
@@ -364,4 +395,4 @@ export const MobileAppPreview: React.FC<MobileAppPreviewProps> = ({
       </div>
     </div>
   );
-}; 
+};

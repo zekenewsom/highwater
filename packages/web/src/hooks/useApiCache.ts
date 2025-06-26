@@ -57,40 +57,43 @@ const apiCache = new ApiCache();
 export function useApiCache<T>(
   key: string,
   fetcher: () => Promise<T>,
-  ttl: number = 5 * 60 * 1000
+  ttl: number = 5 * 60 * 1000,
 ) {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
 
-  const fetchData = useCallback(async (forceRefresh = false) => {
-    try {
-      setLoading(true);
-      setError(null);
+  const fetchData = useCallback(
+    async (forceRefresh = false) => {
+      try {
+        setLoading(true);
+        setError(null);
 
-      // Check cache first (unless forcing refresh)
-      if (!forceRefresh) {
-        const cachedData = apiCache.get<T>(key);
-        if (cachedData) {
-          setData(cachedData);
-          setLoading(false);
-          return;
+        // Check cache first (unless forcing refresh)
+        if (!forceRefresh) {
+          const cachedData = apiCache.get<T>(key);
+          if (cachedData) {
+            setData(cachedData);
+            setLoading(false);
+            return;
+          }
         }
-      }
 
-      // Fetch fresh data
-      const freshData = await fetcher();
-      
-      // Cache the result
-      apiCache.set(key, freshData, ttl);
-      
-      setData(freshData);
-    } catch (err) {
-      setError(err instanceof Error ? err : new Error('Unknown error'));
-    } finally {
-      setLoading(false);
-    }
-  }, [key, fetcher, ttl]);
+        // Fetch fresh data
+        const freshData = await fetcher();
+
+        // Cache the result
+        apiCache.set(key, freshData, ttl);
+
+        setData(freshData);
+      } catch (err) {
+        setError(err instanceof Error ? err : new Error('Unknown error'));
+      } finally {
+        setLoading(false);
+      }
+    },
+    [key, fetcher, ttl],
+  );
 
   const refresh = useCallback(() => {
     return fetchData(true);
@@ -113,4 +116,4 @@ export function useApiCache<T>(
   };
 }
 
-export { apiCache }; 
+export { apiCache };

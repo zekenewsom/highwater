@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from 'react';
 import NavBar from '../../components/NavBar';
 import { AllocationBreakdown } from '../../components/AllocationBreakdown';
@@ -20,8 +20,12 @@ export default function Portfolio() {
           </div>
           <div className="mt-4 md:mt-0 flex flex-col items-end gap-2">
             <div className="flex gap-2 mb-2">
-              <button className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">Export</button>
-              <button className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">Refresh</button>
+              <button className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
+                Export
+              </button>
+              <button className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
+                Refresh
+              </button>
               <AddButtonWithDropdown />
             </div>
           </div>

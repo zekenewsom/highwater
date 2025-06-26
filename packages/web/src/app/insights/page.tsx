@@ -1,14 +1,14 @@
 // packages/web/src/app/insights/page.tsx
-import React from 'react'
-import NavBar from '../../components/NavBar'
-import { InformationCircleIcon, BookmarkIcon } from '@heroicons/react/24/outline'
-import { MARKET_SIGNALS, AI_INSIGHTS, ALERTS, NEWS } from '../../data/mockDashboard'
-import MarketSignals from '../../components/MarketSignals'
-import AIInsights from '../../components/AIInsights'
-import Alerts from '../../components/Alerts'
-import NewsFeed from '../../components/NewsFeed'
-import OnChainTrends from '../../components/OnChainTrends'
-import RiskComplianceFlags from '../../components/RiskComplianceFlags'
+import React from 'react';
+import NavBar from '../../components/NavBar';
+import { InformationCircleIcon, BookmarkIcon } from '@heroicons/react/24/outline';
+import { MARKET_SIGNALS, AI_INSIGHTS, ALERTS, NEWS } from '../../data/mockDashboard';
+import MarketSignals from '../../components/MarketSignals';
+import AIInsights from '../../components/AIInsights';
+import Alerts from '../../components/Alerts';
+import NewsFeed from '../../components/NewsFeed';
+import OnChainTrends from '../../components/OnChainTrends';
+import RiskComplianceFlags from '../../components/RiskComplianceFlags';
 
 export default function InsightsPage() {
   return (
@@ -19,7 +19,9 @@ export default function InsightsPage() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           <div>
             <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Insights</h1>
-            <p className="mt-1 text-gray-600 text-sm">Last updated: April 30, 2025 · 01:02 AM EST</p>
+            <p className="mt-1 text-gray-600 text-sm">
+              Last updated: April 30, 2025 · 01:02 AM EST
+            </p>
           </div>
         </div>
 
@@ -43,5 +45,5 @@ export default function InsightsPage() {
         </div>
       </main>
     </>
-  )
+  );
 }

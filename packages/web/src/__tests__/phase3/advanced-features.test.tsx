@@ -25,20 +25,20 @@ describe('Phase 3 Advanced Features', () => {
         returns: {
           total: 12.5,
           annualized: 11.8,
-          monthly: [2.1, -1.2, 3.4, 1.8, -0.5, 2.9, 1.2, -0.8, 2.1, 1.5, 0.9, 1.8]
+          monthly: [2.1, -1.2, 3.4, 1.8, -0.5, 2.9, 1.2, -0.8, 2.1, 1.5, 0.9, 1.8],
         },
         risk: {
           volatility: 8.2,
           sharpeRatio: 1.45,
           maxDrawdown: -5.2,
-          beta: 0.95
+          beta: 0.95,
         },
         performance: {
           vsBenchmark: 2.1,
           vsSector: 1.8,
-          percentile: 75
-        }
-      }
+          percentile: 75,
+        },
+      },
     };
 
     const mockRebalancingResult = {
@@ -49,11 +49,11 @@ describe('Phase 3 Advanced Features', () => {
         targetAllocation: { stocks: 65, bonds: 20, alternatives: 10, cash: 5 },
         trades: [
           { symbol: 'AAPL', action: 'BUY' as const, shares: 50, value: 7500 },
-          { symbol: 'BND', action: 'SELL' as const, shares: 100, value: 8500 }
+          { symbol: 'BND', action: 'SELL' as const, shares: 100, value: 8500 },
         ],
         estimatedCost: 1500,
-        estimatedTaxImpact: 250
-      }
+        estimatedTaxImpact: 250,
+      },
     };
 
     beforeEach(() => {
@@ -63,7 +63,7 @@ describe('Phase 3 Advanced Features', () => {
         data: mockAnalytics,
         loading: false,
         error: null,
-        refresh: jest.fn()
+        refresh: jest.fn(),
       });
 
       mockApiService.analyzeRebalancing.mockResolvedValue(mockRebalancingResult);
@@ -122,7 +122,7 @@ describe('Phase 3 Advanced Features', () => {
 
       await waitFor(() => {
         expect(mockApiService.analyzeRebalancing).toHaveBeenCalledWith('1', {
-          targetAllocation: { stocks: 65, bonds: 25, alternatives: 10, cash: 5 }
+          targetAllocation: { stocks: 65, bonds: 25, alternatives: 10, cash: 5 },
         });
       });
 
@@ -146,7 +146,7 @@ describe('Phase 3 Advanced Features', () => {
         data: null,
         loading: true,
         error: null,
-        refresh: jest.fn()
+        refresh: jest.fn(),
       });
 
       render(<PortfolioAnalytics portfolioId="1" />);
@@ -161,7 +161,7 @@ describe('Phase 3 Advanced Features', () => {
         data: null,
         loading: false,
         error: new Error('Failed to load analytics'),
-        refresh: jest.fn()
+        refresh: jest.fn(),
       });
 
       render(<PortfolioAnalytics portfolioId="1" />);
@@ -181,16 +181,16 @@ describe('Phase 3 Advanced Features', () => {
           'Complete risk assessment questionnaire',
           'Provide identification documents',
           'Set up account funding',
-          'Schedule initial consultation'
+          'Schedule initial consultation',
         ],
         estimatedTimeline: '5-7 business days',
         requiredDocuments: [
           'Government-issued ID',
           'Proof of address',
           'Employment verification',
-          'Source of funds documentation'
-        ]
-      }
+          'Source of funds documentation',
+        ],
+      },
     };
 
     beforeEach(() => {
@@ -212,7 +212,9 @@ describe('Phase 3 Advanced Features', () => {
       // Try to proceed without filling required fields
       fireEvent.click(screen.getByText('Next'));
 
-      expect(screen.getByText('Please complete all required fields before proceeding.')).toBeInTheDocument();
+      expect(
+        screen.getByText('Please complete all required fields before proceeding.'),
+      ).toBeInTheDocument();
     });
 
     it('allows navigation through steps', () => {
@@ -220,7 +222,9 @@ describe('Phase 3 Advanced Features', () => {
 
       // Fill required fields
       fireEvent.change(screen.getByLabelText('Full Name *'), { target: { value: 'John Doe' } });
-      fireEvent.change(screen.getByLabelText('Email Address *'), { target: { value: 'john@example.com' } });
+      fireEvent.change(screen.getByLabelText('Email Address *'), {
+        target: { value: 'john@example.com' },
+      });
       fireEvent.change(screen.getByLabelText('Advisor ID *'), { target: { value: 'A123' } });
 
       // Proceed to next step
@@ -235,7 +239,9 @@ describe('Phase 3 Advanced Features', () => {
 
       // Fill and proceed to second step
       fireEvent.change(screen.getByLabelText('Full Name *'), { target: { value: 'John Doe' } });
-      fireEvent.change(screen.getByLabelText('Email Address *'), { target: { value: 'john@example.com' } });
+      fireEvent.change(screen.getByLabelText('Email Address *'), {
+        target: { value: 'john@example.com' },
+      });
       fireEvent.change(screen.getByLabelText('Advisor ID *'), { target: { value: 'A123' } });
       fireEvent.click(screen.getByText('Next'));
 
@@ -252,7 +258,9 @@ describe('Phase 3 Advanced Features', () => {
       // Navigate through all steps
       // Step 1: Basic Information
       fireEvent.change(screen.getByLabelText('Full Name *'), { target: { value: 'John Doe' } });
-      fireEvent.change(screen.getByLabelText('Email Address *'), { target: { value: 'john@example.com' } });
+      fireEvent.change(screen.getByLabelText('Email Address *'), {
+        target: { value: 'john@example.com' },
+      });
       fireEvent.change(screen.getByLabelText('Advisor ID *'), { target: { value: 'A123' } });
       fireEvent.click(screen.getByText('Next'));
 
@@ -260,7 +268,9 @@ describe('Phase 3 Advanced Features', () => {
       fireEvent.click(screen.getByText('Next'));
 
       // Step 3: Investment Details
-      fireEvent.change(screen.getByLabelText('Initial Investment Amount *'), { target: { value: '50000' } });
+      fireEvent.change(screen.getByLabelText('Initial Investment Amount *'), {
+        target: { value: '50000' },
+      });
       fireEvent.click(screen.getByText('Next'));
 
       // Step 4: Documents (informational)
@@ -275,7 +285,7 @@ describe('Phase 3 Advanced Features', () => {
           email: 'john@example.com',
           advisorId: 'A123',
           riskProfile: 'Moderate',
-          initialInvestment: 50000
+          initialInvestment: 50000,
         });
       });
 
@@ -291,11 +301,15 @@ describe('Phase 3 Advanced Features', () => {
 
       // Navigate to review step
       fireEvent.change(screen.getByLabelText('Full Name *'), { target: { value: 'John Doe' } });
-      fireEvent.change(screen.getByLabelText('Email Address *'), { target: { value: 'john@example.com' } });
+      fireEvent.change(screen.getByLabelText('Email Address *'), {
+        target: { value: 'john@example.com' },
+      });
       fireEvent.change(screen.getByLabelText('Advisor ID *'), { target: { value: 'A123' } });
       fireEvent.click(screen.getByText('Next'));
       fireEvent.click(screen.getByText('Next'));
-      fireEvent.change(screen.getByLabelText('Initial Investment Amount *'), { target: { value: '50000' } });
+      fireEvent.change(screen.getByLabelText('Initial Investment Amount *'), {
+        target: { value: '50000' },
+      });
       fireEvent.click(screen.getByText('Next'));
       fireEvent.click(screen.getByText('Next'));
 
@@ -411,4 +425,4 @@ describe('Phase 3 Advanced Features', () => {
       expect(screen.getByText('React Native')).toBeInTheDocument();
     });
   });
-}); 
+});

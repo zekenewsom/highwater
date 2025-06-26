@@ -13,7 +13,7 @@ export const ClientsList: React.FC<ClientsListProps> = ({ onClientSelect }) => {
   const { data, loading, error, refresh } = useApiCache(
     'clients',
     () => apiService.getClients(),
-    2 * 60 * 1000 // 2 minutes cache
+    2 * 60 * 1000, // 2 minutes cache
   );
 
   const clients = data?.data || [];
@@ -33,7 +33,11 @@ export const ClientsList: React.FC<ClientsListProps> = ({ onClientSelect }) => {
         <div className="flex">
           <div className="flex-shrink-0">
             <svg className="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+              <path
+                fillRule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                clipRule="evenodd"
+              />
             </svg>
           </div>
           <div className="ml-3">
@@ -70,7 +74,12 @@ export const ClientsList: React.FC<ClientsListProps> = ({ onClientSelect }) => {
           title="Refresh data"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+            />
           </svg>
         </button>
       </div>
@@ -83,7 +92,10 @@ export const ClientsList: React.FC<ClientsListProps> = ({ onClientSelect }) => {
                   <div className="flex-shrink-0">
                     <div className="h-10 w-10 rounded-full bg-blue-600 flex items-center justify-center">
                       <span className="text-white font-medium">
-                        {client.name.split(' ').map(n => n[0]).join('')}
+                        {client.name
+                          .split(' ')
+                          .map((n) => n[0])
+                          .join('')}
                       </span>
                     </div>
                   </div>
@@ -93,9 +105,7 @@ export const ClientsList: React.FC<ClientsListProps> = ({ onClientSelect }) => {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="text-sm text-gray-500">
-                    Advisor: {client.advisorId}
-                  </div>
+                  <div className="text-sm text-gray-500">Advisor: {client.advisorId}</div>
                   {onClientSelect && (
                     <button
                       onClick={() => onClientSelect(client)}
@@ -112,4 +122,4 @@ export const ClientsList: React.FC<ClientsListProps> = ({ onClientSelect }) => {
       </ul>
     </div>
   );
-}; 
+};

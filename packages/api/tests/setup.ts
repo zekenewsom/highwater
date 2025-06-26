@@ -1,7 +1,6 @@
 import dotenv from 'dotenv';
 import request from 'supertest';
-import express from 'express';
-import { auth, requiresAuth } from 'express-openid-connect';
+import express, { Request, Response, NextFunction } from 'express';
 
 // Set test environment variables
 process.env.NODE_ENV = 'test';
@@ -16,8 +15,8 @@ dotenv.config({ path: '.env.test' });
 
 // Mock Auth0 OpenID Connect for testing
 jest.mock('express-openid-connect', () => ({
-  auth: jest.fn(() => (req: any, res: any, next: any) => next()),
-  requiresAuth: jest.fn(() => (req: any, res: any, next: any) => next()),
+  auth: jest.fn(() => (req: Request, res: Response, next: NextFunction) => next()),
+  requiresAuth: jest.fn(() => (req: Request, res: Response, next: NextFunction) => next()),
 }));
 
 // Mock JWT verification for testing
@@ -82,29 +81,29 @@ jest.mock('@prisma/client', () => ({
 }));
 
 // Global test setup
-beforeAll(async () => {
+beforeAll(async (): Promise<void> => {
   // Setup test database or mocks here
 });
 
-afterAll(async () => {
+afterAll(async (): Promise<void> => {
   // Cleanup after all tests
 });
 
 // Global test utilities
-export const createTestUser = () => ({
+export const createTestUser = (): { id: string; email: string; name: string } => ({
   id: 'test-user-id',
   email: 'test@example.com',
   name: 'Test User'
 });
 
-export const createTestPortfolio = () => ({
+export const createTestPortfolio = (): { id: string; name: string; clientId: string; assets: number } => ({
   id: 'test-portfolio-id',
   name: 'Test Portfolio',
   clientId: 'test-client-id',
   assets: 5
 });
 
-export const createTestClient = () => ({
+export const createTestClient = (): { id: string; name: string; email: string; advisorId: string } => ({
   id: 'test-client-id',
   name: 'Test Client',
   email: 'client@example.com',
@@ -120,12 +119,13 @@ export const createTestApp = (): express.Application => {
   app.use(express.urlencoded({ extended: true }));
   
   // Add routes
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   app.use('/', require('../../src/routes').default);
   
   return app;
 };
 
-export const createAuthenticatedRequest = (app: express.Application) => {
+export const createAuthenticatedRequest = (app: express.Application): ReturnType<typeof request> => {
   return request(app).set('Authorization', 'Bearer valid-token');
 };
 

@@ -9,7 +9,10 @@ jest.mock('../../data/api', () => ({
     getPortfolios: jest.fn(),
   },
   ApiError: class extends Error {
-    constructor(message: string, public status: number) {
+    constructor(
+      message: string,
+      public status: number,
+    ) {
       super(message);
       this.name = 'ApiError';
     }
@@ -46,9 +49,9 @@ describe('PortfoliosList', () => {
 
   it('should render loading state initially', () => {
     mockApiService.getPortfolios.mockImplementation(() => new Promise(() => {}));
-    
+
     render(<PortfoliosList />);
-    
+
     expect(screen.getByText('Loading portfolios...')).toBeInTheDocument();
   });
 
@@ -172,4 +175,4 @@ describe('PortfoliosList', () => {
       expect(screen.getByText('Client ID: 2')).toBeInTheDocument();
     });
   });
-}); 
+});

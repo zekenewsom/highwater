@@ -244,4 +244,4 @@ export interface MobileDashboard {
     averagePerformance: number;
     pendingActions: number;
   };
-} 
+}

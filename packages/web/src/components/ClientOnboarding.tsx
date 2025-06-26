@@ -24,10 +24,7 @@ interface OnboardingFormData {
   reportingFrequency: string;
 }
 
-export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({ 
-  onComplete, 
-  onCancel 
-}) => {
+export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({ onComplete, onCancel }) => {
   const [currentStep, setCurrentStep] = useState<OnboardingStep>('basic');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -38,19 +35,39 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({
     riskProfile: 'Moderate',
     initialInvestment: 0,
     communicationPreference: 'Email',
-    reportingFrequency: 'Monthly'
+    reportingFrequency: 'Monthly',
   });
 
   const steps: { key: OnboardingStep; title: string; description: string }[] = [
-    { key: 'basic', title: 'Basic Information', description: 'Personal details and contact information' },
-    { key: 'risk', title: 'Risk Assessment', description: 'Investment preferences and risk tolerance' },
-    { key: 'investment', title: 'Investment Details', description: 'Initial investment amount and goals' },
-    { key: 'documents', title: 'Documentation', description: 'Required documents and verification' },
-    { key: 'review', title: 'Review & Submit', description: 'Review all information and submit application' }
+    {
+      key: 'basic',
+      title: 'Basic Information',
+      description: 'Personal details and contact information',
+    },
+    {
+      key: 'risk',
+      title: 'Risk Assessment',
+      description: 'Investment preferences and risk tolerance',
+    },
+    {
+      key: 'investment',
+      title: 'Investment Details',
+      description: 'Initial investment amount and goals',
+    },
+    {
+      key: 'documents',
+      title: 'Documentation',
+      description: 'Required documents and verification',
+    },
+    {
+      key: 'review',
+      title: 'Review & Submit',
+      description: 'Review all information and submit application',
+    },
   ];
 
-  const updateFormData = (field: keyof OnboardingFormData, value: any) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+  const updateFormData = (field: keyof OnboardingFormData, value: string | number) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
   const validateStep = (step: OnboardingStep): boolean => {
@@ -72,7 +89,7 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({
 
   const handleNext = () => {
     if (validateStep(currentStep)) {
-      const currentIndex = steps.findIndex(s => s.key === currentStep);
+      const currentIndex = steps.findIndex((s) => s.key === currentStep);
       if (currentIndex < steps.length - 1) {
         setCurrentStep(steps[currentIndex + 1].key);
         setError(null);
@@ -83,7 +100,7 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({
   };
 
   const handlePrevious = () => {
-    const currentIndex = steps.findIndex(s => s.key === currentStep);
+    const currentIndex = steps.findIndex((s) => s.key === currentStep);
     if (currentIndex > 0) {
       setCurrentStep(steps[currentIndex - 1].key);
       setError(null);
@@ -100,7 +117,7 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({
         email: formData.email,
         advisorId: formData.advisorId,
         riskProfile: formData.riskProfile,
-        initialInvestment: formData.initialInvestment
+        initialInvestment: formData.initialInvestment,
       };
 
       const result = await apiService.onboardClient(onboardingRequest);
@@ -191,7 +208,10 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({
               </select>
             </div>
             <div>
-              <label htmlFor="communicationPreference" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="communicationPreference"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Communication Preference
               </label>
               <select
@@ -206,7 +226,10 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({
               </select>
             </div>
             <div>
-              <label htmlFor="reportingFrequency" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="reportingFrequency"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Reporting Frequency
               </label>
               <select
@@ -227,7 +250,10 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({
         return (
           <div className="space-y-6">
             <div>
-              <label htmlFor="initialInvestment" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="initialInvestment"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Initial Investment Amount *
               </label>
               <input
@@ -272,7 +298,8 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({
             <div className="bg-green-50 border border-green-200 rounded-lg p-4">
               <h4 className="text-sm font-medium text-green-900 mb-2">Next Steps</h4>
               <p className="text-sm text-green-700">
-                After submitting your application, our team will contact you within 24 hours to guide you through the document submission process.
+                After submitting your application, our team will contact you within 24 hours to
+                guide you through the document submission process.
               </p>
             </div>
           </div>
@@ -312,8 +339,8 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({
             </div>
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
               <p className="text-sm text-blue-700">
-                By submitting this application, you agree to our terms of service and privacy policy. 
-                You will receive a confirmation email once your application is processed.
+                By submitting this application, you agree to our terms of service and privacy
+                policy. You will receive a confirmation email once your application is processed.
               </p>
             </div>
           </div>
@@ -329,7 +356,9 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({
       {/* Header */}
       <div className="px-6 py-4 border-b border-gray-200">
         <h2 className="text-xl font-semibold text-gray-900">Client Onboarding</h2>
-        <p className="text-sm text-gray-600 mt-1">Complete the form below to onboard a new client</p>
+        <p className="text-sm text-gray-600 mt-1">
+          Complete the form below to onboard a new client
+        </p>
       </div>
 
       {/* Progress Steps */}
@@ -337,29 +366,33 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({
         <div className="flex items-center justify-between">
           {steps.map((step, index) => (
             <div key={step.key} className="flex items-center">
-              <div className={`flex items-center justify-center w-8 h-8 rounded-full text-sm font-medium ${
-                steps.findIndex(s => s.key === currentStep) >= index
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-200 text-gray-600'
-              }`}>
+              <div
+                className={`flex items-center justify-center w-8 h-8 rounded-full text-sm font-medium ${
+                  steps.findIndex((s) => s.key === currentStep) >= index
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-200 text-gray-600'
+                }`}
+              >
                 {index + 1}
               </div>
               {index < steps.length - 1 && (
-                <div className={`w-16 h-0.5 mx-2 ${
-                  steps.findIndex(s => s.key === currentStep) > index
-                    ? 'bg-blue-600'
-                    : 'bg-gray-200'
-                }`} />
+                <div
+                  className={`w-16 h-0.5 mx-2 ${
+                    steps.findIndex((s) => s.key === currentStep) > index
+                      ? 'bg-blue-600'
+                      : 'bg-gray-200'
+                  }`}
+                />
               )}
             </div>
           ))}
         </div>
         <div className="mt-4">
           <h3 className="text-lg font-medium text-gray-900">
-            {steps.find(s => s.key === currentStep)?.title}
+            {steps.find((s) => s.key === currentStep)?.title}
           </h3>
           <p className="text-sm text-gray-600">
-            {steps.find(s => s.key === currentStep)?.description}
+            {steps.find((s) => s.key === currentStep)?.description}
           </p>
         </div>
       </div>
@@ -414,4 +447,4 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({
       </div>
     </div>
   );
-}; 
+};

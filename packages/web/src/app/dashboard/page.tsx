@@ -27,15 +27,13 @@ export default function DashboardPage() {
             <div>
               <div className="mb-4">
                 <h2 className="text-xl font-semibold text-gray-900">Clients</h2>
-                <p className="text-sm text-gray-600">
-                  View and manage your client relationships
-                </p>
+                <p className="text-sm text-gray-600">View and manage your client relationships</p>
               </div>
-              <ClientsList 
+              <ClientsList
                 onClientSelect={(client) => {
                   setSelectedClient(client);
                   setSelectedPortfolio(null);
-                }} 
+                }}
               />
               {selectedClient && (
                 <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-md">
@@ -51,15 +49,13 @@ export default function DashboardPage() {
             <div>
               <div className="mb-4">
                 <h2 className="text-xl font-semibold text-gray-900">Portfolios</h2>
-                <p className="text-sm text-gray-600">
-                  Monitor and manage investment portfolios
-                </p>
+                <p className="text-sm text-gray-600">Monitor and manage investment portfolios</p>
               </div>
-              <PortfoliosList 
+              <PortfoliosList
                 onPortfolioSelect={(portfolio) => {
                   setSelectedPortfolio(portfolio);
                   setSelectedClient(null);
-                }} 
+                }}
               />
               {selectedPortfolio && (
                 <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-md">
@@ -94,4 +90,4 @@ export default function DashboardPage() {
       </div>
     </div>
   );
-} 
+}

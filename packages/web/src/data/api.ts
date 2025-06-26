@@ -1,10 +1,8 @@
-import { 
-  ClientsResponse, 
-  ClientResponse, 
-  PortfoliosResponse, 
+import {
+  ClientsResponse,
+  ClientResponse,
+  PortfoliosResponse,
   PortfolioResponse,
-  Client,
-  Portfolio,
   ClientAnalyticsResponse,
   ClientOnboardingRequest,
   ClientOnboardingResponse,
@@ -12,7 +10,9 @@ import {
   RebalancingRequest,
   RebalancingResponse,
   ClientFilters,
-  PortfolioFilters
+  PortfolioFilters,
+  MobileDashboard,
+  ApiError as ApiErrorType,
 } from '../types/api';
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
@@ -21,7 +21,7 @@ class ApiError extends Error {
   constructor(
     message: string,
     public status: number,
-    public response?: any
+    public response?: ApiErrorType,
   ) {
     super(message);
     this.name = 'ApiError';
@@ -34,14 +34,16 @@ async function handleResponse<T>(response: Response): Promise<T> {
     throw new ApiError(
       errorData.message || `HTTP error! status: ${response.status}`,
       response.status,
-      errorData
+      errorData,
     );
   }
-  
+
   return response.json();
 }
 
-function buildQueryString(params: Record<string, any>): string {
+function buildQueryString(
+  params: Record<string, string | number | boolean | undefined> | ClientFilters | PortfolioFilters,
+): string {
   const searchParams = new URLSearchParams();
   Object.entries(params).forEach(([key, value]) => {
     if (value !== undefined && value !== null) {
@@ -73,11 +75,14 @@ export const apiService = {
   },
 
   async getClientAnalytics(id: string, period: string = '1y'): Promise<ClientAnalyticsResponse> {
-    const response = await fetch(`${API_BASE_URL}/api/v2/clients/${id}/analytics?period=${period}`, {
-      headers: {
-        'Content-Type': 'application/json',
+    const response = await fetch(
+      `${API_BASE_URL}/api/v2/clients/${id}/analytics?period=${period}`,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
       },
-    });
+    );
     return handleResponse<ClientAnalyticsResponse>(response);
   },
 
@@ -112,16 +117,25 @@ export const apiService = {
     return handleResponse<PortfolioResponse>(response);
   },
 
-  async getPortfolioAnalytics(id: string, period: string = '1y'): Promise<PortfolioAnalyticsResponse> {
-    const response = await fetch(`${API_BASE_URL}/api/v2/portfolios/${id}/analytics?period=${period}`, {
-      headers: {
-        'Content-Type': 'application/json',
+  async getPortfolioAnalytics(
+    id: string,
+    period: string = '1y',
+  ): Promise<PortfolioAnalyticsResponse> {
+    const response = await fetch(
+      `${API_BASE_URL}/api/v2/portfolios/${id}/analytics?period=${period}`,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
       },
-    });
+    );
     return handleResponse<PortfolioAnalyticsResponse>(response);
   },
 
-  async analyzeRebalancing(id: string, rebalancingData: RebalancingRequest): Promise<RebalancingResponse> {
+  async analyzeRebalancing(
+    id: string,
+    rebalancingData: RebalancingRequest,
+  ): Promise<RebalancingResponse> {
     const response = await fetch(`${API_BASE_URL}/api/v2/portfolios/${id}/rebalance`, {
       method: 'POST',
       headers: {
@@ -139,13 +153,13 @@ export const apiService = {
   },
 
   // Mobile app endpoints (for future mobile development)
-  async getMobileDashboard(): Promise<any> {
+  async getMobileDashboard(): Promise<MobileDashboard> {
     const response = await fetch(`${API_BASE_URL}/api/v2/mobile/dashboard`, {
       headers: {
         'Content-Type': 'application/json',
       },
     });
-    return handleResponse<any>(response);
+    return handleResponse<MobileDashboard>(response);
   },
 
   // Legacy endpoint check (for deprecation monitoring)
@@ -155,24 +169,26 @@ export const apiService = {
   }> {
     const [clientsResponse, portfoliosResponse] = await Promise.allSettled([
       fetch(`${API_BASE_URL}/api/v1/clients`),
-      fetch(`${API_BASE_URL}/api/v1/portfolios`)
+      fetch(`${API_BASE_URL}/api/v1/portfolios`),
     ]);
 
     return {
       clients: {
         deprecated: clientsResponse.status === 'fulfilled',
-        warning: clientsResponse.status === 'fulfilled' 
-          ? clientsResponse.value.headers.get('X-API-Deprecation-Warning') || undefined
-          : undefined
+        warning:
+          clientsResponse.status === 'fulfilled'
+            ? clientsResponse.value.headers.get('X-API-Deprecation-Warning') || undefined
+            : undefined,
       },
       portfolios: {
         deprecated: portfoliosResponse.status === 'fulfilled',
-        warning: portfoliosResponse.status === 'fulfilled'
-          ? portfoliosResponse.value.headers.get('X-API-Deprecation-Warning') || undefined
-          : undefined
-      }
+        warning:
+          portfoliosResponse.status === 'fulfilled'
+            ? portfoliosResponse.value.headers.get('X-API-Deprecation-Warning') || undefined
+            : undefined,
+      },
     };
-  }
+  },
 };
 
-export { ApiError }; 
+export { ApiError };

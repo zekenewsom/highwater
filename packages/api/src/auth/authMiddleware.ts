@@ -1,13 +1,19 @@
-import { Request, Response, NextFunction, RequestHandler } from 'express';
+import { Request, RequestHandler } from 'express';
 import jwt from 'jsonwebtoken';
 
 const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET || 'dev-access-secret';
+
+interface JWTPayload {
+  sub: string;
+  email?: string;
+  [key: string]: unknown;
+}
 
 export interface AuthRequest extends Request {
   user?: {
     sub: string;
     email?: string;
-    [key: string]: any;
+    [key: string]: unknown;
   };
 }
 
@@ -15,17 +21,20 @@ export interface AuthRequest extends Request {
 export const authenticateJWT: RequestHandler = (req, res, next) => {
   const authHeader = req.headers['authorization'];
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
-    return res.status(401).json({ error: 'Missing or invalid Authorization header' });
+    res.status(401).json({ error: 'Missing or invalid Authorization header' });
+    return;
   }
   const token = authHeader.split(' ')[1];
-  jwt.verify(token, ACCESS_TOKEN_SECRET, (err, decoded: any) => {
+  jwt.verify(token, ACCESS_TOKEN_SECRET, (err, decoded) => {
     if (err) {
-      return res.status(401).json({ error: 'Invalid or expired token' });
+      res.status(401).json({ error: 'Invalid or expired token' });
+      return;
     }
     // Only attach non-sensitive claims
+    const payload = decoded as JWTPayload;
     (req as AuthRequest).user = {
-      sub: decoded.sub,
-      email: decoded.email,
+      sub: payload.sub,
+      email: payload.email,
       // Add other non-sensitive claims if needed
     };
     next();

@@ -1,6 +1,15 @@
-"use client";
+'use client';
 import React from 'react';
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend } from 'recharts';
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+  CartesianGrid,
+  Legend,
+} from 'recharts';
 
 // Fix date axis so all dates show up properly
 const data = [
@@ -17,8 +26,13 @@ export default function PerformanceComparisonChart() {
       <div className="flex items-center justify-between mb-2">
         <h2 className="text-xl font-medium text-gray-800">Performance Comparison</h2>
         <div className="flex gap-1">
-          {["YTD","1Y","Inception"].map((r) => (
-            <button key={r} className="px-2 py-1 text-xs rounded bg-gray-100 hover:bg-gray-200 font-medium text-gray-600">{r}</button>
+          {['YTD', '1Y', 'Inception'].map((r) => (
+            <button
+              key={r}
+              className="px-2 py-1 text-xs rounded bg-gray-100 hover:bg-gray-200 font-medium text-gray-600"
+            >
+              {r}
+            </button>
           ))}
         </div>
       </div>
@@ -27,10 +41,20 @@ export default function PerformanceComparisonChart() {
           <LineChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="date" tick={{ fontSize: 12 }} />
-            <YAxis domain={['auto', 'auto']} tickFormatter={v => `${v}%`} tick={{ fontSize: 12 }} />
-            <Tooltip formatter={v => `${v}%`} />
+            <YAxis
+              domain={['auto', 'auto']}
+              tickFormatter={(v) => `${v}%`}
+              tick={{ fontSize: 12 }}
+            />
+            <Tooltip formatter={(v) => `${v}%`} />
             <Legend />
-            <Line type="monotone" dataKey="Portfolio" stroke="#6366f1" strokeWidth={2} dot={false} />
+            <Line
+              type="monotone"
+              dataKey="Portfolio"
+              stroke="#6366f1"
+              strokeWidth={2}
+              dot={false}
+            />
             <Line type="monotone" dataKey="BTC" stroke="#f59e42" strokeWidth={2} dot={false} />
             <Line type="monotone" dataKey="ETH" stroke="#10b981" strokeWidth={2} dot={false} />
           </LineChart>

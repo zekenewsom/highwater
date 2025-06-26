@@ -8,23 +8,20 @@ import TransactionSummaryTable from '../components/TransactionSummaryTable';
 import GainLossAnalysis from '../components/GainLossAnalysis';
 import { AllocationBreakdown } from '../components/AllocationBreakdown';
 
-async function getHealth() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/health`,
-    { cache: 'no-store' }
-  );
+async function getHealth(): Promise<{ status: string; timestamp: string }> {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/health`, { cache: 'no-store' });
   if (!res.ok) {
     throw new Error(`Health check failed: ${res.statusText}`);
   }
   return res.json() as Promise<{ status: string; timestamp: string }>;
 }
 
-export default async function Home() {
-  let health: { status: string; timestamp: string };
+export default async function Home(): Promise<React.JSX.Element> {
   try {
-    health = await getHealth();
-  } catch (err: any) {
-    health = { status: 'error', timestamp: err.message };
+    await getHealth();
+  } catch (err: unknown) {
+    // Health check failed, but we'll continue rendering the page
+    // console.error('Health check failed:', err);
   }
 
   return (
@@ -35,11 +32,17 @@ export default async function Home() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           <div>
             <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Home Dashboard</h1>
-            <p className="mt-1 text-gray-600 text-sm">Last updated: April 30, 2025 · 01:02 AM EST</p>
+            <p className="mt-1 text-gray-600 text-sm">
+              Last updated: April 30, 2025 · 01:02 AM EST
+            </p>
           </div>
           <div className="flex gap-2 mt-4 md:mt-0">
-            <button className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">Export</button>
-            <button className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">Refresh</button>
+            <button className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
+              Export
+            </button>
+            <button className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
+              Refresh
+            </button>
           </div>
         </div>
 
@@ -67,8 +70,6 @@ export default async function Home() {
 
         {/* Allocation Breakdown */}
         <AllocationBreakdown />
-
-
       </main>
     </>
   );

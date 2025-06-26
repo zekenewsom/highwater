@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { useState } from 'react';
 import { ALERTS } from '../data/mockDashboard';
 
@@ -16,7 +16,8 @@ export default function Alerts() {
         {(showAll ? ALERTS : ALERTS.slice(0, VISIBLE_ALERTS)).map((a, i) => (
           <li key={i} className="pl-4 border-l-4 border-yellow-400 transition rounded-md shadow-sm">
             <h3 className="text-base font-semibold text-gray-800 flex items-center gap-2">
-              <span className="inline-block w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>{a.title}
+              <span className="inline-block w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>
+              {a.title}
             </h3>
             <p className="mt-1 text-sm text-gray-700">{a.desc}</p>
             <div className="mt-2 flex justify-between text-xs text-gray-500">
@@ -44,12 +45,18 @@ export default function Alerts() {
             >
               &times;
             </button>
-            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">All Portfolio Alerts</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+              All Portfolio Alerts
+            </h2>
             <ul className="space-y-4 overflow-y-auto pr-2 flex-1">
               {ALERTS.map((a, i) => (
-                <li key={i} className="pl-4 border-l-4 border-yellow-400 transition rounded-md shadow-sm">
+                <li
+                  key={i}
+                  className="pl-4 border-l-4 border-yellow-400 transition rounded-md shadow-sm"
+                >
                   <h3 className="text-base font-semibold text-gray-800 flex items-center gap-2">
-                    <span className="inline-block w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>{a.title}
+                    <span className="inline-block w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>
+                    {a.title}
                   </h3>
                   <p className="mt-1 text-sm text-gray-700">{a.desc}</p>
                   <div className="mt-2 flex justify-between text-xs text-gray-500">

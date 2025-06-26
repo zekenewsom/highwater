@@ -1,7 +1,7 @@
-import React from 'react'
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import Dashboard from '../../app/page'
+import React from 'react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import Dashboard from '../../app/page';
 import { useRouter } from 'next/navigation';
 
 // Mock the router
@@ -69,4 +69,4 @@ describe('Dashboard Integration Tests', () => {
       expect(true).toBe(true);
     });
   });
-}); 
+});

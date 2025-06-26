@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from 'react';
 import NavBar from '../../components/NavBar';
 import ResourceCard from './ResourceCard';
@@ -54,7 +54,7 @@ export default function TaxesPage() {
           >
             <div
               className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-3xl relative animate-fade-in"
-              onClick={e => e.stopPropagation()}
+              onClick={(e) => e.stopPropagation()}
             >
               <button
                 className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-2xl font-bold"
@@ -65,13 +65,15 @@ export default function TaxesPage() {
               </button>
               {showModule === 'documents' && (
                 <>
-                  <h2 className="text-xl font-medium text-gray-800 mb-4 tracking-tight">Documents</h2>
+                  <h2 className="text-xl font-medium text-gray-800 mb-4 tracking-tight">
+                    Documents
+                  </h2>
                   <div className="mb-4">
                     <label className="block text-gray-700 font-medium mb-1">Year</label>
                     <select
                       className="w-full border rounded px-3 py-2 mb-2"
                       value={documentsYear}
-                      onChange={e => setDocumentsYear(e.target.value)}
+                      onChange={(e) => setDocumentsYear(e.target.value)}
                     >
                       <option value="2025">2025</option>
                       <option value="2024">2024</option>
@@ -79,19 +81,27 @@ export default function TaxesPage() {
                     </select>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <button className="px-4 py-2 bg-indigo-600 text-white rounded shadow hover:bg-indigo-700">Download Form 8949</button>
-                    <button className="px-4 py-2 bg-indigo-600 text-white rounded shadow hover:bg-indigo-700">Download Activity</button>
+                    <button className="px-4 py-2 bg-indigo-600 text-white rounded shadow hover:bg-indigo-700">
+                      Download Form 8949
+                    </button>
+                    <button className="px-4 py-2 bg-indigo-600 text-white rounded shadow hover:bg-indigo-700">
+                      Download Activity
+                    </button>
                   </div>
                 </>
               )}
               {showModule === 'settings' && (
                 <>
-                  <h2 className="text-xl font-medium text-gray-800 mb-4 tracking-tight">Settings</h2>
+                  <h2 className="text-xl font-medium text-gray-800 mb-4 tracking-tight">
+                    Settings
+                  </h2>
                   <div className="text-gray-600 mb-6">Configure your tax preferences:</div>
                   <div className="space-y-4">
                     {/* Cost basis method */}
                     <div>
-                      <label className="block text-gray-700 font-medium mb-1">Cost basis method</label>
+                      <label className="block text-gray-700 font-medium mb-1">
+                        Cost basis method
+                      </label>
                       <select className="w-full border rounded px-3 py-2" defaultValue="FIFO">
                         <option value="FIFO">FIFO</option>
                         <option value="LIFO">LIFO</option>
@@ -121,7 +131,9 @@ export default function TaxesPage() {
               )}
               {showModule === 'resources' && (
                 <>
-                  <h2 className="text-xl font-medium text-gray-800 mb-4 tracking-tight">Resources</h2>
+                  <h2 className="text-xl font-medium text-gray-800 mb-4 tracking-tight">
+                    Resources
+                  </h2>
                   <div className="grid gap-4 max-h-[60vh] overflow-y-auto pr-2">
                     <ResourceCard
                       title="Paul Hastings LLP: Crypto Tax Update – April 2025"

@@ -58,10 +58,10 @@ export default function ClientsPage() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Clients List */}
               <div className="lg:col-span-2">
-                <ClientsList 
+                <ClientsList
                   onClientSelect={(client) => {
                     setSelectedClient(client);
-                  }} 
+                  }}
                 />
               </div>
 
@@ -72,30 +72,43 @@ export default function ClientsPage() {
                     <div className="flex items-center mb-4">
                       <div className="h-12 w-12 rounded-full bg-blue-600 flex items-center justify-center mr-4">
                         <span className="text-white font-medium text-lg">
-                          {selectedClient.name.split(' ').map(n => n[0]).join('')}
+                          {selectedClient.name
+                            .split(' ')
+                            .map((n) => n[0])
+                            .join('')}
                         </span>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-900">{selectedClient.name}</h3>
+                        <h3 className="text-lg font-semibold text-gray-900">
+                          {selectedClient.name}
+                        </h3>
                         <p className="text-sm text-gray-500">{selectedClient.email}</p>
                       </div>
                     </div>
 
                     <div className="space-y-4">
                       <div>
-                        <h4 className="text-sm font-medium text-gray-900 mb-2">Client Information</h4>
+                        <h4 className="text-sm font-medium text-gray-900 mb-2">
+                          Client Information
+                        </h4>
                         <dl className="space-y-2">
                           <div>
                             <dt className="text-sm text-gray-500">Client ID</dt>
-                            <dd className="text-sm font-medium text-gray-900">{selectedClient.id}</dd>
+                            <dd className="text-sm font-medium text-gray-900">
+                              {selectedClient.id}
+                            </dd>
                           </div>
                           <div>
                             <dt className="text-sm text-gray-500">Advisor ID</dt>
-                            <dd className="text-sm font-medium text-gray-900">{selectedClient.advisorId}</dd>
+                            <dd className="text-sm font-medium text-gray-900">
+                              {selectedClient.advisorId}
+                            </dd>
                           </div>
                           <div>
                             <dt className="text-sm text-gray-500">Email</dt>
-                            <dd className="text-sm font-medium text-gray-900">{selectedClient.email}</dd>
+                            <dd className="text-sm font-medium text-gray-900">
+                              {selectedClient.email}
+                            </dd>
                           </div>
                         </dl>
                       </div>
@@ -124,7 +137,12 @@ export default function ClientsPage() {
                     <div className="text-center">
                       <div className="mx-auto h-12 w-12 text-gray-400">
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                          />
                         </svg>
                       </div>
                       <h3 className="mt-2 text-sm font-medium text-gray-900">No client selected</h3>
@@ -160,4 +178,4 @@ export default function ClientsPage() {
       </div>
     </>
   );
-} 
+}

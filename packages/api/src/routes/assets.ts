@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { getAssetsController, getCachedAssetsController } from "../controllers/assetsController";
+import { Router } from 'express';
+import { getAssetsController, getCachedAssetsController } from '../controllers/assetsController';
 
 const router: Router = Router();
 
@@ -10,9 +10,9 @@ const router: Router = Router();
 // });
 
 // GET /api/v1/assets/live - fetches live data from CoinMarketCap
-router.get("/live", getAssetsController);
+router.get('/live', getAssetsController);
 
 // GET /api/v1/assets/cache - returns cached assets
-router.get("/cache", getCachedAssetsController);
+router.get('/cache', getCachedAssetsController);
 
 export default router;

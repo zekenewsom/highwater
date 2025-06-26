@@ -1,6 +1,16 @@
 import request from 'supertest';
 import { createTestApp } from '../setup';
 
+interface Portfolio {
+  id: string;
+  name: string;
+  clientId: string;
+  assets: number;
+  value: number;
+  performance: number;
+  risk: string;
+}
+
 const app = createTestApp();
 
 describe('Portfolios API Integration Tests', () => {
@@ -111,7 +121,7 @@ describe('Portfolios API Integration Tests', () => {
         .get('/api/v2/portfolios?clientId=1')
         .expect(200);
 
-      expect(response.body.data.every((portfolio: any) => portfolio.clientId === '1')).toBe(true);
+      expect(response.body.data.every((portfolio: Portfolio) => portfolio.clientId === '1')).toBe(true);
     });
 
     it('should support filtering by risk level', async () => {
@@ -119,7 +129,7 @@ describe('Portfolios API Integration Tests', () => {
         .get('/api/v2/portfolios?risk=Moderate')
         .expect(200);
 
-      expect(response.body.data.every((portfolio: any) => portfolio.risk === 'Moderate')).toBe(true);
+      expect(response.body.data.every((portfolio: Portfolio) => portfolio.risk === 'Moderate')).toBe(true);
     });
   });
 }); 

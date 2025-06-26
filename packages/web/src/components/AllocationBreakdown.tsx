@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 
@@ -14,31 +14,35 @@ const MOCK_ALLOC = [
 
 export default MOCK_ALLOC;
 
-type LabelProps = {
-  cx: number;
-  cy: number;
-  midAngle: number;
-  innerRadius: number;
-  outerRadius: number;
-  percent: number;
-  index: number;
-};
-
-function renderCustomizedLabel() {
+function renderCustomizedLabel(): null {
   return null;
 }
 
-function CustomTooltip({ active, payload }: { active?: boolean; payload?: any[] }) {
+function CustomTooltip({
+  active,
+  payload,
+}: {
+  active?: boolean;
+  payload?: Array<{ value: number; payload: { label: string; index: number } }>;
+}) {
   if (active && payload && payload.length > 0) {
     const { value, payload: data } = payload[0];
     return (
       <div className="rounded-lg shadow-lg bg-white px-4 py-3 border border-gray-200">
         <div className="flex items-center gap-2 mb-1">
-          <span className="inline-block w-3 h-3 rounded-full" style={{ backgroundColor: COLORS[data.index % COLORS.length] }} />
+          <span
+            className="inline-block w-3 h-3 rounded-full"
+            style={{ backgroundColor: COLORS[data.index % COLORS.length] }}
+          />
           <span className="font-semibold text-gray-800">{data.label}</span>
         </div>
-        <div className="text-gray-900 font-medium tabular-nums text-base">${value.toLocaleString()}</div>
-        <div className="text-xs text-gray-500">{((value / MOCK_ALLOC.reduce((acc, cur) => acc + cur.value, 0)) * 100).toFixed(2)}% of portfolio</div>
+        <div className="text-gray-900 font-medium tabular-nums text-base">
+          ${value.toLocaleString()}
+        </div>
+        <div className="text-xs text-gray-500">
+          {((value / MOCK_ALLOC.reduce((acc, cur) => acc + cur.value, 0)) * 100).toFixed(2)}% of
+          portfolio
+        </div>
       </div>
     );
   }
@@ -49,7 +53,9 @@ export function AllocationBreakdown() {
   const total = MOCK_ALLOC.reduce((acc, cur) => acc + cur.value, 0);
   return (
     <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 flex flex-col gap-4 h-full justify-between">
-      <h2 className="text-xl font-medium text-gray-800 tracking-tight text-left mb-2">Allocation Breakdown</h2>
+      <h2 className="text-xl font-medium text-gray-800 tracking-tight text-left mb-2">
+        Allocation Breakdown
+      </h2>
       <div className="flex flex-col md:flex-row gap-6 items-center md:items-start w-full flex-1">
         <div className="flex flex-col items-center justify-center w-full md:w-32 h-32">
           <ResponsiveContainer width="100%" height={120}>
@@ -79,16 +85,25 @@ export function AllocationBreakdown() {
             {MOCK_ALLOC.map((a, idx) => (
               <li key={a.label} className="flex items-center justify-between gap-2">
                 <span className="flex items-center gap-2 text-gray-700 font-medium min-w-[110px]">
-                  <span className="inline-block w-3 h-3 rounded-full" style={{ backgroundColor: COLORS[idx % COLORS.length] }} />
+                  <span
+                    className="inline-block w-3 h-3 rounded-full"
+                    style={{ backgroundColor: COLORS[idx % COLORS.length] }}
+                  />
                   {a.label}
                 </span>
-                <span className="text-gray-900 tabular-nums text-right min-w-[92px]">${a.value.toLocaleString()}</span>
-                <span className="text-gray-500 tabular-nums text-right min-w-[52px]">{((a.value / total) * 100).toFixed(1)}%</span>
+                <span className="text-gray-900 tabular-nums text-right min-w-[92px]">
+                  ${a.value.toLocaleString()}
+                </span>
+                <span className="text-gray-500 tabular-nums text-right min-w-[52px]">
+                  {((a.value / total) * 100).toFixed(1)}%
+                </span>
               </li>
             ))}
             <li className="flex items-center justify-between gap-2 border-t border-gray-200 pt-2 mt-2 font-bold">
               <span className="flex items-center gap-2 text-gray-900 min-w-[110px]">Total</span>
-              <span className="text-gray-900 tabular-nums text-right min-w-[92px]">${total.toLocaleString()}</span>
+              <span className="text-gray-900 tabular-nums text-right min-w-[92px]">
+                ${total.toLocaleString()}
+              </span>
               <span className="text-gray-900 tabular-nums text-right min-w-[52px]">100%</span>
             </li>
           </ul>

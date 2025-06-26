@@ -9,7 +9,10 @@ jest.mock('../../data/api', () => ({
     getClients: jest.fn(),
   },
   ApiError: class extends Error {
-    constructor(message: string, public status: number) {
+    constructor(
+      message: string,
+      public status: number,
+    ) {
       super(message);
       this.name = 'ApiError';
     }
@@ -50,9 +53,9 @@ describe('ClientsList', () => {
 
   it('should render loading state initially', () => {
     mockApiService.getClients.mockImplementation(() => new Promise(() => {}));
-    
+
     render(<ClientsList />);
-    
+
     expect(screen.getByText('Loading clients...')).toBeInTheDocument();
   });
 
@@ -151,4 +154,4 @@ describe('ClientsList', () => {
       expect(screen.getByText('1 client found')).toBeInTheDocument();
     });
   });
-}); 
+});

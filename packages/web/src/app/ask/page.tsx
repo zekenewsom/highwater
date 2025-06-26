@@ -1,39 +1,46 @@
-"use client";
-import React, { useState, useRef, useEffect } from "react";
-import NavBar from "../../components/NavBar";
+'use client';
+import React, { useState, useRef, useEffect } from 'react';
+import NavBar from '../../components/NavBar';
 
 const FAQS = [
   {
-    question: "Should I buy crypto? If so, how much?",
-    answer: "This depends on your financial goals, risk tolerance, and investment timeline. Consider consulting a financial advisor for personalized advice.",
+    question: 'Should I buy crypto? If so, how much?',
+    answer:
+      'This depends on your financial goals, risk tolerance, and investment timeline. Consider consulting a financial advisor for personalized advice.',
   },
   {
-    question: "How do I report my crypto taxes?",
-    answer: "You should report crypto transactions on your annual tax return. Regulations vary by country; consult a tax professional for details.",
+    question: 'How do I report my crypto taxes?',
+    answer:
+      'You should report crypto transactions on your annual tax return. Regulations vary by country; consult a tax professional for details.',
   },
   {
-    question: "What happens to my Bitcoin if I die?",
-    answer: "It's important to have an estate plan that includes your crypto assets. Consider using a will or trust and secure sharing of access details.",
+    question: 'What happens to my Bitcoin if I die?',
+    answer:
+      "It's important to have an estate plan that includes your crypto assets. Consider using a will or trust and secure sharing of access details.",
   },
   {
-    question: "Is my exchange safe? / How do I store this?",
-    answer: "Use reputable exchanges and consider moving assets to a secure wallet for long-term storage.",
+    question: 'Is my exchange safe? / How do I store this?',
+    answer:
+      'Use reputable exchanges and consider moving assets to a secure wallet for long-term storage.',
   },
   {
-    question: "Can I hold crypto in my IRA or trust?",
-    answer: "Yes, some providers allow crypto in IRAs or trusts. Research providers and understand the rules before proceeding.",
+    question: 'Can I hold crypto in my IRA or trust?',
+    answer:
+      'Yes, some providers allow crypto in IRAs or trusts. Research providers and understand the rules before proceeding.',
   },
   {
-    question: "Should I invest in Bitcoin ETFs?",
-    answer: "Bitcoin ETFs can offer regulated exposure to BTC, but consider fees and your investment objectives.",
+    question: 'Should I invest in Bitcoin ETFs?',
+    answer:
+      'Bitcoin ETFs can offer regulated exposure to BTC, but consider fees and your investment objectives.',
   },
   {
-    question: "How do I avoid crypto scams?",
-    answer: "Be wary of unsolicited offers, double-check URLs, and never share your private keys.",
+    question: 'How do I avoid crypto scams?',
+    answer: 'Be wary of unsolicited offers, double-check URLs, and never share your private keys.',
   },
   {
-    question: "What are the tax implications of staking or DeFi?",
-    answer: "Rewards from staking or DeFi are often taxable income. Consult a tax professional for your jurisdiction.",
+    question: 'What are the tax implications of staking or DeFi?',
+    answer:
+      'Rewards from staking or DeFi are often taxable income. Consult a tax professional for your jurisdiction.',
   },
 ];
 
@@ -44,52 +51,55 @@ const MORE_FAQS: { question: string; answer: string }[] = [];
 // Simple function to find the best matching FAQ answer
 function findFAQAnswer(userQuestion: string): string {
   const question = userQuestion.toLowerCase();
-  
+
   // Check for exact matches first
   for (const faq of FAQS) {
-    if (faq.question.toLowerCase().includes(question) || question.includes(faq.question.toLowerCase())) {
+    if (
+      faq.question.toLowerCase().includes(question) ||
+      question.includes(faq.question.toLowerCase())
+    ) {
       return faq.answer;
     }
   }
-  
+
   // Check for keyword matches
   const keywords = {
-    'buy': 'Should I buy crypto? If so, how much?',
-    'crypto': 'Should I buy crypto? If so, how much?',
-    'tax': 'How do I report my crypto taxes?',
-    'taxes': 'How do I report my crypto taxes?',
-    'die': 'What happens to my Bitcoin if I die?',
-    'death': 'What happens to my Bitcoin if I die?',
-    'safe': 'Is my exchange safe? / How do I store this?',
-    'store': 'Is my exchange safe? / How do I store this?',
-    'exchange': 'Is my exchange safe? / How do I store this?',
-    'ira': 'Can I hold crypto in my IRA or trust?',
-    'trust': 'Can I hold crypto in my IRA or trust?',
-    'etf': 'Should I invest in Bitcoin ETFs?',
-    'bitcoin': 'Should I invest in Bitcoin ETFs?',
-    'scam': 'How do I avoid crypto scams?',
-    'staking': 'What are the tax implications of staking or DeFi?',
-    'defi': 'What are the tax implications of staking or DeFi?'
+    buy: 'Should I buy crypto? If so, how much?',
+    crypto: 'Should I buy crypto? If so, how much?',
+    tax: 'How do I report my crypto taxes?',
+    taxes: 'How do I report my crypto taxes?',
+    die: 'What happens to my Bitcoin if I die?',
+    death: 'What happens to my Bitcoin if I die?',
+    safe: 'Is my exchange safe? / How do I store this?',
+    store: 'Is my exchange safe? / How do I store this?',
+    exchange: 'Is my exchange safe? / How do I store this?',
+    ira: 'Can I hold crypto in my IRA or trust?',
+    trust: 'Can I hold crypto in my IRA or trust?',
+    etf: 'Should I invest in Bitcoin ETFs?',
+    bitcoin: 'Should I invest in Bitcoin ETFs?',
+    scam: 'How do I avoid crypto scams?',
+    staking: 'What are the tax implications of staking or DeFi?',
+    defi: 'What are the tax implications of staking or DeFi?',
   };
-  
+
   for (const [keyword, faqQuestion] of Object.entries(keywords)) {
     if (question.includes(keyword)) {
-      const faq = FAQS.find(f => f.question === faqQuestion);
+      const faq = FAQS.find((f) => f.question === faqQuestion);
       if (faq) return faq.answer;
     }
   }
-  
+
   return "I don't have a specific answer for that question yet. Please check our FAQ section for common questions, or contact our support team for personalized assistance.";
 }
 
 function ChatBox({ faqs }: { faqs: { question: string; answer: string }[] }) {
-  const [input, setInput] = React.useState("");
+  const [input, setInput] = React.useState('');
   const [messages, setMessages] = React.useState<string[]>([]);
 
   const handleSend = () => {
     if (input.trim()) {
       setMessages([...messages, input]);
-      setInput("");
+      setInput('');
     }
   };
 
@@ -98,10 +108,14 @@ function ChatBox({ faqs }: { faqs: { question: string; answer: string }[] }) {
       <div className="w-full">
         <div className="h-32 bg-gray-100 rounded mb-4 overflow-y-auto p-2 text-gray-700 text-base flex flex-col justify-end">
           {messages.length === 0 ? (
-            <span className="text-gray-400 text-lg flex items-center justify-center h-full">Chatbox coming soon...</span>
+            <span className="text-gray-400 text-lg flex items-center justify-center h-full">
+              Chatbox coming soon...
+            </span>
           ) : (
             messages.map((msg, i) => (
-              <div key={i} className="mb-1 text-left"><span className="font-semibold text-indigo-700">You:</span> {msg}</div>
+              <div key={i} className="mb-1 text-left">
+                <span className="font-semibold text-indigo-700">You:</span> {msg}
+              </div>
             ))
           )}
         </div>
@@ -110,8 +124,10 @@ function ChatBox({ faqs }: { faqs: { question: string; answer: string }[] }) {
             className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-300"
             placeholder="Type your question..."
             value={input}
-            onChange={e => setInput(e.target.value)}
-            onKeyDown={e => { if (e.key === 'Enter') handleSend(); }}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') handleSend();
+            }}
           />
           <button
             className="px-4 py-2 bg-[#4636f9] text-white rounded hover:bg-[#3726e6] disabled:opacity-50"
@@ -126,14 +142,22 @@ function ChatBox({ faqs }: { faqs: { question: string; answer: string }[] }) {
   );
 }
 
-function FAQQuickBox({ faq, onClick }: { faq: { question: string; answer: string }, onClick: () => void }) {
+function FAQQuickBox({
+  faq,
+  onClick,
+}: {
+  faq: { question: string; answer: string };
+  onClick: () => void;
+}) {
   return (
     <button
       className="bg-indigo-50 border border-indigo-200 rounded-lg p-4 shadow hover:shadow-md transition w-full min-h-[56px] flex items-center justify-center text-left"
       onClick={onClick}
       type="button"
     >
-      <div className="text-xs md:text-sm font-normal text-gray-900 italic text-center w-full">"{faq.question}"</div>
+      <div className="text-xs md:text-sm font-normal text-gray-900 italic text-center w-full">
+        "{faq.question}"
+      </div>
     </button>
   );
 }
@@ -162,7 +186,11 @@ function FAQSection({ handleFAQClick }: { handleFAQClick: (question: string) => 
         <>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-4xl mt-4">
             {MORE_FAQS.map((faq, idx) => (
-              <FAQQuickBox key={"more-" + idx} faq={faq} onClick={() => handleFAQClick(faq.question)} />
+              <FAQQuickBox
+                key={'more-' + idx}
+                faq={faq}
+                onClick={() => handleFAQClick(faq.question)}
+              />
             ))}
           </div>
           <div className="flex justify-center mt-4 w-full max-w-4xl">
@@ -182,8 +210,8 @@ function FAQSection({ handleFAQClick }: { handleFAQClick: (question: string) => 
 
 export default function AskPage() {
   const chatBoxRef = React.useRef<{ setInput: (q: string) => void } | null>(null);
-  const [input, setInput] = React.useState("");
-  const [messages, setMessages] = React.useState<{ sender: 'user' | 'llm', text: string }[]>([]);
+  const [input, setInput] = React.useState('');
+  const [messages, setMessages] = React.useState<{ sender: 'user' | 'llm'; text: string }[]>([]);
   const [loading, setLoading] = React.useState(false);
 
   // Handler for FAQ click to populate chat input
@@ -194,15 +222,15 @@ export default function AskPage() {
   // Handle sending a message - now uses FAQ matching instead of AI
   const handleSend = async () => {
     if (!input.trim()) return;
-    setMessages(msgs => [...msgs, { sender: 'user', text: input }]);
+    setMessages((msgs) => [...msgs, { sender: 'user', text: input }]);
     setLoading(true);
     const userMessage = input;
-    setInput("");
-    
+    setInput('');
+
     // Simulate processing time
     setTimeout(() => {
       const response = findFAQAnswer(userMessage);
-      setMessages(msgs => [...msgs, { sender: 'llm', text: response }]);
+      setMessages((msgs) => [...msgs, { sender: 'llm', text: response }]);
       setLoading(false);
     }, 1000);
   };
@@ -219,8 +247,8 @@ export default function AskPage() {
                   className="flex-1 px-5 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-300 text-black placeholder:text-gray-500 bg-white shadow text-lg"
                   placeholder="Ask any question..."
                   value={input}
-                  onChange={e => setInput(e.target.value)}
-                  onKeyDown={async e => {
+                  onChange={(e) => setInput(e.target.value)}
+                  onKeyDown={async (e) => {
                     if (e.key === 'Enter' && input.trim()) {
                       await handleSend();
                     }
@@ -245,22 +273,27 @@ export default function AskPage() {
           <div className="flex flex-col justify-start items-center w-full flex-1">
             <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 p-10 flex flex-col items-center w-full max-w-4xl mx-auto h-[60vh] md:h-[70vh]">
               <div className="w-full flex flex-col gap-6 h-full">
-                <div 
+                <div
                   className="relative flex-1 bg-gradient-to-br from-indigo-50 via-white to-gray-100 rounded-2xl mb-2 overflow-y-auto p-6 text-base flex flex-col gap-2 custom-scrollbar"
                   id="chat-scroll-area"
-                  style={{scrollBehavior: 'smooth'}}>
+                  style={{ scrollBehavior: 'smooth' }}
+                >
                   {messages.map((msg, i) => (
                     <div
                       key={i}
                       className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
                       <div
-                        className={`max-w-[70%] px-5 py-3 rounded-2xl shadow-md text-base break-words ${msg.sender === 'user'
-                          ? 'bg-indigo-600 text-white rounded-br-lg'
-                          : 'bg-white text-gray-900 border border-gray-200 rounded-bl-lg'}
+                        className={`max-w-[70%] px-5 py-3 rounded-2xl shadow-md text-base break-words ${
+                          msg.sender === 'user'
+                            ? 'bg-indigo-600 text-white rounded-br-lg'
+                            : 'bg-white text-gray-900 border border-gray-200 rounded-bl-lg'
+                        }
                           animate-fade-in`}
                       >
-                        <span className="block font-semibold mb-1 text-xs opacity-70">{msg.sender === 'user' ? 'You' : 'HighWater Protocol'}</span>
+                        <span className="block font-semibold mb-1 text-xs opacity-70">
+                          {msg.sender === 'user' ? 'You' : 'HighWater Protocol'}
+                        </span>
                         {msg.text}
                       </div>
                     </div>
@@ -268,7 +301,9 @@ export default function AskPage() {
                   {loading && (
                     <div className="flex justify-start">
                       <div className="max-w-[70%] px-5 py-3 rounded-2xl shadow-md text-base bg-white text-gray-900 border border-gray-200 rounded-bl-lg animate-pulse">
-                        <span className="block font-semibold mb-1 text-xs opacity-70">HighWater Protocol</span>
+                        <span className="block font-semibold mb-1 text-xs opacity-70">
+                          HighWater Protocol
+                        </span>
                         <span className="italic">Thinking...</span>
                       </div>
                     </div>
@@ -279,8 +314,8 @@ export default function AskPage() {
                     className="flex-1 px-5 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-300 text-black placeholder:text-gray-500 bg-white shadow"
                     placeholder="Type your question..."
                     value={input}
-                    onChange={e => setInput(e.target.value)}
-                    onKeyDown={async e => {
+                    onChange={(e) => setInput(e.target.value)}
+                    onKeyDown={async (e) => {
                       if (e.key === 'Enter' && input.trim()) {
                         await handleSend();
                       }
@@ -314,8 +349,14 @@ export default function AskPage() {
           animation: fadeIn 0.5s;
         }
         @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
       `}</style>
       <script>{`

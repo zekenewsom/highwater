@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from 'react';
 
 const EXCHANGES = ['Coinbase', 'Gemini', 'Kraken', 'Binance', 'Photon'];
@@ -6,8 +6,19 @@ const ASSETS = ['BTC', 'ETH', 'SOL', 'USDC', 'AVAX', 'ADA', 'DOGE', 'DOT', 'MATI
 const TYPES = ['Buy', 'Sell', 'Deposit', 'Withdraw', 'Transfer In', 'Transfer Out'];
 const YEARS = ['2023', '2024', '2025'];
 
-function generateMockActivity(n: number): any[] {
-  const arr = [];
+interface ActivityItem {
+  date: string;
+  asset: string;
+  type: string;
+  amount: number;
+  price: number;
+  value: number;
+  status: string;
+  exchange: string;
+}
+
+function generateMockActivity(n: number): ActivityItem[] {
+  const arr: ActivityItem[] = [];
   for (let i = 0; i < n; ++i) {
     const year = YEARS[Math.floor(Math.random() * YEARS.length)];
     const month = (Math.floor(Math.random() * 12) + 1).toString().padStart(2, '0');
@@ -26,49 +37,239 @@ function generateMockActivity(n: number): any[] {
 }
 
 const INITIAL_ACTIVITY = [
-  { date: '2025-05-01', asset: 'BTC', type: 'Buy', amount: 0.25, price: 65000, value: 16250, status: 'Completed', exchange: 'Coinbase' },
-  { date: '2025-04-29', asset: 'ETH', type: 'Sell', amount: 2, price: 3200, value: 6400, status: 'Completed', exchange: 'Gemini' },
-  { date: '2025-04-28', asset: 'SOL', type: 'Transfer In', amount: 100, price: 16, value: 1600, status: 'Completed', exchange: 'Kraken' },
-  { date: '2025-04-27', asset: 'USDC', type: 'Deposit', amount: 5000, price: 1, value: 5000, status: 'Completed', exchange: 'Binance' },
-  { date: '2025-04-26', asset: 'AVAX', type: 'Withdraw', amount: 50, price: 35, value: 1750, status: 'Completed', exchange: 'Photon' },
-  { date: '2025-04-25', asset: 'BTC', type: 'Transfer Out', amount: 0.1, price: 66000, value: 6600, status: 'Completed', exchange: 'Coinbase' },
-  { date: '2024-12-12', asset: 'ADA', type: 'Buy', amount: 1000, price: 0.4, value: 400, status: 'Completed', exchange: 'Gemini' },
-  { date: '2024-11-30', asset: 'DOGE', type: 'Sell', amount: 500, price: 0.08, value: 40, status: 'Completed', exchange: 'Kraken' },
-  { date: '2024-10-15', asset: 'DOT', type: 'Deposit', amount: 200, price: 5, value: 1000, status: 'Completed', exchange: 'Binance' },
-  { date: '2024-09-22', asset: 'MATIC', type: 'Withdraw', amount: 300, price: 1.2, value: 360, status: 'Completed', exchange: 'Photon' },
-  { date: '2024-08-05', asset: 'XRP', type: 'Transfer In', amount: 800, price: 0.6, value: 480, status: 'Completed', exchange: 'Coinbase' },
-  { date: '2024-07-19', asset: 'BTC', type: 'Transfer Out', amount: 0.15, price: 64000, value: 9600, status: 'Completed', exchange: 'Gemini' },
-  { date: '2023-06-01', asset: 'ETH', type: 'Buy', amount: 5, price: 2900, value: 14500, status: 'Completed', exchange: 'Kraken' },
-  { date: '2023-05-11', asset: 'SOL', type: 'Sell', amount: 150, price: 22, value: 3300, status: 'Completed', exchange: 'Binance' },
-  { date: '2023-04-20', asset: 'USDC', type: 'Deposit', amount: 7000, price: 1, value: 7000, status: 'Completed', exchange: 'Photon' },
-  { date: '2023-03-30', asset: 'AVAX', type: 'Withdraw', amount: 80, price: 28, value: 2240, status: 'Completed', exchange: 'Coinbase' },
-  { date: '2023-02-14', asset: 'ADA', type: 'Transfer In', amount: 1200, price: 0.38, value: 456, status: 'Completed', exchange: 'Gemini' },
-  { date: '2023-01-25', asset: 'DOGE', type: 'Transfer Out', amount: 900, price: 0.07, value: 63, status: 'Completed', exchange: 'Kraken' },
-  { date: '2023-01-10', asset: 'DOT', type: 'Buy', amount: 350, price: 4.5, value: 1575, status: 'Completed', exchange: 'Binance' },
-  { date: '2023-01-02', asset: 'MATIC', type: 'Sell', amount: 600, price: 1.1, value: 660, status: 'Completed', exchange: 'Photon' },
+  {
+    date: '2025-05-01',
+    asset: 'BTC',
+    type: 'Buy',
+    amount: 0.25,
+    price: 65000,
+    value: 16250,
+    status: 'Completed',
+    exchange: 'Coinbase',
+  },
+  {
+    date: '2025-04-29',
+    asset: 'ETH',
+    type: 'Sell',
+    amount: 2,
+    price: 3200,
+    value: 6400,
+    status: 'Completed',
+    exchange: 'Gemini',
+  },
+  {
+    date: '2025-04-28',
+    asset: 'SOL',
+    type: 'Transfer In',
+    amount: 100,
+    price: 16,
+    value: 1600,
+    status: 'Completed',
+    exchange: 'Kraken',
+  },
+  {
+    date: '2025-04-27',
+    asset: 'USDC',
+    type: 'Deposit',
+    amount: 5000,
+    price: 1,
+    value: 5000,
+    status: 'Completed',
+    exchange: 'Binance',
+  },
+  {
+    date: '2025-04-26',
+    asset: 'AVAX',
+    type: 'Withdraw',
+    amount: 50,
+    price: 35,
+    value: 1750,
+    status: 'Completed',
+    exchange: 'Photon',
+  },
+  {
+    date: '2025-04-25',
+    asset: 'BTC',
+    type: 'Transfer Out',
+    amount: 0.1,
+    price: 66000,
+    value: 6600,
+    status: 'Completed',
+    exchange: 'Coinbase',
+  },
+  {
+    date: '2024-12-12',
+    asset: 'ADA',
+    type: 'Buy',
+    amount: 1000,
+    price: 0.4,
+    value: 400,
+    status: 'Completed',
+    exchange: 'Gemini',
+  },
+  {
+    date: '2024-11-30',
+    asset: 'DOGE',
+    type: 'Sell',
+    amount: 500,
+    price: 0.08,
+    value: 40,
+    status: 'Completed',
+    exchange: 'Kraken',
+  },
+  {
+    date: '2024-10-15',
+    asset: 'DOT',
+    type: 'Deposit',
+    amount: 200,
+    price: 5,
+    value: 1000,
+    status: 'Completed',
+    exchange: 'Binance',
+  },
+  {
+    date: '2024-09-22',
+    asset: 'MATIC',
+    type: 'Withdraw',
+    amount: 300,
+    price: 1.2,
+    value: 360,
+    status: 'Completed',
+    exchange: 'Photon',
+  },
+  {
+    date: '2024-08-05',
+    asset: 'XRP',
+    type: 'Transfer In',
+    amount: 800,
+    price: 0.6,
+    value: 480,
+    status: 'Completed',
+    exchange: 'Coinbase',
+  },
+  {
+    date: '2024-07-19',
+    asset: 'BTC',
+    type: 'Transfer Out',
+    amount: 0.15,
+    price: 64000,
+    value: 9600,
+    status: 'Completed',
+    exchange: 'Gemini',
+  },
+  {
+    date: '2023-06-01',
+    asset: 'ETH',
+    type: 'Buy',
+    amount: 5,
+    price: 2900,
+    value: 14500,
+    status: 'Completed',
+    exchange: 'Kraken',
+  },
+  {
+    date: '2023-05-11',
+    asset: 'SOL',
+    type: 'Sell',
+    amount: 150,
+    price: 22,
+    value: 3300,
+    status: 'Completed',
+    exchange: 'Binance',
+  },
+  {
+    date: '2023-04-20',
+    asset: 'USDC',
+    type: 'Deposit',
+    amount: 7000,
+    price: 1,
+    value: 7000,
+    status: 'Completed',
+    exchange: 'Photon',
+  },
+  {
+    date: '2023-03-30',
+    asset: 'AVAX',
+    type: 'Withdraw',
+    amount: 80,
+    price: 28,
+    value: 2240,
+    status: 'Completed',
+    exchange: 'Coinbase',
+  },
+  {
+    date: '2023-02-14',
+    asset: 'ADA',
+    type: 'Transfer In',
+    amount: 1200,
+    price: 0.38,
+    value: 456,
+    status: 'Completed',
+    exchange: 'Gemini',
+  },
+  {
+    date: '2023-01-25',
+    asset: 'DOGE',
+    type: 'Transfer Out',
+    amount: 900,
+    price: 0.07,
+    value: 63,
+    status: 'Completed',
+    exchange: 'Kraken',
+  },
+  {
+    date: '2023-01-10',
+    asset: 'DOT',
+    type: 'Buy',
+    amount: 350,
+    price: 4.5,
+    value: 1575,
+    status: 'Completed',
+    exchange: 'Binance',
+  },
+  {
+    date: '2023-01-02',
+    asset: 'MATIC',
+    type: 'Sell',
+    amount: 600,
+    price: 1.1,
+    value: 660,
+    status: 'Completed',
+    exchange: 'Photon',
+  },
 ];
 
 export default function ActivityTable() {
-  const [sortBy, setSortBy] = React.useState<'year'|'type'|'asset'|'exchange'>('year');
-  const [sortDir, setSortDir] = React.useState<'asc'|'desc'>('desc');
-  const [activity, setActivity] = React.useState<any[]>(INITIAL_ACTIVITY);
+  const [sortBy, setSortBy] = React.useState<'year' | 'type' | 'asset' | 'exchange'>('year');
+  const [sortDir, setSortDir] = React.useState<'asc' | 'desc'>('desc');
+  const [activity, setActivity] = React.useState<ActivityItem[]>(INITIAL_ACTIVITY);
 
   const sorted = React.useMemo(() => {
     let arr = [...activity];
     if (sortBy === 'year') {
-      arr.sort((a, b) => (sortDir === 'asc' ? a.date.localeCompare(b.date) : b.date.localeCompare(a.date)));
+      arr.sort((a, b) =>
+        sortDir === 'asc' ? a.date.localeCompare(b.date) : b.date.localeCompare(a.date),
+      );
     } else if (sortBy === 'type') {
-      arr.sort((a, b) => (sortDir === 'asc' ? a.type.localeCompare(b.type) : b.type.localeCompare(a.type)));
+      arr.sort((a, b) =>
+        sortDir === 'asc' ? a.type.localeCompare(b.type) : b.type.localeCompare(a.type),
+      );
     } else if (sortBy === 'asset') {
-      arr.sort((a, b) => (sortDir === 'asc' ? a.asset.localeCompare(b.asset) : b.asset.localeCompare(a.asset)));
+      arr.sort((a, b) =>
+        sortDir === 'asc' ? a.asset.localeCompare(b.asset) : b.asset.localeCompare(a.asset),
+      );
     } else if (sortBy === 'exchange') {
-      arr.sort((a, b) => (sortDir === 'asc' ? a.exchange.localeCompare(b.exchange) : b.exchange.localeCompare(a.exchange)));
+      arr.sort((a, b) =>
+        sortDir === 'asc'
+          ? a.exchange.localeCompare(b.exchange)
+          : b.exchange.localeCompare(a.exchange),
+      );
     }
     return arr;
   }, [activity, sortBy, sortDir]);
 
-  function handleSeeMore() {
-    setActivity(prev => [...prev, ...generateMockActivity(20)]);
+  function handleSeeMore(): void {
+    setActivity((prev) => [...prev, ...generateMockActivity(20)]);
   }
 
   return (
@@ -80,7 +281,7 @@ export default function ActivityTable() {
           <select
             className="border rounded px-2 py-1 text-sm text-black"
             value={sortBy}
-            onChange={e => setSortBy(e.target.value as any)}
+            onChange={(e) => setSortBy(e.target.value as 'year' | 'type' | 'asset' | 'exchange')}
           >
             <option value="year">Year</option>
             <option value="type">Type</option>
@@ -89,7 +290,7 @@ export default function ActivityTable() {
           </select>
           <button
             className="text-gray-500 hover:text-gray-800 px-1"
-            onClick={() => setSortDir(d => d === 'asc' ? 'desc' : 'asc')}
+            onClick={() => setSortDir((d) => (d === 'asc' ? 'desc' : 'asc'))}
             title={sortDir === 'asc' ? 'Ascending' : 'Descending'}
           >
             {sortDir === 'asc' ? '↑' : '↓'}
@@ -113,21 +314,36 @@ export default function ActivityTable() {
           <tbody>
             {sorted.map((t, idx) => (
               <tr key={idx} className="border-b last:border-none">
-                <td className="py-2 font-medium text-gray-700 align-middle whitespace-nowrap">{t.date}</td>
+                <td className="py-2 font-medium text-gray-700 align-middle whitespace-nowrap">
+                  {t.date}
+                </td>
                 <td className="py-2 text-gray-700 align-middle whitespace-nowrap">{t.asset}</td>
                 <td className="py-2 text-gray-700 align-middle whitespace-nowrap">{t.type}</td>
                 <td className="py-2 text-gray-900 align-middle whitespace-nowrap">{t.amount}</td>
-                <td className="py-2 text-gray-900 align-middle whitespace-nowrap">${t.price.toLocaleString()}</td>
-                <td className="py-2 text-gray-900 align-middle whitespace-nowrap">${t.value.toLocaleString()}</td>
+                <td className="py-2 text-gray-900 align-middle whitespace-nowrap">
+                  ${t.price.toLocaleString()}
+                </td>
+                <td className="py-2 text-gray-900 align-middle whitespace-nowrap">
+                  ${t.value.toLocaleString()}
+                </td>
                 <td className="py-2 text-gray-900 align-middle whitespace-nowrap">{t.exchange}</td>
-                <td className={`py-2 align-middle whitespace-nowrap font-semibold ${t.status === 'Completed' ? 'text-green-600' : 'text-gray-600'}`}>{t.status}</td>
+                <td
+                  className={`py-2 align-middle whitespace-nowrap font-semibold ${t.status === 'Completed' ? 'text-green-600' : 'text-gray-600'}`}
+                >
+                  {t.status}
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
       <div className="w-full pt-4 flex justify-center">
-        <span className="text-gray-500 text-sm font-medium cursor-pointer hover:underline" onClick={handleSeeMore}>See more</span>
+        <span
+          className="text-gray-500 text-sm font-medium cursor-pointer hover:underline"
+          onClick={handleSeeMore}
+        >
+          See more
+        </span>
       </div>
     </div>
   );

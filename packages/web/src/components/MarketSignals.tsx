@@ -1,17 +1,23 @@
-"use client";
+'use client';
 import React, { useState, useRef, useEffect } from 'react';
 import { InformationCircleIcon } from '@heroicons/react/24/outline';
 import { MARKET_SIGNALS } from '../data/mockDashboard';
 
 const DESCRIPTIONS: Record<string, string> = {
-  'Crypto Market Volatility Index': 'Measures the overall volatility of the cryptocurrency market over the last 30 days.',
+  'Crypto Market Volatility Index':
+    'Measures the overall volatility of the cryptocurrency market over the last 30 days.',
   'Total DeFi TVL': 'Total value locked in decentralized finance protocols across all chains.',
   'Bitcoin Dominance': 'Percentage of total crypto market cap represented by Bitcoin.',
-  'Stablecoin Net Flow': 'Net inflow or outflow of stablecoins across major exchanges over the last 24h.',
-  'Network Hash Rate': 'Aggregate computational power securing proof-of-work blockchains. Higher hash rates indicate greater security and miner participation.',
-  'Derivatives Open Interest': 'Total value of outstanding derivative contracts (futures, options) in the crypto market. Rising open interest can signal increased trading activity or speculation.',
-  'Institutional Flows': 'Net inflow or outflow of funds from institutional investors, such as hedge funds and asset managers, over the past week.',
-  'Regulatory Activity': 'Tracks the number and severity of regulatory events or actions impacting the crypto market in the last 7 days.',
+  'Stablecoin Net Flow':
+    'Net inflow or outflow of stablecoins across major exchanges over the last 24h.',
+  'Network Hash Rate':
+    'Aggregate computational power securing proof-of-work blockchains. Higher hash rates indicate greater security and miner participation.',
+  'Derivatives Open Interest':
+    'Total value of outstanding derivative contracts (futures, options) in the crypto market. Rising open interest can signal increased trading activity or speculation.',
+  'Institutional Flows':
+    'Net inflow or outflow of funds from institutional investors, such as hedge funds and asset managers, over the past week.',
+  'Regulatory Activity':
+    'Tracks the number and severity of regulatory events or actions impacting the crypto market in the last 7 days.',
 };
 
 export default function MarketSignals() {
@@ -32,7 +38,10 @@ export default function MarketSignals() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 flex-1">
       {MARKET_SIGNALS.map((s) => (
-        <div key={s.title} className="relative bg-white rounded-lg shadow-lg border border-gray-200 p-5">
+        <div
+          key={s.title}
+          className="relative bg-white rounded-lg shadow-lg border border-gray-200 p-5"
+        >
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-medium text-gray-700">{s.title}</h3>
             <button

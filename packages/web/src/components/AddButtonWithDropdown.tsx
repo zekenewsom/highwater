@@ -1,13 +1,13 @@
-"use client";
-import React, { useState } from "react";
+'use client';
+import React, { useState } from 'react';
 
 const placeholderLogos = Array.from({ length: 8 });
 
 export default function AddButtonWithDropdown() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [modalType, setModalType] = useState<null | "wallet" | "exchange">(null);
+  const [modalType, setModalType] = useState<null | 'wallet' | 'exchange'>(null);
 
-  const openModal = (type: "wallet" | "exchange") => {
+  const openModal = (type: 'wallet' | 'exchange') => {
     setModalType(type);
     setDropdownOpen(false);
   };
@@ -27,13 +27,13 @@ export default function AddButtonWithDropdown() {
         <div className="absolute right-0 mt-2 w-44 bg-white border border-gray-200 rounded-lg shadow-lg z-20">
           <button
             className="w-full text-left px-4 py-2 hover:bg-gray-100 text-black"
-            onClick={() => openModal("exchange")}
+            onClick={() => openModal('exchange')}
           >
             Add Exchange
           </button>
           <button
             className="w-full text-left px-4 py-2 hover:bg-gray-100 text-black"
-            onClick={() => openModal("wallet")}
+            onClick={() => openModal('wallet')}
           >
             Add Wallet
           </button>
@@ -45,7 +45,7 @@ export default function AddButtonWithDropdown() {
           <div className="bg-white rounded-xl shadow-xl p-8 max-w-lg w-full">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-bold text-gray-900">
-                {modalType === "wallet" ? "Add Wallet" : "Add Exchange"}
+                {modalType === 'wallet' ? 'Add Wallet' : 'Add Exchange'}
               </h2>
               <button
                 className="text-gray-400 hover:text-gray-700 text-2xl font-bold"
@@ -77,7 +77,9 @@ export default function AddButtonWithDropdown() {
                       className="object-contain max-w-full max-h-full"
                     />
                   </div>
-                  <span className="text-xs text-gray-600 text-center font-medium truncate w-24 mt-1">{logo.name}</span>
+                  <span className="text-xs text-gray-600 text-center font-medium truncate w-24 mt-1">
+                    {logo.name}
+                  </span>
                 </div>
               ))}
             </div>
@@ -85,7 +87,7 @@ export default function AddButtonWithDropdown() {
               className="w-full mt-2 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow"
               type="button"
             >
-{modalType === 'wallet' ? 'Add Other Wallet' : 'Add Other Exchange'}
+              {modalType === 'wallet' ? 'Add Other Wallet' : 'Add Other Exchange'}
             </button>
           </div>
         </div>

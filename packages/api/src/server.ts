@@ -3,9 +3,9 @@ import { auth, requiresAuth } from 'express-openid-connect';
 import dotenv from 'dotenv';
 import clientsRouter from './routes/clients';
 import portfoliosRouter from './routes/portfolios';
-import http from "http";
+import http from 'http';
 
-import logger from "./utils/logger";
+import logger from './utils/logger';
 dotenv.config();
 
 const config = {
@@ -100,22 +100,22 @@ server.listen(PORT, () => {
 
 // Graceful shutdown
 const shutdown = () => {
-  logger.info("Received shutdown signal, closing server...");
+  logger.info('Received shutdown signal, closing server...');
   server.close((err) => {
     if (err) {
-      logger.error("Error during server shutdown:", err);
+      logger.error('Error during server shutdown:', err);
       process.exit(1);
     } else {
-      logger.info("Server closed gracefully.");
+      logger.info('Server closed gracefully.');
       process.exit(0);
     }
   });
   // Force exit if not closed in 10 seconds
   setTimeout(() => {
-    logger.error("Could not close server in time, forcefully shutting down");
+    logger.error('Could not close server in time, forcefully shutting down');
     process.exit(1);
   }, 10000);
 };
 
-process.on("SIGTERM", shutdown);
-process.on("SIGINT", shutdown);
+process.on('SIGTERM', shutdown);
+process.on('SIGINT', shutdown);

@@ -109,4 +109,4 @@ describe('API v2 JSON Endpoints', () => {
       expect(response.body.success).toBe(true);
     });
   });
-}); 
+});

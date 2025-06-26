@@ -1,6 +1,16 @@
 import request from 'supertest';
 import { createTestApp } from '../setup';
 
+interface Client {
+  id: string;
+  name: string;
+  email: string;
+  advisorId: string;
+  status: string;
+  totalAssets: number;
+  riskProfile: string;
+}
+
 const app = createTestApp();
 
 describe('Clients API Integration Tests', () => {
@@ -111,7 +121,7 @@ describe('Clients API Integration Tests', () => {
         .get('/api/v2/clients?advisorId=A123')
         .expect(200);
 
-      expect(response.body.data.every((client: any) => client.advisorId === 'A123')).toBe(true);
+      expect(response.body.data.every((client: Client) => client.advisorId === 'A123')).toBe(true);
     });
 
     it('should support filtering by status', async () => {
@@ -119,7 +129,7 @@ describe('Clients API Integration Tests', () => {
         .get('/api/v2/clients?status=Active')
         .expect(200);
 
-      expect(response.body.data.every((client: any) => client.status === 'Active')).toBe(true);
+      expect(response.body.data.every((client: Client) => client.status === 'Active')).toBe(true);
     });
 
     it('should support filtering by risk profile', async () => {
@@ -127,7 +137,7 @@ describe('Clients API Integration Tests', () => {
         .get('/api/v2/clients?riskProfile=Moderate')
         .expect(200);
 
-      expect(response.body.data.every((client: any) => client.riskProfile === 'Moderate')).toBe(true);
+      expect(response.body.data.every((client: Client) => client.riskProfile === 'Moderate')).toBe(true);
     });
   });
 }); 
