@@ -1,0 +1,373 @@
+
+
+> web@0.1.0 test /Users/zeke/projects/highwater/packages/web
+> jest
+
+[33m[1m[1m●[22m[1m Validation Warning[22m:[39m
+[33m[39m
+[33m  Unknown option [1m"moduleNameMapping"[22m with value [1m{"^@/(.*)$": "<rootDir>/src/$1"}[22m was found.[39m
+[33m  This is probably a typing mistake. Fixing it will remove this message.[39m
+[33m[39m
+[33m  [1mConfiguration Documentation:[22m[39m
+[33m  https://jestjs.io/docs/configuration[39m
+[33m[39m
+[33m[1m[1m●[22m[1m Validation Warning[22m:[39m
+[33m[39m
+[33m  Unknown option [1m"moduleNameMapping"[22m with value [1m{"^@/(.*)$": "<rootDir>/src/$1"}[22m was found.[39m
+[33m  This is probably a typing mistake. Fixing it will remove this message.[39m
+[33m[39m
+[33m  [1mConfiguration Documentation:[22m[39m
+[33m  https://jestjs.io/docs/configuration[39m
+[33m[39m
+[1m[2mDetermining test suites to run...[22m[22m[999D[K
+[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A[0m[7m[1m[31m FAIL [39m[22m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A[1m[31m  [1m● [22m[1mNetWorthOverview › displays chart component[39m[22m
+
+    TestingLibraryElementError: Found multiple elements by: [data-testid="bar-chart"]
+
+    Here are the matching elements:
+
+    Ignored nodes: comments, script, style
+    [36m<div[39m
+      [33mdata-testid[39m=[32m"bar-chart"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mdata-testid[39m=[32m"x-axis"[39m
+      [36m/>[39m
+      [36m<div[39m
+        [33mdata-testid[39m=[32m"bar"[39m
+      [36m/>[39m
+    [36m</div>[39m
+
+    Ignored nodes: comments, script, style
+    [36m<div[39m
+      [33mdata-testid[39m=[32m"bar-chart"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mdata-testid[39m=[32m"x-axis"[39m
+      [36m/>[39m
+      [36m<div[39m
+        [33mdata-testid[39m=[32m"bar"[39m
+      [36m/>[39m
+    [36m</div>[39m
+
+    Ignored nodes: comments, script, style
+    [36m<div[39m
+      [33mdata-testid[39m=[32m"bar-chart"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mdata-testid[39m=[32m"x-axis"[39m
+      [36m/>[39m
+      [36m<div[39m
+        [33mdata-testid[39m=[32m"bar"[39m
+      [36m/>[39m
+    [36m</div>[39m
+
+    Ignored nodes: comments, script, style
+    [36m<div[39m
+      [33mdata-testid[39m=[32m"bar-chart"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mdata-testid[39m=[32m"x-axis"[39m
+      [36m/>[39m
+      [36m<div[39m
+        [33mdata-testid[39m=[32m"bar"[39m
+      [36m/>[39m
+    [36m</div>[39m
+
+    (If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"bg-white rounded-2xl shadow-lg border border-gray-100 p-8 flex flex-col h-full justify-between gap-6"[39m
+        [36m>[39m
+          [36m<h2[39m
+            [33mclass[39m=[32m"text-xl font-medium text-gray-800 tracking-tight mb-2"[39m
+          [36m>[39m
+            [0mNet Worth Overview[0m
+          [36m</h2>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"flex flex-col sm:flex-row sm:items-end gap-4 mb-2"[39m
+          [36m>[39m
+            [36m<span[39m
+              [33mclass[39m=[32m"text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight drop-shadow-sm leading-tight"[39m
+            [36m>[39m
+              [0m$[0m
+              [0m13,564,649[0m
+            [36m</span>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"flex flex-col gap-4 flex-1"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"flex items-center gap-4"[39m
+            [36m>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"text-sm font-medium text-gray-700 w-40 min-w-[120px]"[39m
+              [36m>[39m
+                [0mCryptoassets[0m
+              [36m</span>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"flex-1 flex items-center"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mdata-testid[39m=[32m"responsive-container"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mdata-testid[39m=[32m"bar-chart"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mdata-testid[39m=[32m"x-axis"[39m
+                    [36m/>[39m
+                    [36m<div[39m
+                      [33mdata-testid[39m=[32m"bar"[39m
+                    [36m/>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"text-base font-semibold tabular-nums text-gray-900"[39m
+              [36m>[39m
+                [0m$[0m
+                [0m3,276,484[0m
+              [36m</span>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"flex items-center gap-4"[39m
+            [36m>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"text-sm font-medium text-gray-700 w-40 min-w-[120px]"[39m
+              [36m>[39m
+                [0mTraditional Investments[0m
+              [36m</span>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"flex-1 flex items-center"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mdata-testid[39m=[32m"responsive-container"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mdata-testid[39m=[32m"bar-chart"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mdata-testid[39m=[32m"x-axis"[39m
+                    [36m/>[39m
+                    [36m<div[39m
+                      [33mdata-testid[39m=[32m"bar"[39m
+                    [36m/>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"text-base font-semibold tabular-nums text-gray-900"[39m
+              [36m>[39m
+                [0m$[0m
+                [0m5,261,894[0m
+              [36m</span>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"flex items-center gap-4"[39m
+            [36m>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"text-sm font-medium text-gray-700 w-40 min-w-[120px]"[39m
+              [36m>[39m
+                [0mCash Reserves[0m
+              [36m</span>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"flex-1 flex items-center"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mdata-testid[39m=[32m"responsive-container"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mdata-testid[39m=[32m"bar-chart"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mdata-testid[39m=[32m"x-axis"[39m
+                    [36m/>[39m
+                    [36m<div[39m
+                      [33mdata-testid[39m=[32m"bar"[39m
+                    [36m/>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"text-base font-semibold tabular-nums text-gray-900"[39m
+              [36m>[39m
+                [0m$[0m
+                [0m5,421,771[0m
+              [36m</span>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"flex items-center gap-4"[39m
+            [36m>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"text-sm font-medium text-gray-700 w-40 min-w-[120px]"[39m
+              [36m>[39m
+                [0mLiabilities[0m
+              [36m</span>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"flex-1 flex items-center"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mdata-testid[39m=[32m"responsive-container"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mdata-testid[39m=[32m"bar-chart"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mdata-testid[39m=[32m"x-axis"[39m
+                    [36m/>[39m
+                    [36m<div[39m
+                      [33mdata-testid[39m=[32m"bar"[39m
+                    [36m/>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"text-base font-semibold tabular-nums text-red-600"[39m
+              [36m>[39m
+                [0m-[0m
+                [0m$[0m
+                [0m395,500[0m
+              [36m</span>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+[2m[22m
+[2m    [0m [90m 36 |[39m     [22m
+[2m     [90m 37 |[39m     [90m// Check for chart elements (mocked in jest.setup.js)[39m[22m
+[2m    [31m[1m>[22m[2m[39m[90m 38 |[39m     expect(screen[33m.[39mgetByTestId([32m'bar-chart'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[22m
+[2m     [90m    |[39m                   [31m[1m^[22m[2m[39m[22m
+[2m     [90m 39 |[39m   })[33m;[39m[22m
+[2m     [90m 40 |[39m[22m
+[2m     [90m 41 |[39m   it([32m'renders without crashing with no data'[39m[33m,[39m () [33m=>[39m {[0m[22m
+[2m[22m
+[2m      [2mat Object.getElementError ([22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/config.js[2m:37:19)[22m[2m[22m
+[2m      [2mat getElementError ([22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:20:35)[22m[2m[22m
+[2m      [2mat getMultipleElementsFoundError ([22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:23:10)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:55:13[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:95:19[22m[2m[22m
+[2m      [2mat Object.getByTestId ([22m[2m[0m[36msrc/components/__tests__/NetWorthOverview.test.tsx[39m[0m[2m:38:19)[22m[2m[22m
+
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/[22m[1mAddButtonWithDropdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/[22m[1mAddButtonWithDropdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/[22m[1mAddButtonWithDropdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/[22m[1mAddButtonWithDropdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/[22m[1mAddButtonWithDropdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/[22m[1mAddButtonWithDropdown.test.tsx[22m
+[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m [2msrc/components/[22m[1mAddButtonWithDropdown.test.tsx[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/[22m[1mAddButtonWithDropdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNavBar.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNavBar.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNavBar.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNavBar.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNavBar.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNavBar.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNavBar.test.tsx[22m
+[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m [2msrc/components/__tests__/[22m[1mNavBar.test.tsx[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNavBar.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mAllocationBreakdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mAllocationBreakdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mAllocationBreakdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mAllocationBreakdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mAllocationBreakdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mAllocationBreakdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mAllocationBreakdown.test.tsx[22m
+[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m [2msrc/components/__tests__/[22m[1mAllocationBreakdown.test.tsx[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mAllocationBreakdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A[999D[K
+[1mTest Suites: [22m[1m[31m1 failed[39m[22m, [1m[32m5 passed[39m[22m, 6 total
+[1mTests:       [22m[1m[31m1 failed[39m[22m, [1m[32m34 passed[39m[22m, 35 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1.535 s
+[41m[30m ELIFECYCLE [39m[49m [31mTest failed. See above for more details.[39m

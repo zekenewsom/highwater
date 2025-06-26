@@ -1,0 +1,587 @@
+
+
+> api@1.0.0 test:coverage /Users/zeke/projects/highwater/packages/api
+> jest --coverage
+
+[33m[1m[1m●[22m[1m Validation Warning[22m:[39m
+[33m[39m
+[33m  Unknown option [1m"moduleNameMapping"[22m with value [1m{"^@/(.*)$": "<rootDir>/src/$1"}[22m was found.[39m
+[33m  This is probably a typing mistake. Fixing it will remove this message.[39m
+[33m[39m
+[33m  [1mConfiguration Documentation:[22m[39m
+[33m  https://jestjs.io/docs/configuration[39m
+[33m[39m
+[33m[1m[1m●[22m[1m Validation Warning[22m:[39m
+[33m[39m
+[33m  Unknown option [1m"moduleNameMapping"[22m with value [1m{"^@/(.*)$": "<rootDir>/src/$1"}[22m was found.[39m
+[33m  This is probably a typing mistake. Fixing it will remove this message.[39m
+[33m[39m
+[33m  [1mConfiguration Documentation:[22m[39m
+[33m  https://jestjs.io/docs/configuration[39m
+[33m[39m
+[1m[2mDetermining test suites to run...[22m[22m[999D[K
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[999D[K
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[0m[7m[1m[31m FAIL [39m[22m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  [1m● [22mConsole
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.547Z","url":"/api/v1/assets/live"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+    [2mconsole.log[22m
+      {"level":"error","message":"CoinMarketCap API key is not set in environment variables.","stack":"Error: CoinMarketCap API key is not set in environment variables.\n    at fetchAssets (/Users/zeke/projects/highwater/packages/api/src/services/assetService.ts:14:11)\n    at getAssetsController (/Users/zeke/projects/highwater/packages/api/src/controllers/assetsController.ts:8:37)\n    at Layer.handleRequest (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/lib/layer.js:152:17)\n    at next (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/lib/route.js:157:13)\n    at Route.dispatch (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/lib/route.js:117:3)\n    at handle (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:435:11)\n    at Layer.handleRequest (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/lib/layer.js:152:17)\n    at /Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:295:15\n    at processParams (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:582:12)\n    at next (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:291:5)\n    at Function.handle (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:186:3)\n    at router (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:60:12)\n    at Layer.handleRequest (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:342:13)\n    at /Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:297:9\n    at processParams (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:582:12)\n    at next (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:291:5)\n    at Function.handle (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:186:3)\n    at router (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:60:12)\n    at Layer.handleRequest (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:342:13)\n    at /Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:297:9\n    at processParams (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:582:12)\n    at next (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:291:5)\n    at next (/Users/zeke/projects/highwater/packages/api/src/app.ts:14:3)\n    at Layer.handleRequest (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:342:13)\n    at /Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:297:9\n    at processParams (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:582:12)\n    at next (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:291:5)\n    at jsonParser (/Users/zeke/projects/highwater/node_modules/.pnpm/body-parser@2.2.0/node_modules/body-parser/lib/types/json.js:100:7)\n    at Layer.handleRequest (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:342:13)\n    at /Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:297:9\n    at processParams (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:582:12)\n    at next (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:291:5)\n    at cors (/Users/zeke/projects/highwater/node_modules/.pnpm/cors@2.8.5/node_modules/cors/lib/index.js:188:7)\n    at /Users/zeke/projects/highwater/node_modules/.pnpm/cors@2.8.5/node_modules/cors/lib/index.js:224:17\n    at originCallback (/Users/zeke/projects/highwater/node_modules/.pnpm/cors@2.8.5/node_modules/cors/lib/index.js:214:15)\n    at /Users/zeke/projects/highwater/node_modules/.pnpm/cors@2.8.5/node_modules/cors/lib/index.js:219:13\n    at optionsCallback (/Users/zeke/projects/highwater/node_modules/.pnpm/cors@2.8.5/node_modules/cors/lib/index.js:199:9)\n    at corsMiddleware (/Users/zeke/projects/highwater/node_modules/.pnpm/cors@2.8.5/node_modules/cors/lib/index.js:204:7)\n    at Layer.handleRequest (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:342:13)\n    at /Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:297:9\n    at processParams (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:582:12)\n    at next (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:291:5)\n    at Function.handle (/Users/zeke/projects/highwater/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:186:3)\n    at Function.handle (/Users/zeke/projects/highwater/node_modules/.pnpm/express@5.1.0/node_modules/express/lib/application.js:177:15)\n    at Server.app (/Users/zeke/projects/highwater/node_modules/.pnpm/express@5.1.0/node_modules/express/lib/express.js:38:9)\n    at Server.emit (node:events:524:28)\n    at parserOnIncoming (node:_http_server:1141:12)\n    at HTTPParser.parserOnHeadersComplete (node:_http_common:118:17)","timestamp":"2025-06-26T00:12:02.557Z"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.564Z","url":"/api/v1/assets/cache"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.568Z","url":"/api/v1/assets/nonexistent"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[1m[31m  [1m● [22m[1mAssets API Integration Tests › GET /api/v1/assets/live › should return assets data[39m[22m
+
+    expected 200 "OK", got 500 "Internal Server Error"
+[2m[22m
+[2m    [0m [90m  7 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[22m
+[2m     [90m  8 |[39m         [33m.[39m[36mget[39m([32m'/api/v1/assets/live'[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m  9 |[39m         [33m.[39mexpect([35m200[39m)[33m;[39m[22m
+[2m     [90m    |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m 10 |[39m[22m
+[2m     [90m 11 |[39m       expect(response[33m.[39mbody)[33m.[39mtoBeDefined()[33m;[39m[22m
+[2m     [90m 12 |[39m     })[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36mtests/integration/assets.test.ts[39m[0m[2m:9:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertStatus ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:252:14)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[0m[7m[1m[31m FAIL [39m[22m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  [1m● [22mConsole
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.559Z","url":"/api/v1/clients"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.572Z","url":"/api/v1/clients"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.575Z","url":"/api/v1/clients"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.577Z","url":"/api/v1/clients"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.579Z","url":"/api/v1/clients"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.582Z","url":"/api/v1/clients"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.584Z","url":"/api/v1/clients"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.589Z","url":"/api/v1/clients?invalid=param"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.591Z","url":"/api/v1/clients/nonexistent"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[1m[31m  [1m● [22m[1mClients API Integration Tests › GET /api/v1/clients › should return clients dashboard HTML[39m[22m
+
+    expected 200 "OK", got 404 "Not Found"
+[2m[22m
+[2m    [0m [90m  7 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[22m
+[2m     [90m  8 |[39m         [33m.[39m[36mget[39m([32m'/api/v1/clients'[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m  9 |[39m         [33m.[39mexpect([35m200[39m)[33m;[39m[22m
+[2m     [90m    |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m 10 |[39m[22m
+[2m     [90m 11 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'<title>Clients</title>'[39m)[33m;[39m[22m
+[2m     [90m 12 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'Alice Smith'[39m)[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36mtests/integration/clients.test.ts[39m[0m[2m:9:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertStatus ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:252:14)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mClients API Integration Tests › GET /api/v1/clients › should include navigation links[39m[22m
+
+    expected 200 "OK", got 404 "Not Found"
+[2m[22m
+[2m    [0m [90m 17 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[22m
+[2m     [90m 18 |[39m         [33m.[39m[36mget[39m([32m'/api/v1/clients'[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m 19 |[39m         [33m.[39mexpect([35m200[39m)[33m;[39m[22m
+[2m     [90m    |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m 20 |[39m[22m
+[2m     [90m 21 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'href="/"'[39m)[33m;[39m[22m
+[2m     [90m 22 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'href="/api/v1/portfolios"'[39m)[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36mtests/integration/clients.test.ts[39m[0m[2m:19:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertStatus ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:252:14)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mClients API Integration Tests › GET /api/v1/clients › should display client table with correct structure[39m[22m
+
+    expected 200 "OK", got 404 "Not Found"
+[2m[22m
+[2m    [0m [90m 26 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[22m
+[2m     [90m 27 |[39m         [33m.[39m[36mget[39m([32m'/api/v1/clients'[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m 28 |[39m         [33m.[39mexpect([35m200[39m)[33m;[39m[22m
+[2m     [90m    |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m 29 |[39m[22m
+[2m     [90m 30 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'<table>'[39m)[33m;[39m[22m
+[2m     [90m 31 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'<thead>'[39m)[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36mtests/integration/clients.test.ts[39m[0m[2m:28:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertStatus ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:252:14)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mClients API Integration Tests › GET /api/v1/clients › should include client data in table rows[39m[22m
+
+    expected 200 "OK", got 404 "Not Found"
+[2m[22m
+[2m    [0m [90m 40 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[22m
+[2m     [90m 41 |[39m         [33m.[39m[36mget[39m([32m'/api/v1/clients'[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m 42 |[39m         [33m.[39mexpect([35m200[39m)[33m;[39m[22m
+[2m     [90m    |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m 43 |[39m[22m
+[2m     [90m 44 |[39m       [90m// Check for specific client data[39m[22m
+[2m     [90m 45 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'Alice Smith'[39m)[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36mtests/integration/clients.test.ts[39m[0m[2m:42:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertStatus ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:252:14)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mClients API Integration Tests › GET /api/v1/clients › should include action buttons for each client[39m[22m
+
+    expected 200 "OK", got 404 "Not Found"
+[2m[22m
+[2m    [0m [90m 54 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[22m
+[2m     [90m 55 |[39m         [33m.[39m[36mget[39m([32m'/api/v1/clients'[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m 56 |[39m         [33m.[39mexpect([35m200[39m)[33m;[39m[22m
+[2m     [90m    |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m 57 |[39m[22m
+[2m     [90m 58 |[39m       [90m// Check for Edit and Delete buttons[39m[22m
+[2m     [90m 59 |[39m       [36mconst[39m editButtonCount [33m=[39m (response[33m.[39mtext[33m.[39mmatch([35m/Edit/g[39m) [33m||[39m [])[33m.[39mlength[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36mtests/integration/clients.test.ts[39m[0m[2m:56:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertStatus ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:252:14)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mClients API Integration Tests › GET /api/v1/clients › should include proper CSS styling[39m[22m
+
+    expected 200 "OK", got 404 "Not Found"
+[2m[22m
+[2m    [0m [90m 67 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[22m
+[2m     [90m 68 |[39m         [33m.[39m[36mget[39m([32m'/api/v1/clients'[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m 69 |[39m         [33m.[39mexpect([35m200[39m)[33m;[39m[22m
+[2m     [90m    |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m 70 |[39m[22m
+[2m     [90m 71 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'<style>'[39m)[33m;[39m[22m
+[2m     [90m 72 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'font-family: Arial, sans-serif'[39m)[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36mtests/integration/clients.test.ts[39m[0m[2m:69:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertStatus ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:252:14)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mClients API Integration Tests › Client Data Structure › should return consistent client data format[39m[22m
+
+    expected 200 "OK", got 404 "Not Found"
+[2m[22m
+[2m    [0m [90m 81 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[22m
+[2m     [90m 82 |[39m         [33m.[39m[36mget[39m([32m'/api/v1/clients'[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m 83 |[39m         [33m.[39mexpect([35m200[39m)[33m;[39m[22m
+[2m     [90m    |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m 84 |[39m[22m
+[2m     [90m 85 |[39m       [90m// Verify the mock data structure is consistent[39m[22m
+[2m     [90m 86 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'Alice Smith'[39m)[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36mtests/integration/clients.test.ts[39m[0m[2m:83:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertStatus ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:252:14)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mClients API Integration Tests › Error Handling › should handle malformed requests gracefully[39m[22m
+
+    expected 200 "OK", got 404 "Not Found"
+[2m[22m
+[2m    [0m [90m  96 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[22m
+[2m     [90m  97 |[39m         [33m.[39m[36mget[39m([32m'/api/v1/clients?invalid=param'[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m  98 |[39m         [33m.[39mexpect([35m200[39m)[33m;[39m [90m// Should still return the dashboard[39m[22m
+[2m     [90m     |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m  99 |[39m[22m
+[2m     [90m 100 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'Clients'[39m)[33m;[39m[22m
+[2m     [90m 101 |[39m     })[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36mtests/integration/clients.test.ts[39m[0m[2m:98:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertStatus ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:252:14)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[0m[7m[1m[31m FAIL [39m[22m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  [1m● [22mConsole
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.559Z","url":"/api/v1/portfolios"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.572Z","url":"/api/v1/portfolios"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.575Z","url":"/api/v1/portfolios"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.577Z","url":"/api/v1/portfolios"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.579Z","url":"/api/v1/portfolios"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.582Z","url":"/api/v1/portfolios"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.584Z","url":"/api/v1/portfolios"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.587Z","url":"/api/v1/portfolios?invalid=param"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+    [2mconsole.log[22m
+      {"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:12:02.589Z","url":"/api/v1/portfolios/nonexistent"}
+[2m[22m
+[2m      [2mat Console.log ([22m[2m../../node_modules/.pnpm/winston@3.17.0/node_modules/winston/lib/winston/transports/console.js[2m:87:23)[22m[2m[22m
+
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[1m[31m  [1m● [22m[1mPortfolios API Integration Tests › GET /api/v1/portfolios › should return portfolios dashboard HTML[39m[22m
+
+    expected 200 "OK", got 404 "Not Found"
+[2m[22m
+[2m    [0m [90m  7 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[22m
+[2m     [90m  8 |[39m         [33m.[39m[36mget[39m([32m'/api/v1/portfolios'[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m  9 |[39m         [33m.[39mexpect([35m200[39m)[33m;[39m[22m
+[2m     [90m    |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m 10 |[39m[22m
+[2m     [90m 11 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'<title>Portfolios</title>'[39m)[33m;[39m[22m
+[2m     [90m 12 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'Growth Portfolio'[39m)[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36mtests/integration/portfolios.test.ts[39m[0m[2m:9:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertStatus ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:252:14)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mPortfolios API Integration Tests › GET /api/v1/portfolios › should include navigation links[39m[22m
+
+    expected 200 "OK", got 404 "Not Found"
+[2m[22m
+[2m    [0m [90m 17 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[22m
+[2m     [90m 18 |[39m         [33m.[39m[36mget[39m([32m'/api/v1/portfolios'[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m 19 |[39m         [33m.[39mexpect([35m200[39m)[33m;[39m[22m
+[2m     [90m    |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m 20 |[39m[22m
+[2m     [90m 21 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'href="/"'[39m)[33m;[39m[22m
+[2m     [90m 22 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'href="/api/v1/clients"'[39m)[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36mtests/integration/portfolios.test.ts[39m[0m[2m:19:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertStatus ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:252:14)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mPortfolios API Integration Tests › GET /api/v1/portfolios › should display portfolio table with correct structure[39m[22m
+
+    expected 200 "OK", got 404 "Not Found"
+[2m[22m
+[2m    [0m [90m 26 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[22m
+[2m     [90m 27 |[39m         [33m.[39m[36mget[39m([32m'/api/v1/portfolios'[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m 28 |[39m         [33m.[39mexpect([35m200[39m)[33m;[39m[22m
+[2m     [90m    |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m 29 |[39m[22m
+[2m     [90m 30 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'<table>'[39m)[33m;[39m[22m
+[2m     [90m 31 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'<thead>'[39m)[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36mtests/integration/portfolios.test.ts[39m[0m[2m:28:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertStatus ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:252:14)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mPortfolios API Integration Tests › GET /api/v1/portfolios › should include portfolio data in table rows[39m[22m
+
+    expected 200 "OK", got 404 "Not Found"
+[2m[22m
+[2m    [0m [90m 40 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[22m
+[2m     [90m 41 |[39m         [33m.[39m[36mget[39m([32m'/api/v1/portfolios'[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m 42 |[39m         [33m.[39mexpect([35m200[39m)[33m;[39m[22m
+[2m     [90m    |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m 43 |[39m[22m
+[2m     [90m 44 |[39m       [90m// Check for specific portfolio data[39m[22m
+[2m     [90m 45 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'Growth Portfolio'[39m)[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36mtests/integration/portfolios.test.ts[39m[0m[2m:42:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertStatus ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:252:14)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mPortfolios API Integration Tests › GET /api/v1/portfolios › should include action buttons for each portfolio[39m[22m
+
+    expected 200 "OK", got 404 "Not Found"
+[2m[22m
+[2m    [0m [90m 54 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[22m
+[2m     [90m 55 |[39m         [33m.[39m[36mget[39m([32m'/api/v1/portfolios'[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m 56 |[39m         [33m.[39mexpect([35m200[39m)[33m;[39m[22m
+[2m     [90m    |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m 57 |[39m[22m
+[2m     [90m 58 |[39m       [90m// Check for Edit and Delete buttons[39m[22m
+[2m     [90m 59 |[39m       [36mconst[39m editButtonCount [33m=[39m (response[33m.[39mtext[33m.[39mmatch([35m/Edit/g[39m) [33m||[39m [])[33m.[39mlength[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36mtests/integration/portfolios.test.ts[39m[0m[2m:56:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertStatus ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:252:14)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mPortfolios API Integration Tests › GET /api/v1/portfolios › should include proper CSS styling[39m[22m
+
+    expected 200 "OK", got 404 "Not Found"
+[2m[22m
+[2m    [0m [90m 67 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[22m
+[2m     [90m 68 |[39m         [33m.[39m[36mget[39m([32m'/api/v1/portfolios'[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m 69 |[39m         [33m.[39mexpect([35m200[39m)[33m;[39m[22m
+[2m     [90m    |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m 70 |[39m[22m
+[2m     [90m 71 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'<style>'[39m)[33m;[39m[22m
+[2m     [90m 72 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'font-family: Arial, sans-serif'[39m)[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36mtests/integration/portfolios.test.ts[39m[0m[2m:69:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertStatus ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:252:14)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mPortfolios API Integration Tests › Portfolio Data Structure › should return consistent portfolio data format[39m[22m
+
+    expected 200 "OK", got 404 "Not Found"
+[2m[22m
+[2m    [0m [90m 81 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[22m
+[2m     [90m 82 |[39m         [33m.[39m[36mget[39m([32m'/api/v1/portfolios'[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m 83 |[39m         [33m.[39mexpect([35m200[39m)[33m;[39m[22m
+[2m     [90m    |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m 84 |[39m[22m
+[2m     [90m 85 |[39m       [90m// Verify the mock data structure is consistent[39m[22m
+[2m     [90m 86 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'Growth Portfolio'[39m)[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36mtests/integration/portfolios.test.ts[39m[0m[2m:83:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertStatus ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:252:14)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mPortfolios API Integration Tests › Error Handling › should handle malformed requests gracefully[39m[22m
+
+    expected 200 "OK", got 404 "Not Found"
+[2m[22m
+[2m    [0m [90m  96 |[39m       [36mconst[39m response [33m=[39m [36mawait[39m request(app)[22m
+[2m     [90m  97 |[39m         [33m.[39m[36mget[39m([32m'/api/v1/portfolios?invalid=param'[39m)[22m
+[2m    [31m[1m>[22m[2m[39m[90m  98 |[39m         [33m.[39mexpect([35m200[39m)[33m;[39m [90m// Should still return the dashboard[39m[22m
+[2m     [90m     |[39m          [31m[1m^[22m[2m[39m[22m
+[2m     [90m  99 |[39m[22m
+[2m     [90m 100 |[39m       expect(response[33m.[39mtext)[33m.[39mtoContain([32m'Portfolios'[39m)[33m;[39m[22m
+[2m     [90m 101 |[39m     })[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36mtests/integration/portfolios.test.ts[39m[0m[2m:98:10)[22m[2m[22m
+[2m      ----[22m
+[2m      [2mat Test._assertStatus ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:252:14)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:308:13[22m[2m[22m
+[2m      [2mat Test._assertFunction ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:285:13)[22m[2m[22m
+[2m      [2mat Test.assert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:164:23)[22m[2m[22m
+[2m      [2mat Server.localAssert ([22m[2m../../node_modules/.pnpm/supertest@7.0.0/node_modules/supertest/lib/test.js[2m:120:14)[22m[2m[22m
+
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[999D[K[1m[2mRunning coverage on untested files...[22m[22m[41m[30m ELIFECYCLE [39m[49m [31mCommand failed.[39m

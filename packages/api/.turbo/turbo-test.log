@@ -1,0 +1,102 @@
+
+
+> api@1.0.0 test /Users/zeke/projects/highwater/packages/api
+> jest
+
+[33m[1m[1m●[22m[1m Validation Warning[22m:[39m
+[33m[39m
+[33m  Unknown option [1m"moduleNameMapping"[22m with value [1m{"^@/(.*)$": "<rootDir>/src/$1"}[22m was found.[39m
+[33m  This is probably a typing mistake. Fixing it will remove this message.[39m
+[33m[39m
+[33m  [1mConfiguration Documentation:[22m[39m
+[33m  https://jestjs.io/docs/configuration[39m
+[33m[39m
+[33m[1m[1m●[22m[1m Validation Warning[22m:[39m
+[33m[39m
+[33m  Unknown option [1m"moduleNameMapping"[22m with value [1m{"^@/(.*)$": "<rootDir>/src/$1"}[22m was found.[39m
+[33m  This is probably a typing mistake. Fixing it will remove this message.[39m
+[33m[39m
+[33m  [1mConfiguration Documentation:[22m[39m
+[33m  https://jestjs.io/docs/configuration[39m
+[33m[39m
+[1m[2mDetermining test suites to run...[22m[22m[999D[K
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.676Z","url":"/api/v1/assets/live"}
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.678Z","url":"/api/v1/clients"}
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.680Z","url":"/api/v1/portfolios"}
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.685Z","url":"/api/v1/clients"}
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.687Z","url":"/api/v1/clients"}
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.687Z","url":"/api/v1/portfolios"}
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.689Z","url":"/api/v1/clients"}
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.689Z","url":"/api/v1/portfolios"}
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.691Z","url":"/api/v1/clients"}
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.692Z","url":"/api/v1/portfolios"}
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.693Z","url":"/api/v1/clients"}
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.693Z","url":"/api/v1/portfolios"}
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.695Z","url":"/api/v1/clients"}
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.695Z","url":"/api/v1/portfolios"}
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.697Z","url":"/api/v1/portfolios"}
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.698Z","url":"/api/v1/clients?invalid=param"}
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.699Z","url":"/api/v1/portfolios?invalid=param"}
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.699Z","url":"/api/v1/clients/nonexistent"}
+{"level":"info","message":"Incoming request","method":"GET","timestamp":"2025-06-26T00:18:00.701Z","url":"/api/v1/portfolios/nonexistent"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mportfolios.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1mclients.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtests/integration/[22m[1massets.test.ts[22m
+
+[1mTest Suites: [22m[1m[32m2 passed[39m[22m, 2 of 3 total
+[1mTests:       [22m[1m[32m18 passed[39m[22m, 18 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s, estimated 2 s[41m[30m ELIFECYCLE [39m[49m [31mTest failed. See above for more details.[39m

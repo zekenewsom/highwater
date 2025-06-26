@@ -26,7 +26,7 @@ const baseStyles = `
 `;
 
 // Clients dashboard with mock data for UI/UX
-router.get('/api/v1/clients', async (req: Request, res: Response) => {
+router.get('/', async (req: Request, res: Response) => {
   // TODO: Replace with actual DB call
   const clients = [
     { id: '1', name: 'Alice Smith', email: 'alice@example.com', advisorId: 'A123' },

@@ -1,0 +1,809 @@
+
+
+> web@0.1.0 test:coverage /Users/zeke/projects/highwater/packages/web
+> jest --coverage
+
+[33m[1m[1m●[22m[1m Validation Warning[22m:[39m
+[33m[39m
+[33m  Unknown option [1m"moduleNameMapping"[22m with value [1m{"^@/(.*)$": "<rootDir>/src/$1"}[22m was found.[39m
+[33m  This is probably a typing mistake. Fixing it will remove this message.[39m
+[33m[39m
+[33m  [1mConfiguration Documentation:[22m[39m
+[33m  https://jestjs.io/docs/configuration[39m
+[33m[39m
+[33m[1m[1m●[22m[1m Validation Warning[22m:[39m
+[33m[39m
+[33m  Unknown option [1m"moduleNameMapping"[22m with value [1m{"^@/(.*)$": "<rootDir>/src/$1"}[22m was found.[39m
+[33m  This is probably a typing mistake. Fixing it will remove this message.[39m
+[33m[39m
+[33m  [1mConfiguration Documentation:[22m[39m
+[33m  https://jestjs.io/docs/configuration[39m
+[33m[39m
+[1m[2mDetermining test suites to run...[22m[22m[999D[K
+[K[1A[999D[K
+[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A[0m[7m[1m[31m FAIL [39m[22m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A  [1m● [22mConsole
+
+    [2m[31mconsole.error[39m[22m
+[31m      `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.[39m
+[2m[22m
+[2m    [0m [90m 12 |[39m describe([32m'NetWorthOverview'[39m[33m,[39m () [33m=>[39m {[22m
+[2m     [90m 13 |[39m   it([32m'renders net worth overview component'[39m[33m,[39m () [33m=>[39m {[22m
+[2m    [31m[1m>[22m[2m[39m[90m 14 |[39m     render([33m<[39m[33mNetWorthOverview[39m [33m/[39m[33m>[39m)[33m;[39m[22m
+[2m     [90m    |[39m           [31m[1m^[22m[2m[39m[22m
+[2m     [90m 15 |[39m     [22m
+[2m     [90m 16 |[39m     expect(screen[33m.[39mgetByText([35m/Net Worth/i[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[22m
+[2m     [90m 17 |[39m     expect(screen[33m.[39mgetByText([35m/Net Worth Overview/i[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous>.process.env.NODE_ENV.exports.act ([22m[2m../../node_modules/.pnpm/react-dom@19.0.0_react@19.0.0/node_modules/react-dom/cjs/react-dom-test-utils.development.js[2m:19:17)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+react@14.2.1_@types+react@19.0.0_react-dom@19.0.0_react@19.0.0/node_modules/@testing-library/react/dist/act-compat.js[2m:46:25[22m[2m[22m
+[2m      [2mat renderRoot ([22m[2m../../node_modules/.pnpm/@testing-library+react@14.2.1_@types+react@19.0.0_react-dom@19.0.0_react@19.0.0/node_modules/@testing-library/react/dist/pure.js[2m:180:26)[22m[2m[22m
+[2m      [2mat render ([22m[2m../../node_modules/.pnpm/@testing-library+react@14.2.1_@types+react@19.0.0_react-dom@19.0.0_react@19.0.0/node_modules/@testing-library/react/dist/pure.js[2m:266:10)[22m[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36msrc/components/__tests__/NetWorthOverview.test.tsx[39m[0m[2m:14:11)[22m[2m[22m
+
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A[1m[31m  [1m● [22m[1mNetWorthOverview › displays chart component[39m[22m
+
+    TestingLibraryElementError: Found multiple elements by: [data-testid="bar-chart"]
+
+    Here are the matching elements:
+
+    Ignored nodes: comments, script, style
+    [36m<div[39m
+      [33mdata-testid[39m=[32m"bar-chart"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mdata-testid[39m=[32m"x-axis"[39m
+      [36m/>[39m
+      [36m<div[39m
+        [33mdata-testid[39m=[32m"bar"[39m
+      [36m/>[39m
+    [36m</div>[39m
+
+    Ignored nodes: comments, script, style
+    [36m<div[39m
+      [33mdata-testid[39m=[32m"bar-chart"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mdata-testid[39m=[32m"x-axis"[39m
+      [36m/>[39m
+      [36m<div[39m
+        [33mdata-testid[39m=[32m"bar"[39m
+      [36m/>[39m
+    [36m</div>[39m
+
+    Ignored nodes: comments, script, style
+    [36m<div[39m
+      [33mdata-testid[39m=[32m"bar-chart"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mdata-testid[39m=[32m"x-axis"[39m
+      [36m/>[39m
+      [36m<div[39m
+        [33mdata-testid[39m=[32m"bar"[39m
+      [36m/>[39m
+    [36m</div>[39m
+
+    Ignored nodes: comments, script, style
+    [36m<div[39m
+      [33mdata-testid[39m=[32m"bar-chart"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mdata-testid[39m=[32m"x-axis"[39m
+      [36m/>[39m
+      [36m<div[39m
+        [33mdata-testid[39m=[32m"bar"[39m
+      [36m/>[39m
+    [36m</div>[39m
+
+    (If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"bg-white rounded-2xl shadow-lg border border-gray-100 p-8 flex flex-col h-full justify-between gap-6"[39m
+        [36m>[39m
+          [36m<h2[39m
+            [33mclass[39m=[32m"text-xl font-medium text-gray-800 tracking-tight mb-2"[39m
+          [36m>[39m
+            [0mNet Worth Overview[0m
+          [36m</h2>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"flex flex-col sm:flex-row sm:items-end gap-4 mb-2"[39m
+          [36m>[39m
+            [36m<span[39m
+              [33mclass[39m=[32m"text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight drop-shadow-sm leading-tight"[39m
+            [36m>[39m
+              [0m$[0m
+              [0m13,564,649[0m
+            [36m</span>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"flex flex-col gap-4 flex-1"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"flex items-center gap-4"[39m
+            [36m>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"text-sm font-medium text-gray-700 w-40 min-w-[120px]"[39m
+              [36m>[39m
+                [0mCryptoassets[0m
+              [36m</span>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"flex-1 flex items-center"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mdata-testid[39m=[32m"responsive-container"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mdata-testid[39m=[32m"bar-chart"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mdata-testid[39m=[32m"x-axis"[39m
+                    [36m/>[39m
+                    [36m<div[39m
+                      [33mdata-testid[39m=[32m"bar"[39m
+                    [36m/>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"text-base font-semibold tabular-nums text-gray-900"[39m
+              [36m>[39m
+                [0m$[0m
+                [0m3,276,484[0m
+              [36m</span>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"flex items-center gap-4"[39m
+            [36m>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"text-sm font-medium text-gray-700 w-40 min-w-[120px]"[39m
+              [36m>[39m
+                [0mTraditional Investments[0m
+              [36m</span>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"flex-1 flex items-center"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mdata-testid[39m=[32m"responsive-container"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mdata-testid[39m=[32m"bar-chart"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mdata-testid[39m=[32m"x-axis"[39m
+                    [36m/>[39m
+                    [36m<div[39m
+                      [33mdata-testid[39m=[32m"bar"[39m
+                    [36m/>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"text-base font-semibold tabular-nums text-gray-900"[39m
+              [36m>[39m
+                [0m$[0m
+                [0m5,261,894[0m
+              [36m</span>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"flex items-center gap-4"[39m
+            [36m>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"text-sm font-medium text-gray-700 w-40 min-w-[120px]"[39m
+              [36m>[39m
+                [0mCash Reserves[0m
+              [36m</span>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"flex-1 flex items-center"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mdata-testid[39m=[32m"responsive-container"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mdata-testid[39m=[32m"bar-chart"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mdata-testid[39m=[32m"x-axis"[39m
+                    [36m/>[39m
+                    [36m<div[39m
+                      [33mdata-testid[39m=[32m"bar"[39m
+                    [36m/>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"text-base font-semibold tabular-nums text-gray-900"[39m
+              [36m>[39m
+                [0m$[0m
+                [0m5,421,771[0m
+              [36m</span>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"flex items-center gap-4"[39m
+            [36m>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"text-sm font-medium text-gray-700 w-40 min-w-[120px]"[39m
+              [36m>[39m
+                [0mLiabilities[0m
+              [36m</span>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"flex-1 flex items-center"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mdata-testid[39m=[32m"responsive-container"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mdata-testid[39m=[32m"bar-chart"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mdata-testid[39m=[32m"x-axis"[39m
+                    [36m/>[39m
+                    [36m<div[39m
+                      [33mdata-testid[39m=[32m"bar"[39m
+                    [36m/>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"text-base font-semibold tabular-nums text-red-600"[39m
+              [36m>[39m
+                [0m-[0m
+                [0m$[0m
+                [0m395,500[0m
+              [36m</span>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+[2m[22m
+[2m    [0m [90m 36 |[39m     [22m
+[2m     [90m 37 |[39m     [90m// Check for chart elements (mocked in jest.setup.js)[39m[22m
+[2m    [31m[1m>[22m[2m[39m[90m 38 |[39m     expect(screen[33m.[39mgetByTestId([32m'bar-chart'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[22m
+[2m     [90m    |[39m                   [31m[1m^[22m[2m[39m[22m
+[2m     [90m 39 |[39m   })[33m;[39m[22m
+[2m     [90m 40 |[39m[22m
+[2m     [90m 41 |[39m   it([32m'renders without crashing with no data'[39m[33m,[39m () [33m=>[39m {[0m[22m
+[2m[22m
+[2m      [2mat Object.getElementError ([22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/config.js[2m:37:19)[22m[2m[22m
+[2m      [2mat getElementError ([22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:20:35)[22m[2m[22m
+[2m      [2mat getMultipleElementsFoundError ([22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:23:10)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:55:13[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:95:19[22m[2m[22m
+[2m      [2mat Object.getByTestId ([22m[2m[0m[36msrc/components/__tests__/NetWorthOverview.test.tsx[39m[0m[2m:38:19)[22m[2m[22m
+
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/[22m[1mAddButtonWithDropdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/[22m[1mAddButtonWithDropdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/[22m[1mAddButtonWithDropdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/[22m[1mAddButtonWithDropdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/[22m[1mAddButtonWithDropdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/[22m[1mAddButtonWithDropdown.test.tsx[22m
+[K[1A[K[1A[0m[7m[1m[31m FAIL [39m[22m[27m[0m [2msrc/components/[22m[1mAddButtonWithDropdown.test.tsx[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/[22m[1mAddButtonWithDropdown.test.tsx[22m
+[K[1A[K[1A  [1m● [22mConsole
+
+    [2m[31mconsole.error[39m[22m
+[31m      `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.[39m
+[2m[22m
+[2m    [0m [90m 4 |[39m describe([32m"AddButtonWithDropdown"[39m[33m,[39m () [33m=>[39m {[22m
+[2m     [90m 5 |[39m   it([32m"shows dropdown on button click"[39m[33m,[39m () [33m=>[39m {[22m
+[2m    [31m[1m>[22m[2m[39m[90m 6 |[39m     render([33m<[39m[33mAddButtonWithDropdown[39m [33m/[39m[33m>[39m)[33m;[39m[22m
+[2m     [90m   |[39m           [31m[1m^[22m[2m[39m[22m
+[2m     [90m 7 |[39m     fireEvent[33m.[39mclick(screen[33m.[39mgetByText([32m"Add"[39m))[33m;[39m[22m
+[2m     [90m 8 |[39m     expect(screen[33m.[39mgetByText([35m/Add Wallet/i[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[22m
+[2m     [90m 9 |[39m     expect(screen[33m.[39mgetByText([35m/Add Exchange/i[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous>.process.env.NODE_ENV.exports.act ([22m[2m../../node_modules/.pnpm/react-dom@19.0.0_react@19.0.0/node_modules/react-dom/cjs/react-dom-test-utils.development.js[2m:19:17)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+react@14.2.1_@types+react@19.0.0_react-dom@19.0.0_react@19.0.0/node_modules/@testing-library/react/dist/act-compat.js[2m:46:25[22m[2m[22m
+[2m      [2mat renderRoot ([22m[2m../../node_modules/.pnpm/@testing-library+react@14.2.1_@types+react@19.0.0_react-dom@19.0.0_react@19.0.0/node_modules/@testing-library/react/dist/pure.js[2m:180:26)[22m[2m[22m
+[2m      [2mat render ([22m[2m../../node_modules/.pnpm/@testing-library+react@14.2.1_@types+react@19.0.0_react-dom@19.0.0_react@19.0.0/node_modules/@testing-library/react/dist/pure.js[2m:266:10)[22m[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36msrc/components/AddButtonWithDropdown.test.tsx[39m[0m[2m:6:11)[22m[2m[22m
+
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/[22m[1mAddButtonWithDropdown.test.tsx[22m
+[K[1A[K[1A[1m[31m  [1m● [22m[1mAddButtonWithDropdown › shows modal when Add Wallet is clicked[39m[22m
+
+    TestingLibraryElementError: Unable to find an element with the text: /Logo/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"relative"[39m
+        [36m>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"px-4 py-2 bg-white text-black rounded-lg shadow font-semibold flex items-center gap-2 border border-gray-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-300"[39m
+          [36m>[39m
+            [0mAdd [0m
+            [36m<span[39m
+              [33mclass[39m=[32m"text-lg"[39m
+            [36m>[39m
+              [0m+[0m
+            [36m</span>[39m
+          [36m</button>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"fixed inset-0 z-30 flex items-center justify-center bg-black bg-opacity-40"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"bg-white rounded-xl shadow-xl p-8 max-w-lg w-full"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"flex justify-between items-center mb-4"[39m
+              [36m>[39m
+                [36m<h2[39m
+                  [33mclass[39m=[32m"text-xl font-bold text-gray-900"[39m
+                [36m>[39m
+                  [0mAdd Wallet[0m
+                [36m</h2>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"text-gray-400 hover:text-gray-700 text-2xl font-bold"[39m
+                [36m>[39m
+                  [0m×[0m
+                [36m</button>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"grid grid-cols-4 gap-2 mb-6"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"flex flex-col items-center"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"w-24 h-24 bg-white rounded flex items-center justify-center border border-gray-200 shadow-sm"[39m
+                  [36m>[39m
+                    [36m<img[39m
+                      [33malt[39m=[32m"Phantom"[39m
+                      [33mclass[39m=[32m"object-contain max-w-full max-h-full"[39m
+                      [33msrc[39m=[32m"/logos/phantom.png"[39m
+                    [36m/>[39m
+                  [36m</div>[39m
+                  [36m<span[39m
+                    [33mclass[39m=[32m"text-xs text-gray-600 text-center font-medium truncate w-24 mt-1"[39m
+                  [36m>[39m
+                    [0mPhantom[0m
+                  [36m</span>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"flex flex-col items-center"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"w-24 h-24 bg-white rounded flex items-center justify-center border border-gray-200 shadow-sm"[39m
+                  [36m>[39m
+                    [36m<img[39m
+                      [33malt[39m=[32m"MetaMask"[39m
+                      [33mclass[39m=[32m"object-contain max-w-full max-h-full"[39m
+                      [33msrc[39m=[32m"/logos/metamask.png"[39m
+                    [36m/>[39m
+                  [36m</div>[39m
+                  [36m<span[39m
+                    [33mclass[39m=[32m"text-xs text-gray-600 text-center font-medium truncate w-24 mt-1"[39m
+                  [36m>[39m
+                    [0mMetaMask[0m
+                  [36m</span>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"flex flex-col items-center"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"w-24 h-24 bg-white rounded flex items-center justify-center border border-gray-200 shadow-sm"[39m
+                  [36m>[39m
+                    [36m<img[39m
+                      [33malt[39m=[32m"Trust"[39m
+                      [33mclass[39m=[32m"object-contain max-w-full max-h-full"[39m
+                      [33msrc[39m=[32m"/logos/trust.png"[39m
+                    [36m/>[39m
+                  [36m</div>[39m
+                  [36m<span[39m
+                    [33mclass[39m=[32m"text-xs text-gray-600 text-center font-medium truncate w-24 mt-1"[39m
+                  [36m>[39m
+                    [0mTrust[0m
+                  [36m</span>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"flex flex-col items-center"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"w-24 h-24 bg-white rounded flex items-center justify-center border border-gray-200 shadow-sm"[39m
+                  [36m>[39m
+                    [36m<img[39m
+                      [33malt[39m=[32m"Moonshot"[39m
+                      [33mclass[39m=[32m"object-contain max-w-full max-h-full"[39m
+                      [33msrc[39m=[32m"/logos/moonshot.png"[39m
+                    [36m/>[39m
+                  [36m</div>[39m
+                  [36m<span[39m
+                    [33mclass[39m=[32m"text-xs text-gray-600 text-center font-medium truncate w-24 mt-1"[39m
+                  [36m>[39m
+                    [0mMoonshot[0m
+                  [36m</span>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"w-full mt-2 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mAdd Other Wallet[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+[2m[22m
+[2m    [0m [90m 15 |[39m     fireEvent[33m.[39mclick(screen[33m.[39mgetByText([35m/Add Wallet/i[39m))[33m;[39m[22m
+[2m     [90m 16 |[39m     expect(screen[33m.[39mgetByText([35m/Add Wallet/i[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[22m
+[2m    [31m[1m>[22m[2m[39m[90m 17 |[39m     expect(screen[33m.[39mgetAllByText([35m/Logo/i[39m)[33m.[39mlength)[33m.[39mtoBeGreaterThan([35m0[39m)[33m;[39m[22m
+[2m     [90m    |[39m                   [31m[1m^[22m[2m[39m[22m
+[2m     [90m 18 |[39m   })[33m;[39m[22m
+[2m     [90m 19 |[39m[22m
+[2m     [90m 20 |[39m   it([32m"shows modal when Add Exchange is clicked"[39m[33m,[39m () [33m=>[39m {[0m[22m
+[2m[22m
+[2m      [2mat Object.getElementError ([22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/config.js[2m:37:19)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:76:38[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:109:15[22m[2m[22m
+[2m      [2mat Object.getAllByText ([22m[2m[0m[36msrc/components/AddButtonWithDropdown.test.tsx[39m[0m[2m:17:19)[22m[2m[22m
+
+[1m[31m  [1m● [22m[1mAddButtonWithDropdown › shows modal when Add Exchange is clicked[39m[22m
+
+    TestingLibraryElementError: Unable to find an element with the text: /Logo/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"relative"[39m
+        [36m>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"px-4 py-2 bg-white text-black rounded-lg shadow font-semibold flex items-center gap-2 border border-gray-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-300"[39m
+          [36m>[39m
+            [0mAdd [0m
+            [36m<span[39m
+              [33mclass[39m=[32m"text-lg"[39m
+            [36m>[39m
+              [0m+[0m
+            [36m</span>[39m
+          [36m</button>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"fixed inset-0 z-30 flex items-center justify-center bg-black bg-opacity-40"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"bg-white rounded-xl shadow-xl p-8 max-w-lg w-full"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"flex justify-between items-center mb-4"[39m
+              [36m>[39m
+                [36m<h2[39m
+                  [33mclass[39m=[32m"text-xl font-bold text-gray-900"[39m
+                [36m>[39m
+                  [0mAdd Exchange[0m
+                [36m</h2>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"text-gray-400 hover:text-gray-700 text-2xl font-bold"[39m
+                [36m>[39m
+                  [0m×[0m
+                [36m</button>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"grid grid-cols-4 gap-2 mb-6"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"flex flex-col items-center"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"w-24 h-24 bg-white rounded flex items-center justify-center border border-gray-200 shadow-sm"[39m
+                  [36m>[39m
+                    [36m<img[39m
+                      [33malt[39m=[32m"Coinbase"[39m
+                      [33mclass[39m=[32m"object-contain max-w-full max-h-full"[39m
+                      [33msrc[39m=[32m"/logos/coinbase.png"[39m
+                    [36m/>[39m
+                  [36m</div>[39m
+                  [36m<span[39m
+                    [33mclass[39m=[32m"text-xs text-gray-600 text-center font-medium truncate w-24 mt-1"[39m
+                  [36m>[39m
+                    [0mCoinbase[0m
+                  [36m</span>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"flex flex-col items-center"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"w-24 h-24 bg-white rounded flex items-center justify-center border border-gray-200 shadow-sm"[39m
+                  [36m>[39m
+                    [36m<img[39m
+                      [33malt[39m=[32m"Gemini"[39m
+                      [33mclass[39m=[32m"object-contain max-w-full max-h-full"[39m
+                      [33msrc[39m=[32m"/logos/gemini.png"[39m
+                    [36m/>[39m
+                  [36m</div>[39m
+                  [36m<span[39m
+                    [33mclass[39m=[32m"text-xs text-gray-600 text-center font-medium truncate w-24 mt-1"[39m
+                  [36m>[39m
+                    [0mGemini[0m
+                  [36m</span>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"flex flex-col items-center"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"w-24 h-24 bg-white rounded flex items-center justify-center border border-gray-200 shadow-sm"[39m
+                  [36m>[39m
+                    [36m<img[39m
+                      [33malt[39m=[32m"Kraken"[39m
+                      [33mclass[39m=[32m"object-contain max-w-full max-h-full"[39m
+                      [33msrc[39m=[32m"/logos/kraken.png"[39m
+                    [36m/>[39m
+                  [36m</div>[39m
+                  [36m<span[39m
+                    [33mclass[39m=[32m"text-xs text-gray-600 text-center font-medium truncate w-24 mt-1"[39m
+                  [36m>[39m
+                    [0mKraken[0m
+                  [36m</span>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"flex flex-col items-center"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"w-24 h-24 bg-white rounded flex items-center justify-center border border-gray-200 shadow-sm"[39m
+                  [36m>[39m
+                    [36m<img[39m
+                      [33malt[39m=[32m"Binance"[39m
+                      [33mclass[39m=[32m"object-contain max-w-full max-h-full"[39m
+                      [33msrc[39m=[32m"/logos/binance.png"[39m
+                    [36m/>[39m
+                  [36m</div>[39m
+                  [36m<span[39m
+                    [33mclass[39m=[32m"text-xs text-gray-600 text-center font-medium truncate w-24 mt-1"[39m
+                  [36m>[39m
+                    [0mBinance[0m
+                  [36m</span>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"w-full mt-2 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mAdd Other Exchange[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+[2m[22m
+[2m    [0m [90m 23 |[39m     fireEvent[33m.[39mclick(screen[33m.[39mgetByText([35m/Add Exchange/i[39m))[33m;[39m[22m
+[2m     [90m 24 |[39m     expect(screen[33m.[39mgetByText([35m/Add Exchange/i[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[22m
+[2m    [31m[1m>[22m[2m[39m[90m 25 |[39m     expect(screen[33m.[39mgetAllByText([35m/Logo/i[39m)[33m.[39mlength)[33m.[39mtoBeGreaterThan([35m0[39m)[33m;[39m[22m
+[2m     [90m    |[39m                   [31m[1m^[22m[2m[39m[22m
+[2m     [90m 26 |[39m   })[33m;[39m[22m
+[2m     [90m 27 |[39m[22m
+[2m     [90m 28 |[39m   it([32m"closes modal on × click"[39m[33m,[39m () [33m=>[39m {[0m[22m
+[2m[22m
+[2m      [2mat Object.getElementError ([22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/config.js[2m:37:19)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:76:38[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:109:15[22m[2m[22m
+[2m      [2mat Object.getAllByText ([22m[2m[0m[36msrc/components/AddButtonWithDropdown.test.tsx[39m[0m[2m:25:19)[22m[2m[22m
+
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/[22m[1mAddButtonWithDropdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNavBar.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNavBar.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNavBar.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNavBar.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNavBar.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNavBar.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNavBar.test.tsx[22m
+[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m [2msrc/components/__tests__/[22m[1mNavBar.test.tsx[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNavBar.test.tsx[22m
+[K[1A[K[1A  [1m● [22mConsole
+
+    [2m[31mconsole.error[39m[22m
+[31m      `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.[39m
+[2m[22m
+[2m    [0m [90m 4 |[39m describe([32m'NavBar'[39m[33m,[39m () [33m=>[39m {[22m
+[2m     [90m 5 |[39m   it([32m'renders navigation bar component'[39m[33m,[39m () [33m=>[39m {[22m
+[2m    [31m[1m>[22m[2m[39m[90m 6 |[39m     render([33m<[39m[33mNavBar[39m [33m/[39m[33m>[39m)[33m;[39m[22m
+[2m     [90m   |[39m           [31m[1m^[22m[2m[39m[22m
+[2m     [90m 7 |[39m     [22m
+[2m     [90m 8 |[39m     [90m// Check for navigation element[39m[22m
+[2m     [90m 9 |[39m     [36mconst[39m nav [33m=[39m screen[33m.[39mgetByRole([32m'navigation'[39m)[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous>.process.env.NODE_ENV.exports.act ([22m[2m../../node_modules/.pnpm/react-dom@19.0.0_react@19.0.0/node_modules/react-dom/cjs/react-dom-test-utils.development.js[2m:19:17)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+react@14.2.1_@types+react@19.0.0_react-dom@19.0.0_react@19.0.0/node_modules/@testing-library/react/dist/act-compat.js[2m:46:25[22m[2m[22m
+[2m      [2mat renderRoot ([22m[2m../../node_modules/.pnpm/@testing-library+react@14.2.1_@types+react@19.0.0_react-dom@19.0.0_react@19.0.0/node_modules/@testing-library/react/dist/pure.js[2m:180:26)[22m[2m[22m
+[2m      [2mat render ([22m[2m../../node_modules/.pnpm/@testing-library+react@14.2.1_@types+react@19.0.0_react-dom@19.0.0_react@19.0.0/node_modules/@testing-library/react/dist/pure.js[2m:266:10)[22m[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36msrc/components/__tests__/NavBar.test.tsx[39m[0m[2m:6:11)[22m[2m[22m
+
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNavBar.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+[K[1A[K[1A  [1m● [22mConsole
+
+    [2m[31mconsole.error[39m[22m
+[31m      `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.[39m
+[2m[22m
+[2m    [0m [90m 4 |[39m describe([32m'HoldingsTable'[39m[33m,[39m () [33m=>[39m {[22m
+[2m     [90m 5 |[39m   it([32m'renders holdings table component'[39m[33m,[39m () [33m=>[39m {[22m
+[2m    [31m[1m>[22m[2m[39m[90m 6 |[39m     render([33m<[39m[33mHoldingsTable[39m [33m/[39m[33m>[39m)[33m;[39m[22m
+[2m     [90m   |[39m           [31m[1m^[22m[2m[39m[22m
+[2m     [90m 7 |[39m     [22m
+[2m     [90m 8 |[39m     expect(screen[33m.[39mgetByText([35m/Holdings/i[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[22m
+[2m     [90m 9 |[39m   })[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous>.process.env.NODE_ENV.exports.act ([22m[2m../../node_modules/.pnpm/react-dom@19.0.0_react@19.0.0/node_modules/react-dom/cjs/react-dom-test-utils.development.js[2m:19:17)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+react@14.2.1_@types+react@19.0.0_react-dom@19.0.0_react@19.0.0/node_modules/@testing-library/react/dist/act-compat.js[2m:46:25[22m[2m[22m
+[2m      [2mat renderRoot ([22m[2m../../node_modules/.pnpm/@testing-library+react@14.2.1_@types+react@19.0.0_react-dom@19.0.0_react@19.0.0/node_modules/@testing-library/react/dist/pure.js[2m:180:26)[22m[2m[22m
+[2m      [2mat render ([22m[2m../../node_modules/.pnpm/@testing-library+react@14.2.1_@types+react@19.0.0_react-dom@19.0.0_react@19.0.0/node_modules/@testing-library/react/dist/pure.js[2m:266:10)[22m[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36msrc/components/__tests__/HoldingsTable.test.tsx[39m[0m[2m:6:11)[22m[2m[22m
+
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mHoldingsTable.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mAllocationBreakdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mAllocationBreakdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mAllocationBreakdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mAllocationBreakdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mAllocationBreakdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mAllocationBreakdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mAllocationBreakdown.test.tsx[22m
+[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m [2msrc/components/__tests__/[22m[1mAllocationBreakdown.test.tsx[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mAllocationBreakdown.test.tsx[22m
+[K[1A[K[1A  [1m● [22mConsole
+
+    [2m[31mconsole.error[39m[22m
+[31m      `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.[39m
+[2m[22m
+[2m    [0m [90m 4 |[39m describe([32m'AllocationBreakdown'[39m[33m,[39m () [33m=>[39m {[22m
+[2m     [90m 5 |[39m   it([32m'renders allocation breakdown component'[39m[33m,[39m () [33m=>[39m {[22m
+[2m    [31m[1m>[22m[2m[39m[90m 6 |[39m     render([33m<[39m[33mAllocationBreakdown[39m [33m/[39m[33m>[39m)[33m;[39m[22m
+[2m     [90m   |[39m           [31m[1m^[22m[2m[39m[22m
+[2m     [90m 7 |[39m     [22m
+[2m     [90m 8 |[39m     expect(screen[33m.[39mgetByText([35m/Allocation/i[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[22m
+[2m     [90m 9 |[39m   })[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat Object.<anonymous>.process.env.NODE_ENV.exports.act ([22m[2m../../node_modules/.pnpm/react-dom@19.0.0_react@19.0.0/node_modules/react-dom/cjs/react-dom-test-utils.development.js[2m:19:17)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+react@14.2.1_@types+react@19.0.0_react-dom@19.0.0_react@19.0.0/node_modules/@testing-library/react/dist/act-compat.js[2m:46:25[22m[2m[22m
+[2m      [2mat renderRoot ([22m[2m../../node_modules/.pnpm/@testing-library+react@14.2.1_@types+react@19.0.0_react-dom@19.0.0_react@19.0.0/node_modules/@testing-library/react/dist/pure.js[2m:180:26)[22m[2m[22m
+[2m      [2mat render ([22m[2m../../node_modules/.pnpm/@testing-library+react@14.2.1_@types+react@19.0.0_react-dom@19.0.0_react@19.0.0/node_modules/@testing-library/react/dist/pure.js[2m:266:10)[22m[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36msrc/components/__tests__/AllocationBreakdown.test.tsx[39m[0m[2m:6:11)[22m[2m[22m
+
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mAllocationBreakdown.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/integration/[22m[1mDashboardFlow.test.tsx[22m
+[K[1A[K[1A[999D[K[1m[2mRunning coverage on untested files...[22m[22m[999D[K---------------------------------|---------|----------|---------|---------|-------------------
+File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+---------------------------------|---------|----------|---------|---------|-------------------
+[31;1mAll files                       [0m | [31;1m  17.94[0m | [31;1m   16.66[0m | [31;1m  18.79[0m | [31;1m  17.24[0m | [31;1m                 [0m 
+[31;1m app                            [0m | [31;1m      0[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m                 [0m 
+[31;1m  layout.tsx                    [0m | [31;1m      0[0m | [32;1m     100[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m2-22             [0m 
+[31;1m  page.tsx                      [0m | [31;1m      0[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m1-27             [0m 
+[31;1m app/api/auth/[...auth0]        [0m | [31;1m      0[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m                 [0m 
+[31;1m  route.ts                      [0m | [31;1m      0[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m1-61             [0m 
+[31;1m app/ask                        [0m | [31;1m      0[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m                 [0m 
+[31;1m  page.tsx                      [0m | [31;1m      0[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m2-285            [0m 
+[31;1m app/insights                   [0m | [31;1m      0[0m | [32;1m     100[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m                 [0m 
+[31;1m  page.tsx                      [0m | [31;1m      0[0m | [32;1m     100[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m2-13             [0m 
+[31;1m app/portfolio                  [0m | [31;1m      0[0m | [32;1m     100[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m                 [0m 
+[31;1m  page.tsx                      [0m | [31;1m      0[0m | [32;1m     100[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m2-11             [0m 
+[31;1m app/settings                   [0m | [31;1m      0[0m | [32;1m     100[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m                 [0m 
+[31;1m  page.tsx                      [0m | [31;1m      0[0m | [32;1m     100[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m2-5              [0m 
+[31;1m app/taxes                      [0m | [31;1m      0[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m                 [0m 
+[31;1m  ResourceCard.tsx              [0m | [31;1m      0[0m | [32;1m     100[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m1-9              [0m 
+[31;1m  page.tsx                      [0m | [31;1m      0[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m2-74             [0m 
+[31;1m components                     [0m | [31;1m  29.85[0m | [31;1m    26.5[0m | [31;1m   27.9[0m | [31;1m  29.23[0m | [31;1m                 [0m 
+[31;1m  AIInsights.tsx                [0m | [31;1m      0[0m | [32;1m     100[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m1-12             [0m 
+[31;1m  ActivityTable.tsx             [0m | [31;1m      0[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m2-115            [0m 
+[32;1m  AddButtonWithDropdown.tsx     [0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+[31;1m  Alerts.tsx                    [0m | [31;1m      0[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m2-50             [0m 
+[33;1m  AllocationBreakdown.tsx       [0m | [33;1m  68.75[0m | [31;1m       0[0m | [33;1m  57.14[0m | [33;1m  64.28[0m | [31;1m28-45            [0m 
+[32;1m  AuthNav.tsx                   [0m | [32;1m  85.71[0m | [31;1m      25[0m | [32;1m    100[0m | [32;1m  85.71[0m | [31;1m13               [0m 
+[31;1m  EstimatedMiscIncome.tsx       [0m | [31;1m      0[0m | [32;1m     100[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m1-23             [0m 
+[31;1m  GainLossAnalysis.tsx          [0m | [31;1m      0[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m1-32             [0m 
+[32;1m  HoldingsTable.tsx             [0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+[31;1m  MarketSignals.tsx             [0m | [31;1m      0[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m2-40             [0m 
+[32;1m  NavBar.tsx                    [0m | [32;1m  88.88[0m | [33;1m      50[0m | [32;1m  83.33[0m | [32;1m  88.23[0m | [31;1m28-29            [0m 
+[32;1m  NetWorthOverview.tsx          [0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+[31;1m  NewsFeed.tsx                  [0m | [31;1m      0[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m3-67             [0m 
+[31;1m  OnChainTrends.tsx             [0m | [31;1m      0[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m2-78             [0m 
+[31;1m  PerformanceComparisonChart.tsx[0m | [31;1m      0[0m | [32;1m     100[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m2-31             [0m 
+[31;1m  PortfolioActivityChart.tsx    [0m | [31;1m      0[0m | [32;1m     100[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m2-41             [0m 
+[31;1m  RecentTrades.tsx              [0m | [31;1m      0[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m2-34             [0m 
+[31;1m  RiskComplianceFlags.tsx       [0m | [31;1m      0[0m | [32;1m     100[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m1-27             [0m 
+[31;1m  TransactionSummaryTable.tsx   [0m | [31;1m      0[0m | [31;1m       0[0m | [31;1m      0[0m | [31;1m      0[0m | [31;1m2-27             [0m 
+[31;1m contexts                       [0m | [31;1m  27.77[0m | [31;1m       0[0m | [31;1m     25[0m | [31;1m  18.75[0m | [31;1m                 [0m 
+[31;1m  AuthContext.tsx               [0m | [31;1m  27.77[0m | [31;1m       0[0m | [31;1m     25[0m | [31;1m  18.75[0m | [31;1m21-46            [0m 
+[31;1m data                           [0m | [31;1m      0[0m | [32;1m     100[0m | [32;1m    100[0m | [31;1m      0[0m | [31;1m                 [0m 
+[31;1m  mockDashboard.ts              [0m | [31;1m      0[0m | [32;1m     100[0m | [32;1m    100[0m | [31;1m      0[0m | [31;1m9-37             [0m 
+---------------------------------|---------|----------|---------|---------|-------------------
+
+[1mTest Suites: [22m[1m[31m2 failed[39m[22m, [1m[32m4 passed[39m[22m, 6 total
+[1mTests:       [22m[1m[31m3 failed[39m[22m, [1m[32m32 passed[39m[22m, 35 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        [1m[33m2.656 s[39m[22m
+[2mRan all test suites[22m[2m.[22m
+[41m[30m ELIFECYCLE [39m[49m [31mCommand failed with exit code 1.[39m

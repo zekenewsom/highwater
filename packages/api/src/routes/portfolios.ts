@@ -26,7 +26,7 @@ const baseStyles = `
 `;
 
 // Portfolios dashboard with mock data for UI/UX
-router.get('/api/v1/portfolios', async (req: Request, res: Response) => {
+router.get('/', async (req: Request, res: Response) => {
   // TODO: Replace with actual DB call
   const portfolios = [
     { id: '1', name: 'Growth Portfolio', clientId: '1', assets: 5 },
