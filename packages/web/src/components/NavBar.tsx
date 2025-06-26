@@ -6,6 +6,8 @@ import AuthNav from './AuthNav';
 
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
+  { label: 'Clients', href: '/clients' },
+  { label: 'Portfolios', href: '/portfolios' },
   { label: 'Insights', href: '/insights' },
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'Taxes', href: '/taxes' },

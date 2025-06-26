@@ -87,6 +87,10 @@ app.get('/profile', requiresAuth(), (req, res) => {
 app.use('/api/v1/clients', clientsRouter);
 app.use('/api/v1/portfolios', portfoliosRouter);
 
+// Attach new JSON API routes
+app.use('/api/v2/clients', clientsRouter);
+app.use('/api/v2/portfolios', portfoliosRouter);
+
 const PORT = process.env.PORT || 4000;
 const server = http.createServer(app);
 
@@ -97,9 +101,14 @@ server.listen(PORT, () => {
 // Graceful shutdown
 const shutdown = () => {
   logger.info("Received shutdown signal, closing server...");
-  server.close(() => {
-    logger.info("Server closed gracefully.");
-    process.exit(0);
+  server.close((err) => {
+    if (err) {
+      logger.error("Error during server shutdown:", err);
+      process.exit(1);
+    } else {
+      logger.info("Server closed gracefully.");
+      process.exit(0);
+    }
   });
   // Force exit if not closed in 10 seconds
   setTimeout(() => {
