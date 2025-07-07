@@ -120,7 +120,15 @@ export const createTestApp = (): express.Application => {
   
   // Add routes
   // eslint-disable-next-line @typescript-eslint/no-var-requires
-  app.use('/', require('../../src/routes').default);
+  const routes = require('../../src/routes/index').default;
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const clientsRouter = require('../../src/routes/clients').default;
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const portfoliosRouter = require('../../src/routes/portfolios').default;
+  
+  app.use('/api/v1', routes);
+  app.use('/', clientsRouter); // v2 routes are defined with full paths
+  app.use('/', portfoliosRouter); // v2 routes are defined with full paths
   
   return app;
 };

@@ -167,7 +167,7 @@ describe('Phase 3 Advanced Features', () => {
       render(<PortfolioAnalytics portfolioId="1" />);
 
       expect(screen.getByText('Error loading analytics')).toBeInTheDocument();
-      expect(screen.getByText('Failed to load analytics')).toBeInTheDocument();
+      expect(screen.getByText('An unexpected error occurred')).toBeInTheDocument();
     });
   });
 

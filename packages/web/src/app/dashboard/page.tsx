@@ -1,22 +1,29 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { ClientsList } from '../../components/ClientsList';
 import { PortfoliosList } from '../../components/PortfoliosList';
-import { Client, Portfolio } from '../../types/api';
+import { Client } from '../../types/api';
+import { useClient } from '../../contexts/ClientContext';
+import NavBar from '../../components/NavBar';
+import PortfolioActivityChart from '../../components/PortfolioActivityChart';
+import NetWorthOverview from '../../components/NetWorthOverview';
+import PerformanceComparisonChart from '../../components/PerformanceComparisonChart';
+import RiskComplianceFlags from '../../components/RiskComplianceFlags';
+import TransactionSummaryTable from '../../components/TransactionSummaryTable';
+import GainLossAnalysis from '../../components/GainLossAnalysis';
+import { AllocationBreakdown } from '../../components/AllocationBreakdown';
 
-export default function DashboardPage() {
-  const [selectedClient, setSelectedClient] = useState<Client | null>(null);
-  const [selectedPortfolio, setSelectedPortfolio] = useState<Portfolio | null>(null);
-
+function ClientSelectionView() {
+  const { setSelectedClient } = useClient();
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="px-4 py-6 sm:px-0">
-          <h1 className="text-3xl font-bold text-gray-900">HighWater Dashboard</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Select a Client</h1>
           <p className="mt-2 text-sm text-gray-600">
-            Manage your clients and portfolios with our modern API-driven interface
+            Choose a client to view their detailed dashboard and portfolio analytics
           </p>
         </div>
 
@@ -27,50 +34,24 @@ export default function DashboardPage() {
             <div>
               <div className="mb-4">
                 <h2 className="text-xl font-semibold text-gray-900">Clients</h2>
-                <p className="text-sm text-gray-600">View and manage your client relationships</p>
+                <p className="text-sm text-gray-600">Click "View Details" to access their dashboard</p>
               </div>
-              <ClientsList
-                onClientSelect={(client) => {
-                  setSelectedClient(client);
-                  setSelectedPortfolio(null);
-                }}
-              />
-              {selectedClient && (
-                <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-md">
-                  <h3 className="font-medium text-blue-900">Selected Client</h3>
-                  <p className="text-sm text-blue-700">
-                    {selectedClient.name} ({selectedClient.email})
-                  </p>
-                </div>
-              )}
+              <ClientsList onClientSelect={setSelectedClient} />
             </div>
 
             {/* Portfolios Section */}
             <div>
               <div className="mb-4">
-                <h2 className="text-xl font-semibold text-gray-900">Portfolios</h2>
-                <p className="text-sm text-gray-600">Monitor and manage investment portfolios</p>
+                <h2 className="text-xl font-semibold text-gray-900">All Portfolios</h2>
+                <p className="text-sm text-gray-600">Overview of all portfolios in the system</p>
               </div>
-              <PortfoliosList
-                onPortfolioSelect={(portfolio) => {
-                  setSelectedPortfolio(portfolio);
-                  setSelectedClient(null);
-                }}
-              />
-              {selectedPortfolio && (
-                <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-md">
-                  <h3 className="font-medium text-green-900">Selected Portfolio</h3>
-                  <p className="text-sm text-green-700">
-                    {selectedPortfolio.name} ({selectedPortfolio.assets} assets)
-                  </p>
-                </div>
-              )}
+              <PortfoliosList />
             </div>
           </div>
 
           {/* API Status */}
           <div className="mt-8 p-4 bg-white border border-gray-200 rounded-md">
-            <h3 className="text-lg font-medium text-gray-900 mb-2">API Status</h3>
+            <h3 className="text-lg font-medium text-gray-900 mb-2">System Status</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
@@ -78,11 +59,11 @@ export default function DashboardPage() {
               </div>
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
-                <span className="text-gray-600">Legacy HTML endpoints maintained</span>
+                <span className="text-gray-600">Real-time data updates</span>
               </div>
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
-                <span className="text-gray-600">Type-safe data consumption</span>
+                <span className="text-gray-600">Advanced analytics ready</span>
               </div>
             </div>
           </div>
@@ -90,4 +71,83 @@ export default function DashboardPage() {
       </div>
     </div>
   );
+}
+
+function ClientDashboardView({ client }: { client: Client }) {
+  const { setSelectedClient } = useClient();
+  return (
+    <>
+      <NavBar />
+      <main className="min-h-screen bg-gray-50 p-8 space-y-8">
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+          <div>
+            <div className="flex items-center gap-4 mb-2">
+              <button
+                onClick={() => setSelectedClient(null)}
+                className="text-indigo-600 hover:text-indigo-800 flex items-center gap-2"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+                Back to Client List
+              </button>
+            </div>
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900">
+              {client.name}'s Dashboard
+            </h1>
+            <p className="mt-1 text-gray-600 text-sm">
+              {client.email} • Advisor: {client.advisorId} • Risk Profile: {client.riskProfile}
+            </p>
+            <p className="mt-1 text-gray-600 text-sm">
+              Last updated: {new Date().toLocaleDateString()} • {new Date().toLocaleTimeString()}
+            </p>
+          </div>
+          <div className="flex gap-2 mt-4 md:mt-0">
+            <button className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
+              Export
+            </button>
+            <button className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
+              Refresh
+            </button>
+          </div>
+        </div>
+
+        {/* Top Row: Activity Chart + Net Worth */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2">
+            <PortfolioActivityChart />
+          </div>
+          <NetWorthOverview />
+        </div>
+
+        {/* Performance Comparison + Risk Flags */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2">
+            <PerformanceComparisonChart />
+          </div>
+          <RiskComplianceFlags />
+        </div>
+
+        {/* Transaction Summary + Gain/Loss */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <TransactionSummaryTable />
+          <GainLossAnalysis />
+        </div>
+
+        {/* Allocation Breakdown */}
+        <AllocationBreakdown />
+      </main>
+    </>
+  );
+}
+
+export default function DashboardPage() {
+  const { selectedClient } = useClient();
+
+  if (selectedClient) {
+    return <ClientDashboardView client={selectedClient} />;
+  }
+
+  return <ClientSelectionView />;
 }

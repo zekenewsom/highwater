@@ -9,15 +9,33 @@ import logger from './utils/logger';
 dotenv.config();
 
 const config = {
-  authRequired: true, // Require login for all routes
+  authRequired: false, // Don't require login by default  
   auth0Logout: true,
   secret: process.env.SESSION_SECRET || 'a long, randomly-generated string stored in env',
   baseURL: process.env.BASE_URL || 'http://localhost:3000',
   clientID: process.env.AUTH0_CLIENT_ID || 'rAMVd4yqqOCdVuB0SoTJGzXcFuqCNSOX',
   issuerBaseURL: process.env.AUTH0_ISSUER_BASE_URL || 'https://dev-l7kprrr7la4wg705.us.auth0.com',
+  routes: {
+    // Only require auth for specific routes, not API endpoints
+    login: false,
+    logout: false,
+    callback: false
+  }
 };
 
 const app = express();
+
+// Add CORS middleware for development
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*'); // Allow all origins for development
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+  if (req.method === 'OPTIONS') {
+    res.sendStatus(200);
+  } else {
+    next();
+  }
+});
 
 // Integrate Auth0 OpenID Connect
 app.use(auth(config));
@@ -87,9 +105,9 @@ app.get('/profile', requiresAuth(), (req, res) => {
 app.use('/api/v1/clients', clientsRouter);
 app.use('/api/v1/portfolios', portfoliosRouter);
 
-// Attach new JSON API routes
-app.use('/api/v2/clients', clientsRouter);
-app.use('/api/v2/portfolios', portfoliosRouter);
+// Attach new JSON API routes (routes already include /api/v2/ in their paths)
+app.use('/', clientsRouter);
+app.use('/', portfoliosRouter);
 
 const PORT = process.env.PORT || 4000;
 const server = http.createServer(app);

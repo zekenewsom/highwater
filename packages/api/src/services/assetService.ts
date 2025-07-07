@@ -13,7 +13,7 @@ export async function fetchAssets({
   start = 1,
   limit = 10,
   convert = 'USD',
-}: FetchAssetsParams = {}): Promise<unknown[]> {
+}: FetchAssetsParams = {}): Promise<any[]> {
   if (!COINMARKETCAP_API_KEY) {
     throw new Error('CoinMarketCap API key is not set in environment variables.');
   }
@@ -25,5 +25,5 @@ export async function fetchAssets({
       Accept: 'application/json',
     },
   });
-  return response.data.data; // returns array of asset objects
+  return response.data; // returns full response object
 }

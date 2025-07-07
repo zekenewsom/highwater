@@ -1,1509 +1,12 @@
 
-
 > web@0.1.0 test /Users/zeke/projects/highwater/packages/web
 > jest
 
-[33m[1m[1m●[22m[1m Validation Warning[22m:[39m
-[33m[39m
-[33m  Unknown option [1m"moduleNameMapping"[22m with value [1m{"^@/(.*)$": "<rootDir>/src/$1"}[22m was found.[39m
-[33m  This is probably a typing mistake. Fixing it will remove this message.[39m
-[33m[39m
-[33m  [1mConfiguration Documentation:[22m[39m
-[33m  https://jestjs.io/docs/configuration[39m
-[33m[39m
-[33m[1m[1m●[22m[1m Validation Warning[22m:[39m
-[33m[39m
-[33m  Unknown option [1m"moduleNameMapping"[22m with value [1m{"^@/(.*)$": "<rootDir>/src/$1"}[22m was found.[39m
-[33m  This is probably a typing mistake. Fixing it will remove this message.[39m
-[33m[39m
-[33m  [1mConfiguration Documentation:[22m[39m
-[33m  https://jestjs.io/docs/configuration[39m
-[33m[39m
-[1m[2mDetermining test suites to run...[22m[22m[999D[K
-[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
-[K[1A[K[1A[0m[7m[1m[31m FAIL [39m[22m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
-
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
-[K[1A[K[1A[1m[31m  [1m● [22m[1mNetWorthOverview › displays chart component[39m[22m
-
-    TestingLibraryElementError: Found multiple elements by: [data-testid="bar-chart"]
-
-    Here are the matching elements:
-
-    Ignored nodes: comments, script, style
-    [36m<div[39m
-      [33mdata-testid[39m=[32m"bar-chart"[39m
-    [36m>[39m
-      [36m<div[39m
-        [33mdata-testid[39m=[32m"x-axis"[39m
-      [36m/>[39m
-      [36m<div[39m
-        [33mdata-testid[39m=[32m"bar"[39m
-      [36m/>[39m
-    [36m</div>[39m
-
-    Ignored nodes: comments, script, style
-    [36m<div[39m
-      [33mdata-testid[39m=[32m"bar-chart"[39m
-    [36m>[39m
-      [36m<div[39m
-        [33mdata-testid[39m=[32m"x-axis"[39m
-      [36m/>[39m
-      [36m<div[39m
-        [33mdata-testid[39m=[32m"bar"[39m
-      [36m/>[39m
-    [36m</div>[39m
-
-    Ignored nodes: comments, script, style
-    [36m<div[39m
-      [33mdata-testid[39m=[32m"bar-chart"[39m
-    [36m>[39m
-      [36m<div[39m
-        [33mdata-testid[39m=[32m"x-axis"[39m
-      [36m/>[39m
-      [36m<div[39m
-        [33mdata-testid[39m=[32m"bar"[39m
-      [36m/>[39m
-    [36m</div>[39m
-
-    Ignored nodes: comments, script, style
-    [36m<div[39m
-      [33mdata-testid[39m=[32m"bar-chart"[39m
-    [36m>[39m
-      [36m<div[39m
-        [33mdata-testid[39m=[32m"x-axis"[39m
-      [36m/>[39m
-      [36m<div[39m
-        [33mdata-testid[39m=[32m"bar"[39m
-      [36m/>[39m
-    [36m</div>[39m
-
-    (If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
-
-    Ignored nodes: comments, script, style
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"bg-white rounded-2xl shadow-lg border border-gray-100 p-8 flex flex-col h-full justify-between gap-6"[39m
-        [36m>[39m
-          [36m<h2[39m
-            [33mclass[39m=[32m"text-xl font-medium text-gray-800 tracking-tight mb-2"[39m
-          [36m>[39m
-            [0mNet Worth Overview[0m
-          [36m</h2>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"flex flex-col sm:flex-row sm:items-end gap-4 mb-2"[39m
-          [36m>[39m
-            [36m<span[39m
-              [33mclass[39m=[32m"text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight drop-shadow-sm leading-tight"[39m
-            [36m>[39m
-              [0m$[0m
-              [0m13,564,649[0m
-            [36m</span>[39m
-          [36m</div>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"flex flex-col gap-4 flex-1"[39m
-          [36m>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"flex items-center gap-4"[39m
-            [36m>[39m
-              [36m<span[39m
-                [33mclass[39m=[32m"text-sm font-medium text-gray-700 w-40 min-w-[120px]"[39m
-              [36m>[39m
-                [0mCryptoassets[0m
-              [36m</span>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"flex-1 flex items-center"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mdata-testid[39m=[32m"responsive-container"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mdata-testid[39m=[32m"bar-chart"[39m
-                  [36m>[39m
-                    [36m<div[39m
-                      [33mdata-testid[39m=[32m"x-axis"[39m
-                    [36m/>[39m
-                    [36m<div[39m
-                      [33mdata-testid[39m=[32m"bar"[39m
-                    [36m/>[39m
-                  [36m</div>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<span[39m
-                [33mclass[39m=[32m"text-base font-semibold tabular-nums text-gray-900"[39m
-              [36m>[39m
-                [0m$[0m
-                [0m3,276,484[0m
-              [36m</span>[39m
-            [36m</div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"flex items-center gap-4"[39m
-            [36m>[39m
-              [36m<span[39m
-                [33mclass[39m=[32m"text-sm font-medium text-gray-700 w-40 min-w-[120px]"[39m
-              [36m>[39m
-                [0mTraditional Investments[0m
-              [36m</span>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"flex-1 flex items-center"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mdata-testid[39m=[32m"responsive-container"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mdata-testid[39m=[32m"bar-chart"[39m
-                  [36m>[39m
-                    [36m<div[39m
-                      [33mdata-testid[39m=[32m"x-axis"[39m
-                    [36m/>[39m
-                    [36m<div[39m
-                      [33mdata-testid[39m=[32m"bar"[39m
-                    [36m/>[39m
-                  [36m</div>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<span[39m
-                [33mclass[39m=[32m"text-base font-semibold tabular-nums text-gray-900"[39m
-              [36m>[39m
-                [0m$[0m
-                [0m5,261,894[0m
-              [36m</span>[39m
-            [36m</div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"flex items-center gap-4"[39m
-            [36m>[39m
-              [36m<span[39m
-                [33mclass[39m=[32m"text-sm font-medium text-gray-700 w-40 min-w-[120px]"[39m
-              [36m>[39m
-                [0mCash Reserves[0m
-              [36m</span>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"flex-1 flex items-center"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mdata-testid[39m=[32m"responsive-container"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mdata-testid[39m=[32m"bar-chart"[39m
-                  [36m>[39m
-                    [36m<div[39m
-                      [33mdata-testid[39m=[32m"x-axis"[39m
-                    [36m/>[39m
-                    [36m<div[39m
-                      [33mdata-testid[39m=[32m"bar"[39m
-                    [36m/>[39m
-                  [36m</div>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<span[39m
-                [33mclass[39m=[32m"text-base font-semibold tabular-nums text-gray-900"[39m
-              [36m>[39m
-                [0m$[0m
-                [0m5,421,771[0m
-              [36m</span>[39m
-            [36m</div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"flex items-center gap-4"[39m
-            [36m>[39m
-              [36m<span[39m
-                [33mclass[39m=[32m"text-sm font-medium text-gray-700 w-40 min-w-[120px]"[39m
-              [36m>[39m
-                [0mLiabilities[0m
-              [36m</span>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"flex-1 flex items-center"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mdata-testid[39m=[32m"responsive-container"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mdata-testid[39m=[32m"bar-chart"[39m
-                  [36m>[39m
-                    [36m<div[39m
-                      [33mdata-testid[39m=[32m"x-axis"[39m
-                    [36m/>[39m
-                    [36m<div[39m
-                      [33mdata-testid[39m=[32m"bar"[39m
-                    [36m/>[39m
-                  [36m</div>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<span[39m
-                [33mclass[39m=[32m"text-base font-semibold tabular-nums text-red-600"[39m
-              [36m>[39m
-                [0m-[0m
-                [0m$[0m
-                [0m395,500[0m
-              [36m</span>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-[2m[22m
-[2m    [0m [90m 38 |[39m     [22m
-[2m     [90m 39 |[39m     [90m// Check for chart elements (mocked in jest.setup.js)[39m[22m
-[2m    [31m[1m>[22m[2m[39m[90m 40 |[39m     expect(screen[33m.[39mgetByTestId([32m'bar-chart'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[22m
-[2m     [90m    |[39m                   [31m[1m^[22m[2m[39m[22m
-[2m     [90m 41 |[39m   })[33m;[39m[22m
-[2m     [90m 42 |[39m[22m
-[2m     [90m 43 |[39m   it([32m'renders without crashing with no data'[39m[33m,[39m () [33m=>[39m {[0m[22m
-[2m[22m
-[2m      [2mat Object.getElementError ([22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/config.js[2m:37:19)[22m[2m[22m
-[2m      [2mat getElementError ([22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:20:35)[22m[2m[22m
-[2m      [2mat getMultipleElementsFoundError ([22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:23:10)[22m[2m[22m
-[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:55:13[22m[2m[22m
-[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:95:19[22m[2m[22m
-[2m      [2mat Object.getByTestId ([22m[2m[0m[36msrc/components/__tests__/NetWorthOverview.test.tsx[39m[0m[2m:40:19)[22m[2m[22m
-
-
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/components/__tests__/[22m[1mNetWorthOverview.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A[0m[7m[1m[31m FAIL [39m[22m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A[1m[31m  [1m● [22m[1mPhase 3 Advanced Features › PortfolioAnalytics Component › renders portfolio analytics with performance metrics[39m[22m
-
-    TestingLibraryElementError: Unable to find an element with the text: 12.5%. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
-
-    Ignored nodes: comments, script, style
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"bg-white rounded-lg shadow"[39m
-        [36m>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"px-6 py-4 border-b border-gray-200"[39m
-          [36m>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"flex items-center justify-between"[39m
-            [36m>[39m
-              [36m<h3[39m
-                [33mclass[39m=[32m"text-lg font-medium text-gray-900"[39m
-              [36m>[39m
-                [0mPortfolio Analytics[0m
-              [36m</h3>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"flex items-center space-x-4"[39m
-              [36m>[39m
-                [36m<select[39m
-                  [33mclass[39m=[32m"text-sm border border-gray-300 rounded-md px-3 py-1"[39m
-                [36m>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"1m"[39m
-                  [36m>[39m
-                    [0m1 Month[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"3m"[39m
-                  [36m>[39m
-                    [0m3 Months[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"6m"[39m
-                  [36m>[39m
-                    [0m6 Months[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"1y"[39m
-                  [36m>[39m
-                    [0m1 Year[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"3y"[39m
-                  [36m>[39m
-                    [0m3 Years[0m
-                  [36m</option>[39m
-                [36m</select>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"bg-blue-600 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-700 transition-colors"[39m
-                [36m>[39m
-                  [0mRebalance[0m
-                [36m</button>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"p-6"[39m
-          [36m>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"[39m
-            [36m>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-blue-50 rounded-lg p-4"[39m
-              [36m>[39m
-                [36m<h4[39m
-                  [33mclass[39m=[32m"text-sm font-medium text-blue-900 mb-2"[39m
-                [36m>[39m
-                  [0mTotal Return[0m
-                [36m</h4>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"text-2xl font-bold text-green-600"[39m
-                [36m>[39m
-                  [0m+[0m
-                  [0m12.5[0m
-                  [0m%[0m
-                [36m</p>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"text-sm text-blue-700"[39m
-                [36m>[39m
-                  [0mAnnualized: [0m
-                  [0m11.8[0m
-                  [0m%[0m
-                [36m</p>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-green-50 rounded-lg p-4"[39m
-              [36m>[39m
-                [36m<h4[39m
-                  [33mclass[39m=[32m"text-sm font-medium text-green-900 mb-2"[39m
-                [36m>[39m
-                  [0mvs Benchmark[0m
-                [36m</h4>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"text-2xl font-bold text-green-600"[39m
-                [36m>[39m
-                  [0m+[0m
-                  [0m2.1[0m
-                  [0m%[0m
-                [36m</p>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"text-sm text-green-700"[39m
-                [36m>[39m
-                  [0mPercentile: [0m
-                  [0m75[0m
-                  [0m%[0m
-                [36m</p>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-purple-50 rounded-lg p-4"[39m
-              [36m>[39m
-                [36m<h4[39m
-                  [33mclass[39m=[32m"text-sm font-medium text-purple-900 mb-2"[39m
-                [36m>[39m
-                  [0mSharpe Ratio[0m
-                [36m</h4>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"text-2xl font-bold text-purple-600"[39m
-                [36m>[39m
-                  [0m1.45[0m
-                [36m</p>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"text-sm text-purple-700"[39m
-                [36m>[39m
-                  [0mVolatility: [0m
-                  [0m8.2[0m
-                  [0m%[0m
-                [36m</p>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"mb-8"[39m
-            [36m>[39m
-              [36m<h4[39m
-                [33mclass[39m=[32m"text-lg font-medium text-gray-900 mb-4"[39m
-              [36m>[39m
-                [0mRisk Metrics[0m
-              [36m</h4>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"grid grid-cols-2 md:grid-cols-4 gap-4"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"text-center"[39m
-                [36m>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-sm text-gray-500"[39m
-                  [36m>[39m
-                    [0mMax Drawdown[0m
-                  [36m</p>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-lg font-semibold text-red-600"[39m
-                  [36m>[39m
-                    [0m-5.2[0m
-                    [0m%[0m
-                  [36m</p>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"text-center"[39m
-                [36m>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-sm text-gray-500"[39m
-                  [36m>[39m
-                    [0mBeta[0m
-                  [36m</p>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-lg font-semibold text-gray-900"[39m
-                  [36m>[39m
-                    [0m0.95[0m
-                  [36m</p>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"text-center"[39m
-                [36m>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-sm text-gray-500"[39m
-                  [36m>[39m
-                    [0mVolatility[0m
-                  [36m</p>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-lg font-semibold text-gray-900"[39m
-                  [36m>[39m
-                    [0m8.2[0m
-                    [0m%[0m
-                  [36m</p>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"text-center"[39m
-                [36m>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-sm text-gray-500"[39m
-                  [36m>[39m
-                    [0mSharpe Ratio[0m
-                  [36m</p>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-lg font-semibold text-gray-900"[39m
-                  [36m>[39m
-                    [0m1.45[0m
-                  [36m</p>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"mb-8"[39m
-            [36m>[39m
-              [36m<h4[39m
-                [33mclass[39m=[32m"text-lg font-medium text-gray-900 mb-4"[39m
-              [36m>[39m
-                [0mMonthly Returns[0m
-              [36m</h4>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"flex items-end space-x-1 h-32"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 6.300000000000001%;"[39m
-                  [33mtitle[39m=[32m"Month 1: 2.1%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-red-500"[39m
-                  [33mstyle[39m=[32m"height: 3.5999999999999996%;"[39m
-                  [33mtitle[39m=[32m"Month 2: -1.2%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 10.2%;"[39m
-                  [33mtitle[39m=[32m"Month 3: 3.4%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 5.4%;"[39m
-                  [33mtitle[39m=[32m"Month 4: 1.8%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-red-500"[39m
-                  [33mstyle[39m=[32m"height: 1.5%;"[39m
-                  [33mtitle[39m=[32m"Month 5: -0.5%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 8.7%;"[39m
-                  [33mtitle[39m=[32m"Month 6: 2.9%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 3.5999999999999996%;"[39m
-                  [33mtitle[39m=[32m"Month 7: 1.2%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-red-500"[39m
-                  [33mstyle[39m=[32m"height: 2.4000000000000004%;"[39m
-                  [33mtitle[39m=[32m"Month 8: -0.8%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 6.300000000000001%;"[39m
-                  [33mtitle[39m=[32m"Month 9: 2.1%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 4.5%;"[39m
-                  [33mtitle[39m=[32m"Month 10: 1.5%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 2.7%;"[39m
-                  [33mtitle[39m=[32m"Month 11: 0.9%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 5.4%;"[39m
-                  [33mtitle[39m=[32m"Month 12: 1.8%"[39m
-                [36m/>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-[2m[22m
-[2m    [0m [90m 74 |[39m[22m
-[2m     [90m 75 |[39m       expect(screen[33m.[39mgetByText([32m'Portfolio Analytics'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[22m
-[2m    [31m[1m>[22m[2m[39m[90m 76 |[39m       expect(screen[33m.[39mgetByText([32m'12.5%'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m [90m// Total Return[39m[22m
-[2m     [90m    |[39m                     [31m[1m^[22m[2m[39m[22m
-[2m     [90m 77 |[39m       expect(screen[33m.[39mgetByText([32m'+2.1%'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m [90m// vs Benchmark[39m[22m
-[2m     [90m 78 |[39m       expect(screen[33m.[39mgetByText([32m'1.45'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m [90m// Sharpe Ratio[39m[22m
-[2m     [90m 79 |[39m     })[33m;[39m[0m[22m
-[2m[22m
-[2m      [2mat Object.getElementError ([22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/config.js[2m:37:19)[22m[2m[22m
-[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:76:38[22m[2m[22m
-[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:52:17[22m[2m[22m
-[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:95:19[22m[2m[22m
-[2m      [2mat Object.getByText ([22m[2m[0m[36msrc/__tests__/phase3/advanced-features.test.tsx[39m[0m[2m:76:21)[22m[2m[22m
-
-[1m[31m  [1m● [22m[1mPhase 3 Advanced Features › PortfolioAnalytics Component › shows rebalancing interface when rebalance button is clicked[39m[22m
-
-    TestingLibraryElementError: Unable to find a label with the text of: Stocks
-
-    Ignored nodes: comments, script, style
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"bg-white rounded-lg shadow"[39m
-        [36m>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"px-6 py-4 border-b border-gray-200"[39m
-          [36m>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"flex items-center justify-between"[39m
-            [36m>[39m
-              [36m<h3[39m
-                [33mclass[39m=[32m"text-lg font-medium text-gray-900"[39m
-              [36m>[39m
-                [0mPortfolio Analytics[0m
-              [36m</h3>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"flex items-center space-x-4"[39m
-              [36m>[39m
-                [36m<select[39m
-                  [33mclass[39m=[32m"text-sm border border-gray-300 rounded-md px-3 py-1"[39m
-                [36m>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"1m"[39m
-                  [36m>[39m
-                    [0m1 Month[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"3m"[39m
-                  [36m>[39m
-                    [0m3 Months[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"6m"[39m
-                  [36m>[39m
-                    [0m6 Months[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"1y"[39m
-                  [36m>[39m
-                    [0m1 Year[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"3y"[39m
-                  [36m>[39m
-                    [0m3 Years[0m
-                  [36m</option>[39m
-                [36m</select>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"bg-blue-600 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-700 transition-colors"[39m
-                [36m>[39m
-                  [0mRebalance[0m
-                [36m</button>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"p-6"[39m
-          [36m>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"[39m
-            [36m>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-blue-50 rounded-lg p-4"[39m
-              [36m>[39m
-                [36m<h4[39m
-                  [33mclass[39m=[32m"text-sm font-medium text-blue-900 mb-2"[39m
-                [36m>[39m
-                  [0mTotal Return[0m
-                [36m</h4>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"text-2xl font-bold text-green-600"[39m
-                [36m>[39m
-                  [0m+[0m
-                  [0m12.5[0m
-                  [0m%[0m
-                [36m</p>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"text-sm text-blue-700"[39m
-                [36m>[39m
-                  [0mAnnualized: [0m
-                  [0m11.8[0m
-                  [0m%[0m
-                [36m</p>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-green-50 rounded-lg p-4"[39m
-              [36m>[39m
-                [36m<h4[39m
-                  [33mclass[39m=[32m"text-sm font-medium text-green-900 mb-2"[39m
-                [36m>[39m
-                  [0mvs Benchmark[0m
-                [36m</h4>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"text-2xl font-bold text-green-600"[39m
-                [36m>[39m
-                  [0m+[0m
-                  [0m2.1[0m
-                  [0m%[0m
-                [36m</p>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"text-sm text-green-700"[39m
-                [36m>[39m
-                  [0mPercentile: [0m
-                  [0m75[0m
-                  [0m%[0m
-                [36m</p>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-purple-50 rounded-lg p-4"[39m
-              [36m>[39m
-                [36m<h4[39m
-                  [33mclass[39m=[32m"text-sm font-medium text-purple-900 mb-2"[39m
-                [36m>[39m
-                  [0mSharpe Ratio[0m
-                [36m</h4>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"text-2xl font-bold text-purple-600"[39m
-                [36m>[39m
-                  [0m1.45[0m
-                [36m</p>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"text-sm text-purple-700"[39m
-                [36m>[39m
-                  [0mVolatility: [0m
-                  [0m8.2[0m
-                  [0m%[0m
-                [36m</p>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"mb-8"[39m
-            [36m>[39m
-              [36m<h4[39m
-                [33mclass[39m=[32m"text-lg font-medium text-gray-900 mb-4"[39m
-              [36m>[39m
-                [0mRisk Metrics[0m
-              [36m</h4>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"grid grid-cols-2 md:grid-cols-4 gap-4"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"text-center"[39m
-                [36m>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-sm text-gray-500"[39m
-                  [36m>[39m
-                    [0mMax Drawdown[0m
-                  [36m</p>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-lg font-semibold text-red-600"[39m
-                  [36m>[39m
-                    [0m-5.2[0m
-                    [0m%[0m
-                  [36m</p>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"text-center"[39m
-                [36m>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-sm text-gray-500"[39m
-                  [36m>[39m
-                    [0mBeta[0m
-                  [36m</p>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-lg font-semibold text-gray-900"[39m
-                  [36m>[39m
-                    [0m0.95[0m
-                  [36m</p>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"text-center"[39m
-                [36m>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-sm text-gray-500"[39m
-                  [36m>[39m
-                    [0mVolatility[0m
-                  [36m</p>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-lg font-semibold text-gray-900"[39m
-                  [36m>[39m
-                    [0m8.2[0m
-                    [0m%[0m
-                  [36m</p>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"text-center"[39m
-                [36m>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-sm text-gray-500"[39m
-                  [36m>[39m
-                    [0mSharpe Ratio[0m
-                  [36m</p>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-lg font-semibold text-gray-900"[39m
-                  [36m>[39m
-                    [0m1.45[0m
-                  [36m</p>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"mb-8"[39m
-            [36m>[39m
-              [36m<h4[39m
-                [33mclass[39m=[32m"text-lg font-medium text-gray-900 mb-4"[39m
-              [36m>[39m
-                [0mMonthly Returns[0m
-              [36m</h4>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"flex items-end space-x-1 h-32"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 6.300000000000001%;"[39m
-                  [33mtitle[39m=[32m"Month 1: 2.1%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-red-500"[39m
-                  [33mstyle[39m=[32m"height: 3.5999999999999996%;"[39m
-                  [33mtitle[39m=[32m"Month 2: -1.2%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 10.2%;"[39m
-                  [33mtitle[39m=[32m"Month 3: 3.4%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 5.4%;"[39m
-                  [33mtitle[39m=[32m"Month 4: 1.8%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-red-500"[39m
-                  [33mstyle[39m=[32m"height: 1.5%;"[39m
-                  [33mtitle[39m=[32m"Month 5: -0.5%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 8.7%;"[39m
-                  [33mtitle[39m=[32m"Month 6: 2.9%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 3.5999999999999996%;"[39m
-                  [33mtitle[39m=[32m"Month 7: 1.2%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-red-500"[39m
-                  [33mstyle[39m=[32m"height: 2.4000000000000004%;"[39m
-                  [33mtitle[39m=[32m"Month 8: -0.8%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 6.300000000000001%;"[39m
-                  [33mtitle[39m=[32m"Month 9: 2.1%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 4.5%;"[39m
-                  [33mtitle[39m=[32m"Month 10: 1.5%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 2.7%;"[39m
-                  [33mtitle[39m=[32m"Month 11: 0.9%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 5.4%;"[39m
-                  [33mtitle[39m=[32m"Month 12: 1.8%"[39m
-                [36m/>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"border-t border-gray-200 pt-6"[39m
-            [36m>[39m
-              [36m<h4[39m
-                [33mclass[39m=[32m"text-lg font-medium text-gray-900 mb-4"[39m
-              [36m>[39m
-                [0mPortfolio Rebalancing[0m
-              [36m</h4>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"grid grid-cols-2 md:grid-cols-4 gap-4 mb-4"[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [36m<label[39m
-                    [33mclass[39m=[32m"block text-sm font-medium text-gray-700 mb-1 capitalize"[39m
-                  [36m>[39m
-                    [0mstocks[0m
-                  [36m</label>[39m
-                  [36m<input[39m
-                    [33mclass[39m=[32m"w-full border border-gray-300 rounded-md px-3 py-2 text-sm"[39m
-                    [33mmax[39m=[32m"100"[39m
-                    [33mmin[39m=[32m"0"[39m
-                    [33mtype[39m=[32m"number"[39m
-                    [33mvalue[39m=[32m"60"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-                [36m<div>[39m
-                  [36m<label[39m
-                    [33mclass[39m=[32m"block text-sm font-medium text-gray-700 mb-1 capitalize"[39m
-                  [36m>[39m
-                    [0mbonds[0m
-                  [36m</label>[39m
-                  [36m<input[39m
-                    [33mclass[39m=[32m"w-full border border-gray-300 rounded-md px-3 py-2 text-sm"[39m
-                    [33mmax[39m=[32m"100"[39m
-                    [33mmin[39m=[32m"0"[39m
-                    [33mtype[39m=[32m"number"[39m
-                    [33mvalue[39m=[32m"25"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-                [36m<div>[39m
-                  [36m<label[39m
-                    [33mclass[39m=[32m"block text-sm font-medium text-gray-700 mb-1 capitalize"[39m
-                  [36m>[39m
-                    [0malternatives[0m
-                  [36m</label>[39m
-                  [36m<input[39m
-                    [33mclass[39m=[32m"w-full border border-gray-300 rounded-md px-3 py-2 text-sm"[39m
-                    [33mmax[39m=[32m"100"[39m
-                    [33mmin[39m=[32m"0"[39m
-                    [33mtype[39m=[32m"number"[39m
-                    [33mvalue[39m=[32m"10"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-                [36m<div>[39m
-                  [36m<label[39m
-                    [33mclass[39m=[32m"block text-sm font-medium text-gray-700 mb-1 capitalize"[39m
-                  [36m>[39m
-                    [0mcash[0m
-                  [36m</label>[39m
-                  [36m<input[39m
-                    [33mclass[39m=[32m"w-full border border-gray-300 rounded-md px-3 py-2 text-sm"[39m
-                    [33mmax[39m=[32m"100"[39m
-                    [33mmin[39m=[32m"0"[39m
-                    [33mtype[39m=[32m"number"[39m
-                    [33mvalue[39m=[32m"5"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"flex space-x-4"[39m
-              [36m>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"bg-green-600 text-white px-4 py-2 rounded-md text-sm hover:bg-green-700 transition-colors"[39m
-                [36m>[39m
-                  [0mAnalyze Rebalancing[0m
-                [36m</button>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"bg-gray-300 text-gray-700 px-4 py-2 rounded-md text-sm hover:bg-gray-400 transition-colors"[39m
-                [36m>[39m
-                  [0mCancel[0m
-                [36m</button>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-[2m[22m
-[2m    [0m [90m 103 |[39m[22m
-[2m     [90m 104 |[39m       expect(screen[33m.[39mgetByText([32m'Portfolio Rebalancing'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[22m
-[2m    [31m[1m>[22m[2m[39m[90m 105 |[39m       expect(screen[33m.[39mgetByLabelText([32m'Stocks'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[22m
-[2m     [90m     |[39m                     [31m[1m^[22m[2m[39m[22m
-[2m     [90m 106 |[39m       expect(screen[33m.[39mgetByLabelText([32m'Bonds'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[22m
-[2m     [90m 107 |[39m     })[33m;[39m[22m
-[2m     [90m 108 |[39m[0m[22m
-[2m[22m
-[2m      [2mat Object.getElementError ([22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/config.js[2m:37:19)[22m[2m[22m
-[2m      [2mat getAllByLabelText ([22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/queries/label-text.js[2m:111:38)[22m[2m[22m
-[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:52:17[22m[2m[22m
-[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:95:19[22m[2m[22m
-[2m      [2mat Object.getByLabelText ([22m[2m[0m[36msrc/__tests__/phase3/advanced-features.test.tsx[39m[0m[2m:105:21)[22m[2m[22m
-
-[1m[31m  [1m● [22m[1mPhase 3 Advanced Features › PortfolioAnalytics Component › handles rebalancing analysis[39m[22m
-
-    TestingLibraryElementError: Unable to find a label with the text of: Stocks
-
-    Ignored nodes: comments, script, style
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"bg-white rounded-lg shadow"[39m
-        [36m>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"px-6 py-4 border-b border-gray-200"[39m
-          [36m>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"flex items-center justify-between"[39m
-            [36m>[39m
-              [36m<h3[39m
-                [33mclass[39m=[32m"text-lg font-medium text-gray-900"[39m
-              [36m>[39m
-                [0mPortfolio Analytics[0m
-              [36m</h3>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"flex items-center space-x-4"[39m
-              [36m>[39m
-                [36m<select[39m
-                  [33mclass[39m=[32m"text-sm border border-gray-300 rounded-md px-3 py-1"[39m
-                [36m>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"1m"[39m
-                  [36m>[39m
-                    [0m1 Month[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"3m"[39m
-                  [36m>[39m
-                    [0m3 Months[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"6m"[39m
-                  [36m>[39m
-                    [0m6 Months[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"1y"[39m
-                  [36m>[39m
-                    [0m1 Year[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"3y"[39m
-                  [36m>[39m
-                    [0m3 Years[0m
-                  [36m</option>[39m
-                [36m</select>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"bg-blue-600 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-700 transition-colors"[39m
-                [36m>[39m
-                  [0mRebalance[0m
-                [36m</button>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"p-6"[39m
-          [36m>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"[39m
-            [36m>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-blue-50 rounded-lg p-4"[39m
-              [36m>[39m
-                [36m<h4[39m
-                  [33mclass[39m=[32m"text-sm font-medium text-blue-900 mb-2"[39m
-                [36m>[39m
-                  [0mTotal Return[0m
-                [36m</h4>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"text-2xl font-bold text-green-600"[39m
-                [36m>[39m
-                  [0m+[0m
-                  [0m12.5[0m
-                  [0m%[0m
-                [36m</p>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"text-sm text-blue-700"[39m
-                [36m>[39m
-                  [0mAnnualized: [0m
-                  [0m11.8[0m
-                  [0m%[0m
-                [36m</p>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-green-50 rounded-lg p-4"[39m
-              [36m>[39m
-                [36m<h4[39m
-                  [33mclass[39m=[32m"text-sm font-medium text-green-900 mb-2"[39m
-                [36m>[39m
-                  [0mvs Benchmark[0m
-                [36m</h4>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"text-2xl font-bold text-green-600"[39m
-                [36m>[39m
-                  [0m+[0m
-                  [0m2.1[0m
-                  [0m%[0m
-                [36m</p>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"text-sm text-green-700"[39m
-                [36m>[39m
-                  [0mPercentile: [0m
-                  [0m75[0m
-                  [0m%[0m
-                [36m</p>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-purple-50 rounded-lg p-4"[39m
-              [36m>[39m
-                [36m<h4[39m
-                  [33mclass[39m=[32m"text-sm font-medium text-purple-900 mb-2"[39m
-                [36m>[39m
-                  [0mSharpe Ratio[0m
-                [36m</h4>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"text-2xl font-bold text-purple-600"[39m
-                [36m>[39m
-                  [0m1.45[0m
-                [36m</p>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"text-sm text-purple-700"[39m
-                [36m>[39m
-                  [0mVolatility: [0m
-                  [0m8.2[0m
-                  [0m%[0m
-                [36m</p>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"mb-8"[39m
-            [36m>[39m
-              [36m<h4[39m
-                [33mclass[39m=[32m"text-lg font-medium text-gray-900 mb-4"[39m
-              [36m>[39m
-                [0mRisk Metrics[0m
-              [36m</h4>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"grid grid-cols-2 md:grid-cols-4 gap-4"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"text-center"[39m
-                [36m>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-sm text-gray-500"[39m
-                  [36m>[39m
-                    [0mMax Drawdown[0m
-                  [36m</p>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-lg font-semibold text-red-600"[39m
-                  [36m>[39m
-                    [0m-5.2[0m
-                    [0m%[0m
-                  [36m</p>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"text-center"[39m
-                [36m>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-sm text-gray-500"[39m
-                  [36m>[39m
-                    [0mBeta[0m
-                  [36m</p>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-lg font-semibold text-gray-900"[39m
-                  [36m>[39m
-                    [0m0.95[0m
-                  [36m</p>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"text-center"[39m
-                [36m>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-sm text-gray-500"[39m
-                  [36m>[39m
-                    [0mVolatility[0m
-                  [36m</p>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-lg font-semibold text-gray-900"[39m
-                  [36m>[39m
-                    [0m8.2[0m
-                    [0m%[0m
-                  [36m</p>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"text-center"[39m
-                [36m>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-sm text-gray-500"[39m
-                  [36m>[39m
-                    [0mSharpe Ratio[0m
-                  [36m</p>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"text-lg font-semibold text-gray-900"[39m
-                  [36m>[39m
-                    [0m1.45[0m
-                  [36m</p>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"mb-8"[39m
-            [36m>[39m
-              [36m<h4[39m
-                [33mclass[39m=[32m"text-lg font-medium text-gray-900 mb-4"[39m
-              [36m>[39m
-                [0mMonthly Returns[0m
-              [36m</h4>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"flex items-end space-x-1 h-32"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 6.300000000000001%;"[39m
-                  [33mtitle[39m=[32m"Month 1: 2.1%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-red-500"[39m
-                  [33mstyle[39m=[32m"height: 3.5999999999999996%;"[39m
-                  [33mtitle[39m=[32m"Month 2: -1.2%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 10.2%;"[39m
-                  [33mtitle[39m=[32m"Month 3: 3.4%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 5.4%;"[39m
-                  [33mtitle[39m=[32m"Month 4: 1.8%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-red-500"[39m
-                  [33mstyle[39m=[32m"height: 1.5%;"[39m
-                  [33mtitle[39m=[32m"Month 5: -0.5%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 8.7%;"[39m
-                  [33mtitle[39m=[32m"Month 6: 2.9%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 3.5999999999999996%;"[39m
-                  [33mtitle[39m=[32m"Month 7: 1.2%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-red-500"[39m
-                  [33mstyle[39m=[32m"height: 2.4000000000000004%;"[39m
-                  [33mtitle[39m=[32m"Month 8: -0.8%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 6.300000000000001%;"[39m
-                  [33mtitle[39m=[32m"Month 9: 2.1%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 4.5%;"[39m
-                  [33mtitle[39m=[32m"Month 10: 1.5%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 2.7%;"[39m
-                  [33mtitle[39m=[32m"Month 11: 0.9%"[39m
-                [36m/>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"flex-1 rounded-t bg-green-500"[39m
-                  [33mstyle[39m=[32m"height: 5.4%;"[39m
-                  [33mtitle[39m=[32m"Month 12: 1.8%"[39m
-                [36m/>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"border-t border-gray-200 pt-6"[39m
-            [36m>[39m
-              [36m<h4[39m
-                [33mclass[39m=[32m"text-lg font-medium text-gray-900 mb-4"[39m
-              [36m>[39m
-                [0mPortfolio Rebalancing[0m
-              [36m</h4>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"grid grid-cols-2 md:grid-cols-4 gap-4 mb-4"[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [36m<label[39m
-                    [33mclass[39m=[32m"block text-sm font-medium text-gray-700 mb-1 capitalize"[39m
-                  [36m>[39m
-                    [0mstocks[0m
-                  [36m</label>[39m
-                  [36m<input[39m
-                    [33mclass[39m=[32m"w-full border border-gray-300 rounded-md px-3 py-2 text-sm"[39m
-                    [33mmax[39m=[32m"100"[39m
-                    [33mmin[39m=[32m"0"[39m
-                    [33mtype[39m=[32m"number"[39m
-                    [33mvalue[39m=[32m"60"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-                [36m<div>[39m
-                  [36m<label[39m
-                    [33mclass[39m=[32m"block text-sm font-medium text-gray-700 mb-1 capitalize"[39m
-                  [36m>[39m
-                    [0mbonds[0m
-                  [36m</label>[39m
-                  [36m<input[39m
-                    [33mclass[39m=[32m"w-full border border-gray-300 rounded-md px-3 py-2 text-sm"[39m
-                    [33mmax[39m=[32m"100"[39m
-                    [33mmin[39m=[32m"0"[39m
-                    [33mtype[39m=[32m"number"[39m
-                    [33mvalue[39m=[32m"25"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-                [36m<div>[39m
-                  [36m<label[39m
-                    [33mclass[39m=[32m"block text-sm font-medium text-gray-700 mb-1 capitalize"[39m
-                  [36m>[39m
-                    [0malternatives[0m
-                  [36m</label>[39m
-                  [36m<input[39m
-                    [33mclass[39m=[32m"w-full border border-gray-300 rounded-md px-3 py-2 text-sm"[39m
-                    [33mmax[39m=[32m"100"[39m
-                    [33mmin[39m=[32m"0"[39m
-                    [33mtype[39m=[32m"number"[39m
-                    [33mvalue[39m=[32m"10"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-                [36m<div>[39m
-                  [36m<label[39m
-                    [33mclass[39m=[32m"block text-sm font-medium text-gray-700 mb-1 capitalize"[39m
-                  [36m>[39m
-                    [0mcash[0m
-                  [36m</label>[39m
-                  [36m<input[39m
-                    [33mclass[39m=[32m"w-full border border-gray-300 rounded-md px-3 py-2 text-sm"[39m
-                    [33mmax[39m=[32m"100"[39m
-                    [33mmin[39m=[32m"0"[39m
-                    [33mtype[39m=[32m"number"[39m
-                    [33mvalue[39m=[32m"5"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"flex space-x-4"[39m
-              [36m>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"bg-green-600 text-white px-4 py-2 rounded-md text-sm hover:bg-green-700 transition-colors"[39m
-                [36m>[39m
-                  [0mAnalyze Rebalancing[0m
-                [36m</button>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"bg-gray-300 text-gray-700 px-4 py-2 rounded-md text-sm hover:bg-gray-400 transition-colors"[39m
-                [36m>[39m
-                  [0mCancel[0m
-                [36m</button>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-[2m[22m
-[2m    [0m [90m 115 |[39m[22m
-[2m     [90m 116 |[39m       [90m// Change allocation[39m[22m
-[2m    [31m[1m>[22m[2m[39m[90m 117 |[39m       [36mconst[39m stocksInput [33m=[39m screen[33m.[39mgetByLabelText([32m'Stocks'[39m)[33m;[39m[22m
-[2m     [90m     |[39m                                  [31m[1m^[22m[2m[39m[22m
-[2m     [90m 118 |[39m       fireEvent[33m.[39mchange(stocksInput[33m,[39m { target[33m:[39m { value[33m:[39m [32m'65'[39m } })[33m;[39m[22m
-[2m     [90m 119 |[39m[22m
-[2m     [90m 120 |[39m       [90m// Submit rebalancing[39m[0m[22m
-[2m[22m
-[2m      [2mat Object.getElementError ([22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/config.js[2m:37:19)[22m[2m[22m
-[2m      [2mat getAllByLabelText ([22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/queries/label-text.js[2m:111:38)[22m[2m[22m
-[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:52:17[22m[2m[22m
-[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:95:19[22m[2m[22m
-[2m      [2mat Object.getByLabelText ([22m[2m[0m[36msrc/__tests__/phase3/advanced-features.test.tsx[39m[0m[2m:117:34)[22m[2m[22m
-
-[1m[31m  [1m● [22m[1mPhase 3 Advanced Features › PortfolioAnalytics Component › handles loading state[39m[22m
-
-    TestingLibraryElementError: Unable to find an element with the text: Portfolio Analytics. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
-
-    Ignored nodes: comments, script, style
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"bg-white rounded-lg shadow p-6"[39m
-        [36m>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"animate-pulse"[39m
-          [36m>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"h-4 bg-gray-200 rounded w-1/4 mb-4"[39m
-            [36m/>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"space-y-3"[39m
-            [36m>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"h-4 bg-gray-200 rounded"[39m
-              [36m/>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"h-4 bg-gray-200 rounded w-5/6"[39m
-              [36m/>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"h-4 bg-gray-200 rounded w-4/6"[39m
-              [36m/>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-[2m[22m
-[2m    [0m [90m 153 |[39m[22m
-[2m     [90m 154 |[39m       [90m// Should show loading skeleton[39m[22m
-[2m    [31m[1m>[22m[2m[39m[90m 155 |[39m       expect(screen[33m.[39mgetByText([32m'Portfolio Analytics'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[22m
-[2m     [90m     |[39m                     [31m[1m^[22m[2m[39m[22m
-[2m     [90m 156 |[39m     })[33m;[39m[22m
-[2m     [90m 157 |[39m[22m
-[2m     [90m 158 |[39m     it([32m'handles error state'[39m[33m,[39m () [33m=>[39m {[0m[22m
-[2m[22m
-[2m      [2mat Object.getElementError ([22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/config.js[2m:37:19)[22m[2m[22m
-[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:76:38[22m[2m[22m
-[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:52:17[22m[2m[22m
-[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:95:19[22m[2m[22m
-[2m      [2mat Object.getByText ([22m[2m[0m[36msrc/__tests__/phase3/advanced-features.test.tsx[39m[0m[2m:155:21)[22m[2m[22m
-
-[1m[31m  [1m● [22m[1mPhase 3 Advanced Features › PortfolioAnalytics Component › handles error state[39m[22m
-
-    TestingLibraryElementError: Unable to find an element with the text: Failed to load analytics. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
-
-    Ignored nodes: comments, script, style
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"bg-red-50 border border-red-200 rounded-lg p-4"[39m
-        [36m>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"flex"[39m
-          [36m>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"flex-shrink-0"[39m
-            [36m>[39m
-              [36m<svg[39m
-                [33mclass[39m=[32m"h-5 w-5 text-red-400"[39m
-                [33mfill[39m=[32m"currentColor"[39m
-                [33mviewBox[39m=[32m"0 0 20 20"[39m
-              [36m>[39m
-                [36m<path[39m
-                  [33mclip-rule[39m=[32m"evenodd"[39m
-                  [33md[39m=[32m"M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"[39m
-                  [33mfill-rule[39m=[32m"evenodd"[39m
-                [36m/>[39m
-              [36m</svg>[39m
-            [36m</div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"ml-3"[39m
-            [36m>[39m
-              [36m<h3[39m
-                [33mclass[39m=[32m"text-sm font-medium text-red-800"[39m
-              [36m>[39m
-                [0mError loading analytics[0m
-              [36m</h3>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"mt-2 text-sm text-red-700"[39m
-              [36m>[39m
-                [0mAn unexpected error occurred[0m
-              [36m</div>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-[2m[22m
-[2m    [0m [90m 168 |[39m[22m
-[2m     [90m 169 |[39m       expect(screen[33m.[39mgetByText([32m'Error loading analytics'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[22m
-[2m    [31m[1m>[22m[2m[39m[90m 170 |[39m       expect(screen[33m.[39mgetByText([32m'Failed to load analytics'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[22m
-[2m     [90m     |[39m                     [31m[1m^[22m[2m[39m[22m
-[2m     [90m 171 |[39m     })[33m;[39m[22m
-[2m     [90m 172 |[39m   })[33m;[39m[22m
-[2m     [90m 173 |[39m[0m[22m
-[2m[22m
-[2m      [2mat Object.getElementError ([22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/config.js[2m:37:19)[22m[2m[22m
-[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:76:38[22m[2m[22m
-[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:52:17[22m[2m[22m
-[2m      [2mat [22m[2m../../node_modules/.pnpm/@testing-library+dom@9.3.4/node_modules/@testing-library/dom/dist/query-helpers.js[2m:95:19[22m[2m[22m
-[2m      [2mat Object.getByText ([22m[2m[0m[36msrc/__tests__/phase3/advanced-features.test.tsx[39m[0m[2m:170:21)[22m[2m[22m
-
-
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/phase3/[22m[1madvanced-features.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/components/[22m[1mPortfoliosList.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/components/[22m[1mPortfoliosList.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/components/[22m[1mPortfoliosList.test.tsx[22m
-[K[1A[K[1A
-[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/__tests__/components/[22m[1mPortfoliosList.test.tsx[22m
-[41m[30m ELIFECYCLE [39m[49m [31mTest failed. See above for more details.[39m
+PASS src/__tests__/integration/DashboardFlow.test.tsx
+PASS src/__tests__/performance/api-performance.test.ts
+PASS src/components/__tests__/NavBar.test.tsx
+PASS src/components/AddButtonWithDropdown.test.tsx
+PASS src/components/__tests__/NetWorthOverview.test.tsx
+PASS src/components/__tests__/AllocationBreakdown.test.tsx
+PASS src/components/__tests__/HoldingsTable.test.tsx
+ ELIFECYCLE  Test failed. See above for more details.

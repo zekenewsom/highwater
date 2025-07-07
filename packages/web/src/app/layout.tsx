@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { AuthProvider } from '../contexts/AuthContext';
+import { ClientProvider } from '../contexts/ClientContext';
 import { PerformanceMonitor } from '../components/PerformanceMonitor';
 // import Link from 'next/link';
 
@@ -25,8 +26,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="min-h-screen bg-gray-50">
         <AuthProvider>
-          {children}
-          <PerformanceMonitor />
+          <ClientProvider>
+            {children}
+            <PerformanceMonitor />
+          </ClientProvider>
         </AuthProvider>
       </body>
     </html>

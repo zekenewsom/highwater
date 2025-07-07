@@ -3,11 +3,13 @@
 import React, { useState } from 'react';
 import { ClientsList } from '../../components/ClientsList';
 import { Client } from '../../types/api';
+import { useClient } from '../../contexts/ClientContext';
 import NavBar from '../../components/NavBar';
 
 export default function ClientsPage() {
-  const [selectedClient, setSelectedClient] = useState<Client | null>(null);
+  const [localSelectedClient, setLocalSelectedClient] = useState<Client | null>(null);
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
+  const { setSelectedClient } = useClient();
 
   return (
     <>
@@ -60,6 +62,7 @@ export default function ClientsPage() {
               <div className="lg:col-span-2">
                 <ClientsList
                   onClientSelect={(client) => {
+                    setLocalSelectedClient(client);
                     setSelectedClient(client);
                   }}
                 />
@@ -67,12 +70,12 @@ export default function ClientsPage() {
 
               {/* Client Details Sidebar */}
               <div className="lg:col-span-1">
-                {selectedClient ? (
+                {localSelectedClient ? (
                   <div className="bg-white shadow rounded-lg p-6 sticky top-6">
                     <div className="flex items-center mb-4">
                       <div className="h-12 w-12 rounded-full bg-blue-600 flex items-center justify-center mr-4">
                         <span className="text-white font-medium text-lg">
-                          {selectedClient.name
+                          {localSelectedClient.name
                             .split(' ')
                             .map((n) => n[0])
                             .join('')}
@@ -80,9 +83,9 @@ export default function ClientsPage() {
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold text-gray-900">
-                          {selectedClient.name}
+                          {localSelectedClient.name}
                         </h3>
-                        <p className="text-sm text-gray-500">{selectedClient.email}</p>
+                        <p className="text-sm text-gray-500">{localSelectedClient.email}</p>
                       </div>
                     </div>
 
@@ -95,19 +98,19 @@ export default function ClientsPage() {
                           <div>
                             <dt className="text-sm text-gray-500">Client ID</dt>
                             <dd className="text-sm font-medium text-gray-900">
-                              {selectedClient.id}
+                              {localSelectedClient.id}
                             </dd>
                           </div>
                           <div>
                             <dt className="text-sm text-gray-500">Advisor ID</dt>
                             <dd className="text-sm font-medium text-gray-900">
-                              {selectedClient.advisorId}
+                              {localSelectedClient.advisorId}
                             </dd>
                           </div>
                           <div>
                             <dt className="text-sm text-gray-500">Email</dt>
                             <dd className="text-sm font-medium text-gray-900">
-                              {selectedClient.email}
+                              {localSelectedClient.email}
                             </dd>
                           </div>
                         </dl>

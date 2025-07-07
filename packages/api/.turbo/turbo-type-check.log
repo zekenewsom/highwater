@@ -1,0 +1,4 @@
+
+> api@1.0.0 type-check /Users/zeke/projects/highwater/packages/api
+> tsc --noEmit
+

@@ -37,7 +37,8 @@ describe('NetWorthOverview', () => {
     render(<NetWorthOverview />);
 
     // Check for chart elements (mocked in jest.setup.js)
-    expect(screen.getByTestId('bar-chart')).toBeInTheDocument();
+    const barCharts = screen.getAllByTestId('bar-chart');
+    expect(barCharts.length).toBeGreaterThan(0);
   });
 
   it('renders without crashing with no data', () => {

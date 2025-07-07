@@ -5,13 +5,14 @@ import { saveAssets, getAssets } from '../dal/assetDal';
 export async function getAssetsController(req: Request, res: Response, next: NextFunction) {
   try {
     const { start, limit, convert } = req.query;
-    const assets = await fetchAssets({
+    const response = await fetchAssets({
       start: start ? Number(start) : 1,
       limit: limit ? Number(limit) : 10,
       convert: typeof convert === 'string' ? convert : 'USD',
     });
-    saveAssets(assets);
-    res.json(assets);
+    const assets = (response as any).data || [];
+    saveAssets(assets as any);
+    res.json(response);
   } catch (err) {
     next(err);
   }
