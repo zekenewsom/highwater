@@ -6,9 +6,9 @@ import AuthNav from './AuthNav';
 import { useClient } from '../contexts/ClientContext';
 
 const NAV_LINKS = [
-  { label: 'Clients', href: '/clients' },
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'Insights', href: '/insights' },
+  { label: 'Compliance', href: '/compliance' },
   { label: 'Taxes', href: '/taxes' },
   { label: 'Ask', href: '/ask' },
 ];
@@ -42,12 +42,15 @@ export default function NavBar() {
           <Link href="/" className="text-2xl font-bold text-black tracking-tight">
             HighWater Protocol
           </Link>
-          {isClientSelected && selectedClient && (
-            <div className="ml-4 text-sm text-gray-600">
-              <span className="hidden sm:inline">Client: </span>
-              <span className="font-medium text-gray-900">{selectedClient.name}</span>
-            </div>
-          )}
+          <Link 
+            href="/clients" 
+            className="ml-4 px-3 py-1.5 rounded-md border border-gray-300 bg-white hover:bg-gray-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          >
+            <span className="text-sm text-gray-600">Client: </span>
+            <span className="font-medium text-gray-900">
+              {isClientSelected && selectedClient ? selectedClient.name : 'Select Client'}
+            </span>
+          </Link>
         </div>
         <ul className="flex-1 flex justify-center gap-2 md:gap-4 lg:gap-6 min-w-0">
           <li>

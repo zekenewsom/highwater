@@ -113,13 +113,24 @@ function PortfolioSelector({ selectedPortfolio, onPortfolioSelect }: {
   );
 }
 
-function PortfolioView({ portfolio }: { portfolio: Portfolio }) {
+function PortfolioView({ portfolio, onBack }: { portfolio: Portfolio; onBack: () => void }) {
   return (
     <>
       <NavBar />
       <main className="min-h-screen bg-gray-50 p-8 space-y-8">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           <div>
+            <div className="flex items-center gap-4 mb-2">
+              <button
+                onClick={onBack}
+                className="text-indigo-600 hover:text-indigo-800 flex items-center gap-2"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+                Back to Portfolio List
+              </button>
+            </div>
             <h1 className="text-2xl md:text-3xl font-bold text-gray-900">{portfolio.name}</h1>
             <p className="mt-1 text-gray-600 text-sm">
               {portfolio.assets} assets • ${portfolio.value?.toLocaleString() || 'N/A'} total value
@@ -198,5 +209,5 @@ export default function PortfolioPage() {
   }
 
   // Show the selected portfolio
-  return <PortfolioView portfolio={selectedPortfolio} />;
+  return <PortfolioView portfolio={selectedPortfolio} onBack={() => setSelectedPortfolio(null)} />;
 }

@@ -89,6 +89,21 @@ export interface CryptoOnboardingStage3Data {
   onboardingWorkflowAdoption: boolean;
 }
 
+// Stage 4: Ongoing Due Diligence Frameworks
+export interface CryptoOnboardingStage4Data {
+  // Step 4.1: Asset Diligence Framework
+  assetDiligenceFrameworkAdoption: boolean;
+  
+  // Step 4.2: Platform & Vendor Diligence Framework
+  platformVendorDiligenceFrameworkAdoption: boolean;
+}
+
+// Stage 5: Final Review & Platform Activation
+export interface CryptoOnboardingStage5Data {
+  // Step 5.2: Activate Your Platform
+  platformActivationAcknowledgment: boolean;
+}
+
 export interface CryptoOnboardingState {
   currentStage: number;
   currentStep: string;
@@ -100,6 +115,8 @@ export interface CryptoOnboardingState {
   step6Data: CryptoOnboardingStep6Data;
   stage2Data: CryptoOnboardingStage2Data;
   stage3Data: CryptoOnboardingStage3Data;
+  stage4Data: CryptoOnboardingStage4Data;
+  stage5Data: CryptoOnboardingStage5Data;
   completed: boolean;
 }
 
@@ -192,6 +209,13 @@ export const INITIAL_CRYPTO_ONBOARDING_STATE: CryptoOnboardingState = {
     suitabilityAddendumAdoption: false,
     disclosureDocumentReview: false,
     onboardingWorkflowAdoption: false,
+  },
+  stage4Data: {
+    assetDiligenceFrameworkAdoption: false,
+    platformVendorDiligenceFrameworkAdoption: false,
+  },
+  stage5Data: {
+    platformActivationAcknowledgment: false,
   },
   completed: false,
 };
