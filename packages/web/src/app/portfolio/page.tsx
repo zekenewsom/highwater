@@ -53,6 +53,26 @@ function PortfolioSelector({ selectedPortfolio, onPortfolioSelect }: {
   );
 
   const portfolios = portfoliosData?.data || [];
+  
+  // Create a default portfolio for the client
+  const defaultPortfolio: Portfolio = {
+    id: `default-${selectedClient?.id}`,
+    name: `${selectedClient?.name}'s Default Portfolio`,
+    description: 'Default portfolio with comprehensive analytics and tracking',
+    value: 125000,
+    assets: 8,
+    performance: 5.2,
+    strategy: 'balanced',
+    riskLevel: 'moderate',
+    currency: 'USD',
+    tags: ['default', 'main'],
+    clientId: selectedClient?.id || '',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  };
+  
+  // Combine default portfolio with existing portfolios
+  const allPortfolios = [defaultPortfolio, ...portfolios];
 
   if (loading) {
     return (
@@ -78,11 +98,11 @@ function PortfolioSelector({ selectedPortfolio, onPortfolioSelect }: {
       <div className="p-4 border-b border-gray-200">
         <h3 className="text-lg font-medium text-gray-900">Select Portfolio</h3>
         <p className="text-sm text-gray-500">
-          {portfolios.length} portfolio{portfolios.length !== 1 ? 's' : ''} available for {selectedClient?.name}
+          {allPortfolios.length} portfolio{allPortfolios.length !== 1 ? 's' : ''} available for {selectedClient?.name}
         </p>
       </div>
       <div className="divide-y divide-gray-200">
-        {portfolios.map((portfolio) => (
+        {allPortfolios.map((portfolio) => (
           <div
             key={portfolio.id}
             className={`p-4 cursor-pointer hover:bg-gray-50 transition-colors ${
@@ -92,7 +112,14 @@ function PortfolioSelector({ selectedPortfolio, onPortfolioSelect }: {
           >
             <div className="flex items-center justify-between">
               <div>
-                <h4 className="text-sm font-medium text-gray-900">{portfolio.name}</h4>
+                <div className="flex items-center gap-2">
+                  <h4 className="text-sm font-medium text-gray-900">{portfolio.name}</h4>
+                  {portfolio.id.startsWith('default-') && (
+                    <span className="px-2 py-0.5 text-xs bg-blue-100 text-blue-700 rounded-full font-medium">
+                      Default
+                    </span>
+                  )}
+                </div>
                 <p className="text-sm text-gray-500">{portfolio.assets} assets</p>
               </div>
               <div className="text-right">
@@ -189,12 +216,12 @@ export default function PortfolioPage() {
                     Managing portfolios for {selectedClient.name}
                   </p>
                 </div>
-                <button
-                  onClick={() => setSelectedPortfolio(null)}
+                <a
+                  href={`/portfolio/manage?clientId=${selectedClient.id}`}
                   className="text-indigo-600 hover:text-indigo-800 text-sm font-medium"
                 >
-                  Change Client
-                </button>
+                  Add / Edit Portfolio
+                </a>
               </div>
               
               <PortfolioSelector 

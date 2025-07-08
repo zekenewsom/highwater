@@ -744,54 +744,6 @@ export const CryptoOnboardingWizard: React.FC<CryptoOnboardingWizardProps> = ({
                 </div>
               ))}
             </div>
-            
-            {/* Step Breadcrumb */}
-            <div className="flex items-center bg-gradient-to-r from-blue-50 to-indigo-50 px-4 py-2 rounded-lg border border-blue-200">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium text-blue-700">
-                  {(() => {
-                    const { currentStage, currentStep } = wizardState;
-                    const stageNames = {
-                      1: "Service Definition",
-                      2: "Due Diligence",
-                      3: "Risk Assessment",
-                      4: "Compliance Framework",
-                      5: "Implementation"
-                    };
-                    
-                    const stepNames = {
-                      '1.1': "Define Services",
-                      '1.2': "DeFi Acknowledgment",
-                      '1.3': "Custody Options",
-                      '1.4': "Trading Venues",
-                      '1.5': "Investment Strategies",
-                      '1.6': "Regulatory Considerations",
-                      '1.summary': "Review Summary",
-                      '1.complete': "Complete",
-                      '2.1': "Asset & Platform Review",
-                      '2.summary': "Review Summary",
-                      '2.complete': "Complete",
-                      '3.1': "Risk Profile",
-                      '3.2': "Suitability Approach",
-                      '3.3': "Allocation Guidelines",
-                      '3.summary': "Review Summary",
-                      '3.complete': "Complete",
-                      '4.1': "Compliance Policies",
-                      '4.2': "Regulatory Filings",
-                      '4.summary': "Review Summary",
-                      '4.complete': "Complete",
-                      '5.1': "Implementation Plan",
-                      '5.2': "Final Review",
-                      '5.summary': "Review Summary",
-                      '5.complete': "Complete"
-                    };
-                    
-                    return `${stageNames[currentStage]} • ${stepNames[currentStep]}`;
-                  })()}
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -988,7 +940,7 @@ export const CryptoOnboardingWizard: React.FC<CryptoOnboardingWizardProps> = ({
                         <textarea
                           value={wizardState.step3Data.otherSuitabilityDescription}
                           onChange={(e) => updateStep3Data('otherSuitabilityDescription', e.target.value)}
-                          className="mt-2 w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="mt-2 w-full border border-gray-300 rounded-md px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
                           placeholder="Please describe your approach to crypto-specific suitability assessment..."
                           rows={3}
                         />
@@ -1019,7 +971,7 @@ export const CryptoOnboardingWizard: React.FC<CryptoOnboardingWizardProps> = ({
                       type="number"
                       value={wizardState.step3Data.maxAllocationPercentage}
                       onChange={(e) => updateStep3Data('maxAllocationPercentage', Number(e.target.value))}
-                      className="w-20 border border-gray-300 rounded-md px-3 py-2 text-center focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-20 border border-gray-300 rounded-md px-3 py-2 text-center text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       min="0"
                       max="100"
                       step="1"

@@ -102,7 +102,7 @@ export default function TaxesPage() {
                       <label className="block text-gray-700 font-medium mb-1">
                         Cost basis method
                       </label>
-                      <select className="w-full border rounded px-3 py-2" defaultValue="FIFO">
+                      <select className="w-full border rounded px-3 py-2 text-gray-900" defaultValue="FIFO">
                         <option value="FIFO">FIFO</option>
                         <option value="LIFO">LIFO</option>
                         <option value="HIFO">HIFO</option>
@@ -111,7 +111,7 @@ export default function TaxesPage() {
                     {/* Base currency */}
                     <div>
                       <label className="block text-gray-700 font-medium mb-1">Base currency</label>
-                      <select className="w-full border rounded px-3 py-2" defaultValue="USD">
+                      <select className="w-full border rounded px-3 py-2 text-gray-900" defaultValue="USD">
                         <option value="USD">USD</option>
                         <option value="EUR">EUR</option>
                         <option value="GBP">GBP</option>
@@ -120,7 +120,7 @@ export default function TaxesPage() {
                     {/* Tax year */}
                     <div>
                       <label className="block text-gray-700 font-medium mb-1">Tax year</label>
-                      <select className="w-full border rounded px-3 py-2" defaultValue="2024">
+                      <select className="w-full border rounded px-3 py-2 text-gray-900" defaultValue="2024">
                         <option value="2025">2025</option>
                         <option value="2024">2024</option>
                         <option value="2023">2023</option>

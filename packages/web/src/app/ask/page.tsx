@@ -121,7 +121,7 @@ function ChatBox({ faqs }: { faqs: { question: string; answer: string }[] }) {
         </div>
         <div className="flex gap-2">
           <input
-            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-300"
+            className="w-full px-4 py-2 border border-gray-300 rounded text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-300"
             placeholder="Type your question..."
             value={input}
             onChange={(e) => setInput(e.target.value)}

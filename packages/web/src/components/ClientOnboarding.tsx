@@ -143,7 +143,7 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({ onComplete, 
                 type="text"
                 value={formData.name}
                 onChange={(e) => updateFormData('name', e.target.value)}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter full name"
               />
             </div>
@@ -156,7 +156,7 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({ onComplete, 
                 type="email"
                 value={formData.email}
                 onChange={(e) => updateFormData('email', e.target.value)}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter email address"
               />
             </div>
@@ -169,7 +169,7 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({ onComplete, 
                 type="text"
                 value={formData.advisorId}
                 onChange={(e) => updateFormData('advisorId', e.target.value)}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter advisor ID"
               />
             </div>
@@ -182,7 +182,7 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({ onComplete, 
                 type="tel"
                 value={formData.phone || ''}
                 onChange={(e) => updateFormData('phone', e.target.value)}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter phone number"
               />
             </div>
@@ -200,7 +200,7 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({ onComplete, 
                 id="riskProfile"
                 value={formData.riskProfile}
                 onChange={(e) => updateFormData('riskProfile', e.target.value)}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="Conservative">Conservative</option>
                 <option value="Moderate">Moderate</option>
@@ -218,7 +218,7 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({ onComplete, 
                 id="communicationPreference"
                 value={formData.communicationPreference}
                 onChange={(e) => updateFormData('communicationPreference', e.target.value)}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="Email">Email</option>
                 <option value="Phone">Phone</option>
@@ -236,7 +236,7 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({ onComplete, 
                 id="reportingFrequency"
                 value={formData.reportingFrequency}
                 onChange={(e) => updateFormData('reportingFrequency', e.target.value)}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="Weekly">Weekly</option>
                 <option value="Monthly">Monthly</option>
@@ -261,7 +261,7 @@ export const ClientOnboarding: React.FC<ClientOnboardingProps> = ({ onComplete, 
                 type="number"
                 value={formData.initialInvestment}
                 onChange={(e) => updateFormData('initialInvestment', Number(e.target.value))}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter amount in USD"
                 min="0"
                 step="1000"

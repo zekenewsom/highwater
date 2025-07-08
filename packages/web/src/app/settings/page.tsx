@@ -17,7 +17,7 @@ export default function SettingsPage() {
                   <span className="text-gray-700">Name</span>
                   <input
                     type="text"
-                    className="mt-1 block w-full rounded border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                    className="mt-1 block w-full rounded border-gray-300 shadow-sm text-gray-900 focus:border-indigo-500 focus:ring-indigo-500"
                     placeholder="Your Name"
                   />
                 </label>
@@ -25,7 +25,7 @@ export default function SettingsPage() {
                   <span className="text-gray-700">Email</span>
                   <input
                     type="email"
-                    className="mt-1 block w-full rounded border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                    className="mt-1 block w-full rounded border-gray-300 shadow-sm text-gray-900 focus:border-indigo-500 focus:ring-indigo-500"
                     placeholder="you@example.com"
                   />
                 </label>

@@ -120,16 +120,16 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$packages$2f$web$2f$src$2f$co
 ;
 const NAV_LINKS = [
     {
-        label: 'Clients',
-        href: '/clients'
-    },
-    {
         label: 'Portfolio',
         href: '/portfolio'
     },
     {
         label: 'Insights',
         href: '/insights'
+    },
+    {
+        label: 'Compliance',
+        href: '/compliance'
     },
     {
         label: 'Taxes',
@@ -176,30 +176,31 @@ function NavBar() {
                             lineNumber: 42,
                             columnNumber: 11
                         }, this),
-                        isClientSelected && selectedClient && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$1_$40$babel$2b$core$40$7$2e$27$2e$4_$40$playwright$2b$test$40$1$2e$42$2e$1_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "ml-4 text-sm text-gray-600",
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$1_$40$babel$2b$core$40$7$2e$27$2e$4_$40$playwright$2b$test$40$1$2e$42$2e$1_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$1_$40$babel$2b$core$40$7$2e$27$2e$4_$40$playwright$2b$test$40$1$2e$42$2e$1_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                            href: "/clients",
+                            className: "ml-4 px-3 py-1.5 rounded-md border border-gray-300 bg-white hover:bg-gray-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-blue-200",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$1_$40$babel$2b$core$40$7$2e$27$2e$4_$40$playwright$2b$test$40$1$2e$42$2e$1_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "hidden sm:inline",
+                                    className: "text-sm text-gray-600",
                                     children: "Client: "
                                 }, void 0, false, {
                                     fileName: "[project]/packages/web/src/components/NavBar.tsx",
-                                    lineNumber: 47,
-                                    columnNumber: 15
+                                    lineNumber: 49,
+                                    columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$1_$40$babel$2b$core$40$7$2e$27$2e$4_$40$playwright$2b$test$40$1$2e$42$2e$1_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "font-medium text-gray-900",
-                                    children: selectedClient.name
+                                    children: isClientSelected && selectedClient ? selectedClient.name : 'Select Client'
                                 }, void 0, false, {
                                     fileName: "[project]/packages/web/src/components/NavBar.tsx",
-                                    lineNumber: 48,
-                                    columnNumber: 15
+                                    lineNumber: 50,
+                                    columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/packages/web/src/components/NavBar.tsx",
-                            lineNumber: 46,
-                            columnNumber: 13
+                            lineNumber: 45,
+                            columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
@@ -217,12 +218,12 @@ function NavBar() {
                                 children: "Home"
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/components/NavBar.tsx",
-                                lineNumber: 54,
+                                lineNumber: 57,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/packages/web/src/components/NavBar.tsx",
-                            lineNumber: 53,
+                            lineNumber: 56,
                             columnNumber: 11
                         }, this),
                         NAV_LINKS.map((link)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$1_$40$babel$2b$core$40$7$2e$27$2e$4_$40$playwright$2b$test$40$1$2e$42$2e$1_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -232,30 +233,30 @@ function NavBar() {
                                     children: link.label
                                 }, void 0, false, {
                                     fileName: "[project]/packages/web/src/components/NavBar.tsx",
-                                    lineNumber: 67,
+                                    lineNumber: 70,
                                     columnNumber: 15
                                 }, this)
                             }, link.href, false, {
                                 fileName: "[project]/packages/web/src/components/NavBar.tsx",
-                                lineNumber: 66,
+                                lineNumber: 69,
                                 columnNumber: 13
                             }, this))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/packages/web/src/components/NavBar.tsx",
-                    lineNumber: 52,
+                    lineNumber: 55,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$1_$40$babel$2b$core$40$7$2e$27$2e$4_$40$playwright$2b$test$40$1$2e$42$2e$1_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex-1 flex items-center justify-end gap-4 min-w-0",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$1_$40$babel$2b$core$40$7$2e$27$2e$4_$40$playwright$2b$test$40$1$2e$42$2e$1_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$packages$2f$web$2f$src$2f$components$2f$AuthNav$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/packages/web/src/components/NavBar.tsx",
-                        lineNumber: 81,
+                        lineNumber: 84,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/packages/web/src/components/NavBar.tsx",
-                    lineNumber: 80,
+                    lineNumber: 83,
                     columnNumber: 9
                 }, this)
             ]
@@ -1494,7 +1495,7 @@ function TaxesPage() {
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$1_$40$babel$2b$core$40$7$2e$27$2e$4_$40$playwright$2b$test$40$1$2e$42$2e$1_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
-                                                            className: "w-full border rounded px-3 py-2",
+                                                            className: "w-full border rounded px-3 py-2 text-gray-900",
                                                             defaultValue: "FIFO",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$1_$40$babel$2b$core$40$7$2e$27$2e$4_$40$playwright$2b$test$40$1$2e$42$2e$1_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1544,7 +1545,7 @@ function TaxesPage() {
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$1_$40$babel$2b$core$40$7$2e$27$2e$4_$40$playwright$2b$test$40$1$2e$42$2e$1_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
-                                                            className: "w-full border rounded px-3 py-2",
+                                                            className: "w-full border rounded px-3 py-2 text-gray-900",
                                                             defaultValue: "USD",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$1_$40$babel$2b$core$40$7$2e$27$2e$4_$40$playwright$2b$test$40$1$2e$42$2e$1_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1594,7 +1595,7 @@ function TaxesPage() {
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$1_$40$babel$2b$core$40$7$2e$27$2e$4_$40$playwright$2b$test$40$1$2e$42$2e$1_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
-                                                            className: "w-full border rounded px-3 py-2",
+                                                            className: "w-full border rounded px-3 py-2 text-gray-900",
                                                             defaultValue: "2024",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$1_$40$babel$2b$core$40$7$2e$27$2e$4_$40$playwright$2b$test$40$1$2e$42$2e$1_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
