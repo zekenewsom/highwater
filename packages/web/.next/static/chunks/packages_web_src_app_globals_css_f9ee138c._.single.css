@@ -582,10 +582,6 @@
     display: grid;
   }
 
-  .hidden {
-    display: none;
-  }
-
   .inline-block {
     display: inline-block;
   }
@@ -2326,12 +2322,6 @@
 
   .disabled\:opacity-50:disabled {
     opacity: .5;
-  }
-
-  @media (width >= 40rem) {
-    .sm\:inline {
-      display: inline;
-    }
   }
 
   @media (width >= 40rem) {
